@@ -40,11 +40,30 @@
                 right:315px;
                 z-index:4;
             }
-            .clearfix::after {
-                content: "";
-                display: block;
-                clear: both;
-    
-
-    }
+            .categories {
+                position:absolute;
+                bottom:55px;
+                // left:240px;
+                left:16.5%;
+            }
+            .ican {
+                position:absolute;
+                bottom:60px;
+                left:15%;
+            }
+            .tags {
+                position:absolute;
+                bottom:55px;
+                left:30%;
+            }
+            .ipan {
+                position:absolute;
+                bottom:60px;
+                left:28.5%;
+            } 
+            .news {
+                display:flex;
+                position:absolute;
+                bottom:60px;
+            }
 }
