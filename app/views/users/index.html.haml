@@ -1,0 +1,8 @@
+.top-header
+  .top-logo
+    = image_tag 'logos/logo.png', class: 'hoge'
+    = fa_icon 'search', class: 'icon'
+    .form
+      -# = form_for
+      %form.new_message
+        %input{type: "text", class: 'input_box', placeholder: '何をお探しですか？'}
