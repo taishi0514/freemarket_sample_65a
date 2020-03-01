@@ -1,9 +1,14 @@
 .header
   .header__logo
-    FURIMA
+  %img(src="/Users/apple/GitHub/freemarket_sample_65a/app/assets/images/logo/logo.png" alt="FURIMA")
 .contents
   .contents__message
     新規会員登録
+  -# = link_to "https://www.mercari.com/jp/signup/registration/?after_save_callback=/jp/",
+  = link_to "#",class: "contents__btn contents__btn--e-mail" do
+    = icon('fas fa-envelope', class: "contents__btn--icon")
+    %span<>
+    メールアドレスで登録する
   = link_to "https://www.facebook.com/", class: "contents__btn contents__btn--facebook" do
     = icon('fab', 'facebook-square',  class: "contents__btn--icon")
     %span<>
@@ -16,8 +21,3 @@
     = icon('fab', 'instagram', class: "contents__btn--icon")
     %span<>
     Instagramで登録する
-  -# = link_to "https://www.mercari.com/jp/signup/registration/?after_save_callback=/jp/",
-  = link_to "#",class: "contents__btn contents__btn--e-mail" do
-    = icon('fas fa-envelope', class: "contents__btn--icon")
-    %span<>
-    メールアドレスで登録する
