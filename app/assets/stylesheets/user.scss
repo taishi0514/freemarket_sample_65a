@@ -1,0 +1,50 @@
+.header {
+  height: 90px;
+  border-bottom:20px solid #ffa500;
+  background-color: #ff8c00;
+  color: #ffffff;
+  &__logo {
+    text-align: center;
+    font-size: 36px;
+    line-height: 90px;
+  }
+}
+.contents {
+  height: calc(100vh - 90px - 20px);
+  width:900px;
+  margin: 0 auto;
+  background-color: #fffacd;
+  &__message{
+    padding: 40px;
+    color:#ffa500;
+    font-size:30px;
+    text-align: center;
+  }
+  &__btn{
+    display: block;
+    height: 80px;
+    width :360px;
+    margin:0 auto 50px;
+    border-radius: 10px;
+    font-size:20px;
+    color:#fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 80px;
+    &--icon{
+      padding-right:20px;
+    }
+    &--facebook{
+      background-color: #4169e1;
+    }
+    &--twitter{
+      background-color: #00bfff;
+    }
+    &--instagram{
+      background-color: #fc76bf;
+    }
+    &--e-mail{
+      background-color: red;
+    }
+  }
+}
