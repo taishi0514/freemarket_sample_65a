@@ -1,3 +1,4 @@
+
 ## usersテーブル 
 |Column|Type|Options|
 |------|----|-------|
@@ -46,8 +47,6 @@
 |category_id|string|null: false|
 |brand_id|date|null: false|
 
-
-
 ### Assocition
 
 - belong_to :user
@@ -61,6 +60,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
+
 |vender_id|references|null: false|foreign_key: true|
 |product_id|references|null: false|foreign_key: true|
 |customer_id|references|null: false|foreign_key: true|
