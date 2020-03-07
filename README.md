@@ -33,7 +33,7 @@
 |user|references|null: false|foreign_key: true|
 |trade_id|string|null: false|
 |title|string|null: false|
-|size_id|references|null: false|foreign_key: true|
+|size|references|null: false|foreign_key: true|
 |shipping_id|string|null: false|
 |ship_period|timestamp|null: false|
 |ship_method|string|null: false|
