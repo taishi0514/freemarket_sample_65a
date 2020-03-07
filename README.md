@@ -166,19 +166,3 @@
 ### Association
 
  - has_many :productss
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
