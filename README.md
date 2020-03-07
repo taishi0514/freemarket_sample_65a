@@ -30,7 +30,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false|foreign_key: true|
+|user|references|null: false|foreign_key: true|
 |trade_id|string|null: false|
 |title|string|null: false|
 |size_id|references|null: false|foreign_key: true|
@@ -43,7 +43,7 @@
 |detail|string|null: false|
 |condition|string|null: false|
 |category_id|string|null: false|
-|brand_id|date|null: false|
+|brand|references|foreign_key: true|
 
 ### Assocition
 
@@ -165,7 +165,7 @@
 
 ### Association
 
- - has_many :products
+ - has_many :productss
 
 
 
