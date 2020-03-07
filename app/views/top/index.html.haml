@@ -1,0 +1,12 @@
+%body
+  %header.header
+    .header__title
+      = link_to "FURIMA", root_path, class: "header__title--text"
+    .header__right
+      - if user_signed_in?
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
+      - else
+        = link_to "ログイン", new_user_session_path, class: "header__right--btn"
+        = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
+  .contents
+    = yield

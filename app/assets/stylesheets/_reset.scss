@@ -46,6 +46,7 @@ th,
 td {
    margin:0;
    padding:0;
+   // background-color: #eee;
 }
 table {
    border-collapse:collapse;
@@ -54,6 +55,9 @@ table {
 fieldset,
 img {
    border:0;
+}
+.fab {
+   padding: 0px 20px 0px 0px;
 }
 /*
    TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
@@ -98,6 +102,12 @@ acronym {
    border:0;
    font-variant:normal;
 }
+.footer {
+   padding: 60px 0;
+   color: #fff;
+   background-color: #272727;
+   text-align: center;
+ }
 /* to preserve line-height and selector appearance */
 sup {
    vertical-align:text-top;

@@ -1,24 +1,78 @@
-# README
+## users
+|Column|Type|Options|
+|------|----|-------|
+|name|string||null: false|
+|e-mail_id|string||null: false|
+|address_id||string|null: false|
+|picture|image||
+|comment_id|string||
+|password|string|null: false|
+|nickname|string|null: false|
+|number|string|null: false|
+|profile||
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Assocition
 
-Things you may want to cover:
+- belongs_to :picture
+- belongs_to :address
+- belongs_to :comment
+- belongs_to :product
 
-* Ruby version
+##  products
 
-* System dependencies
+|Column|Type|Options|
+|------|----|-------|
+|user_id|string||null: false|
+|picture|image|
 
-* Configuration
+### Assocition
 
-* Database creation
+- belongs_to :user
+- belongs_to :picture
 
-* Database initialization
+### Address
 
-* How to run the test suite
+|Column|Type|Options|
+|------|----|-------|
+|user_id|string|null: false|
+|address_id|string|null: false|
 
-* Services (job queues, cache servers, search engines, etc.)
+### Association
 
-* Deployment instructions
+- belongs_to :user_id
 
-* ...
+##  pictures
+
+|Columm|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+
+ - has_many :user
+ - has_many :product
+
+##  comments
+
+|Columm|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|text|text|null: false|
+
+### Association
+
+ - has_many :user
+ - has_many :product
+ - has_many :categories
+
+##  categories
+
+|Columm|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+
+### Association
+
+ - has_many :product
+ - has_many :pictures
