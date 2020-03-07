@@ -10,8 +10,8 @@
 |last_name|string|null: false|
 |last_name_reading|string|null: false|
 |first_name|string|null: false|
+|first_name_reading|string|null: false|
 |have_points|string|null: false|
-|first_name|string|null: false|
 |e-mails|string|null: false|
 |birthday|date|null: false|
 
@@ -47,12 +47,13 @@
 
 ### Assocition
 
-- belong_to :user
-- belong_to :trade
-- belong_to :categorie
-- has_many :images
-- has_many :reviews
-- has_many :comments
+ - belong_to :user
+ - belong_to :trade
+ - belong_to :categorie
+ - belong_to :brand
+ - has_many :images
+ - has_many :reviews
+ - has_many :comments
 
 ### tradesテーブル
 
