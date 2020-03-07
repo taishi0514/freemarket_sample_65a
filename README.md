@@ -2,15 +2,14 @@
 ## usersテーブル 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references||null: false|
 |profile|references||null: false|
 |picture_aba|references|null :false|
 |payment|string|null: false|
 |password||string|null: false|
 |nickname|string|null: false|
 |last_name|string|null: false|
-|kana_last_name|string|null: false|
-|kana_first_name|string|null: false|
+|last_name_reading|string|null: false|
+|first_name_reading|string|null: false|
 |have_points|string|null: false|
 |first_name|string|null: false|
 |e-mails|string|null: false|
@@ -31,7 +30,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false|foreign_key: true|
+|user|references|null: false|foreign_key: true|
 |trade_id|string|null: false|
 |title|string|null: false|
 |size_id|references|null: false|foreign_key: true|
