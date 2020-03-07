@@ -42,14 +42,14 @@
 |likes_count|string|null: false|
 |detail|string|null: false|
 |condition|string|null: false|
-|category_id|string|null: false|
+|category|references|null: false|
 |brand|references|foreign_key: true|
 
 ### Assocition
 
 - belong_to :user
 - belong_to :trade
-- belong_to :categories
+- belong_to :categorie
 - has_many :images
 - has_many :reviews
 - has_many :comments
@@ -78,6 +78,7 @@
 ### Association
 
  - belong_to :user
+ - belong_to :prodct
 
 ## reviewsテーブル
 
@@ -126,7 +127,7 @@
 |Columm|Type|Options|
 |------|----|-------|
 |product|references|null: false|foreign_key: true|
-|images_url|string|null: false|
+|image_url|string|null: false|
 
 ### Association
 
@@ -165,4 +166,14 @@
 
 ### Association
 
- - has_many :productss
+ - has_many :products
+
+## brandsテーブル
+
+|Columm|Type|Options|
+|------|----|-------|
+|brand|string|null: false|
+
+### Association
+
+ - has_many :products
