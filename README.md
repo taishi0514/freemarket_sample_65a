@@ -3,13 +3,13 @@
 |Column|Type|Options|
 |------|----|-------|
 |profile|references||null: false|
-|picture_aba|references|null :false|
+|picture_avatar|references|null :false|
 |payment|string|null: false|
 |password||string|null: false|
 |nickname|string|null: false|
 |last_name|string|null: false|
 |last_name_reading|string|null: false|
-|first_name_reading|string|null: false|
+|first_name|string|null: false|
 |have_points|string|null: false|
 |first_name|string|null: false|
 |e-mails|string|null: false|
@@ -30,7 +30,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null: false|foreign_key: true|
+|user_id|references|null: false|foreign_key: true|
 |trade_id|string|null: false|
 |title|string|null: false|
 |size_id|references|null: false|foreign_key: true|
@@ -59,9 +59,9 @@
 |Column|Type|Options|
 |------|----|-------|
 
-|vender_id|references|null: false|foreign_key: true|
-|product_id|references|null: false|foreign_key: true|
-|customer_id|references|null: false|foreign_key: true|
+|vender|references|null: false|foreign_key: true|
+|product|references|null: false|foreign_key: true|
+|customer|references|null: false|foreign_key: true|
 
 ### Association
 
@@ -72,8 +72,8 @@
 
 |Columm|Type|Options|
 |------|----|-------|
-|user_id|references|null: false|foreign_key: true|
-|product_id|references|null: false|foreign_key: true|
+|user|references|null: false|foreign_key: true|
+|product|references|null: false|foreign_key: true|
 
 ### Association
 
@@ -84,8 +84,8 @@
 |Columm|Type|Options|
 |------|----|-------|
 |trade_id|references|null: false|foreign_key: true|
-|reviewer_id|references|null: false|foreign_key: true|
-|reviewed_id|references|null: false|foreign_key: true|
+|reviewer|references|null: false|foreign_key: true|
+|reviewed|references|null: false|foreign_key: true|
 |review|string|null: false|
 |rate|string|null: false|
 
@@ -104,7 +104,7 @@
 |cities_name|string|null: false|
 |building_name|string|null: false|
 |address_num|string|null: false|
-|user_id|references|null: false|foreign_key: true|
+|user|references|null: false|foreign_key: true|
 
 ### Association
 
@@ -114,7 +114,7 @@
 
 |Columm|Type|Options|
 |------|----|-------|
-|user_id|references|null: false|foreign_key: true|
+|user|references|null: false|foreign_key: true|
 |point|string|null: false|
 
 ### Association
@@ -125,7 +125,7 @@
 
 |Columm|Type|Options|
 |------|----|-------|
-|product_id|references|null: false|foreign_key: true|
+|product|references|null: false|foreign_key: true|
 |images_url|string|null: false|
 
 ### Association
@@ -136,9 +136,9 @@
 
 |Columm|Type|Options|
 |------|----|-------|
-|review_id|references|null: false|foreign_key: true|
+|review|references|null: false|foreign_key: true|
 |comment|string|null: false|
-|user_id|references|null: false|foreign_key: true|
+|user|references|null: false|foreign_key: true|
 
 ### Association
 
@@ -149,7 +149,7 @@
 
 |Columm|Type|Options|
 |------|----|-------|
-|user_id|references|null: false|foreign_key: true|
+|user|references|null: false|foreign_key: true|
 |expiration_date|references|null: false|foreign_key: true|
 |card_num|references|null: false|foreign_key: true|
 
