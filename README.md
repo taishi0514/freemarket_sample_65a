@@ -101,7 +101,7 @@
 |------|----|-------|
 |tell_num|string|null: false|
 |post_code|string|null: false|
-|pf_name|string|null: false|
+|prefecture_name|string|null: false|
 |cities_name|string|null: false|
 |building_name|string|null: false|
 |address_num|string|null: false|
