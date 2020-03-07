@@ -31,7 +31,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |user|references|null: false|foreign_key: true|
-|trade_id|string|null: false|
+|trade|references|null: false|
 |title|string|null: false|
 |size|references|null: false|foreign_key: true|
 |shipping_id|string|null: false|
@@ -83,7 +83,7 @@
 
 |Columm|Type|Options|
 |------|----|-------|
-|trade_id|references|null: false|foreign_key: true|
+|trade|references|null: false|foreign_key: true|
 |reviewer|references|null: false|foreign_key: true|
 |reviewed|references|null: false|foreign_key: true|
 |review|string|null: false|
