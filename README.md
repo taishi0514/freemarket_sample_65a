@@ -24,7 +24,7 @@
 - has_many :credits
 - has_many :messages
 - has_many :trades
-- has_many :address
+- has_one :address
 - has_many :comments
 
 ## productsテーブル
@@ -39,7 +39,6 @@
 |ship_period|timestamp|null: false|
 |ship_method|string|null: false|
 |ship_area|string|null: false|
-|product_id|references|null: false|foreign_key: true|
 |price|string|null: false|
 |likes_count|string|null: false|
 |detail|string|null: false|
@@ -51,7 +50,7 @@
 
 - belong_to :user
 - belong_to :trade
-- has_many :categories
+- belong_to :categories
 - has_many :images
 - has_many :reviews
 - has_many :comments
@@ -76,7 +75,6 @@
 |------|----|-------|
 |user_id|references|null: false|foreign_key: true|
 |product_id|references|null: false|foreign_key: true|
-|like_id|references|null: false|foreign_key: true|
 
 ### Association
 
@@ -90,7 +88,6 @@
 |reviewer_id|references|null: false|foreign_key: true|
 |reviewed_id|references|null: false|foreign_key: true|
 |review|string|null: false|
-|review_id|references|null: false|foreign_key: true|
 |rate|string|null: false|
 
 ### Association
@@ -108,6 +105,7 @@
 |cities_name|string|null: false|
 |building_name|string|null: false|
 |address_num|string|null: false|
+|user_id|references|null: false|foreign_key: true|
 
 ### Association
 
@@ -140,8 +138,8 @@
 |Columm|Type|Options|
 |------|----|-------|
 |review_id|references|null: false|foreign_key: true|
-|comment_id|references|null: false|foreign_key: true|
 |comment|string|null: false|
+|user_id|references|null: false|foreign_key: true|
 
 ### Association
 
@@ -164,12 +162,11 @@
 
 |Columm|Type|Options|
 |------|----|-------|
-|category_id|references|null: false|foreign_key: true|
 |category|string|null: false|
 
 ### Association
 
- - belong_to :product
+ - has_many :products
 
 
 
