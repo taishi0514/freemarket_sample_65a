@@ -1,14 +1,2 @@
-.top-header
-  .top-logo
-    = image_tag 'logos/logo.png', class: 'hoge'
-    = fa_icon 'search', class: 'icon'
-    .categories カテゴリーから探す
-    = fa_icon 'bars', class: 'ican'
-    .tags ブランドから探す
-    = fa_icon 'tags', class: 'ipan'
-    .login-box
-      = link_to '新規会員登録',class:'news'
-      = link_to 'ログイン',class:'logins'
-    .form
-      %form.new_message
-        %input{type: "text", class: 'input_box', placeholder: '何をお探しですか？'}
+.wrapper
+  = render "prodact"
