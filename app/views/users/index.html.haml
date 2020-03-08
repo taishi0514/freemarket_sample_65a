@@ -1,0 +1,31 @@
+-# .header
+-#   .header__logo
+-#     = image_tag 'logos/logo.png', class: 'picture'
+-#   .categories
+-#     =link_to 'カテゴリーから探す', class: 'btn'
+-#       = fa_icon 'bars', class: 'bars'
+-#   .searching 
+-#     =link_to 'ブランドから探す', class: 'tag'
+-#       = fa_icon 'tags', class: 'ipan'
+-#   .login-box
+-#     =link_to '新規会員登録', class: 'news'
+-#     =link_to 'ログイン',class: 'logins'
+-#   %input{type: "text", class: 'input_box', placeholder: '何をお探しですか？'}
+-#   = fa_icon 'search', class: 'search'
+.top-header
+  .top-logo
+    = image_tag 'logos/logo.png', class: 'hoge'
+    .categories 
+      = link_to 'カテゴリーから探す', class: 'caty'
+      = fa_icon 'bars', class: 'ican'
+    .tags
+      = link_to 'ブランドから探す', class: 'brand'
+      = fa_icon 'tags', class: 'ipan'
+    .login-box
+      = link_to '新規会員登録',class:'news'
+    .login-bax
+      = link_to 'ログイン',class:'logins'
+    .form
+      %form.new_message
+        %input{type: "text", class: 'input_box', placeholder: '何をお探しですか？'}
+          = fa_icon 'search', class: 'icon'
