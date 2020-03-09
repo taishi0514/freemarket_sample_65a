@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => {
-    :sessions      => "users/sessions",
-    :registrations => "users/registrations",
-    :passwords     => "users/passwords"
-  }
+  devise_for :users
   # get 'posts', to: 'users#index'
-  root to: 'top#index'
+  root to: 'users#index'
 end
