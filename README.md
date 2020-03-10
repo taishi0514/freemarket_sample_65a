@@ -1,78 +1,180 @@
-## users
+
+## usersテーブル 
 |Column|Type|Options|
 |------|----|-------|
-|name|string||null: false|
-|e-mail_id|string||null: false|
-|address_id||string|null: false|
-|picture|image||
-|comment_id|string||
-|password|string|null: false|
+|profile|references||null: false|
+|picture_avatar|references|null :false|
+|payment|string|null: false|
+|password||string|null: false|
 |nickname|string|null: false|
-|number|string|null: false|
-|profile||
+|last_name|string|null: false|
+|last_name_reading|string|null: false|
+|first_name|string|null: false|
+|first_name_reading|string|null: false|
+|have_points|string|null: false|
+|e-mails|string|null: false|
+|birthday|date|null: false|
 
 ### Assocition
 
-- belongs_to :picture
-- belongs_to :address
-- belongs_to :comment
-- belongs_to :product
+- has_many :products
+- has_many :reviews
+- has_many :points
+- has_many :credits
+- has_many :messages
+- has_many :trades
+- has_one :address
+- has_many :comments
 
-##  products
+## productsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string||null: false|
-|picture|image|
+|user|references|null: false|foreign_key: true|
+|trade|references|null: false|
+|title|string|null: false|
+|size|references|null: false|foreign_key: true|
+|shipping_id|string|null: false|
+|ship_period|timestamp|null: false|
+|ship_method|string|null: false|
+|ship_area|string|null: false|
+|price|string|null: false|
+|likes_count|string|null: false|
+|detail|string|null: false|
+|condition|string|null: false|
+|category|references|null: false|
+|brand|references|foreign_key: true|
 
 ### Assocition
 
-- belongs_to :user
-- belongs_to :picture
+ - belong_to :user
+ - belong_to :trade
+ - belong_to :categorie
+ - belong_to :brand
+ - has_many :images
+ - has_many :reviews
+ - has_many :comments
 
-### Address
+### tradesテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|string|null: false|
-|address_id|string|null: false|
+
+|vender|references|null: false|foreign_key: true|
+|product|references|null: false|foreign_key: true|
+|customer|references|null: false|foreign_key: true|
 
 ### Association
 
-- belongs_to :user_id
+- belong_to :user
+- belong_to :product
 
-##  pictures
+##  likesテーブル
 
 |Columm|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|user|references|null: false|foreign_key: true|
+|product|references|null: false|foreign_key: true|
 
 ### Association
 
- - has_many :user
- - has_many :product
+ - belong_to :user
+ - belong_to :prodct
 
-##  comments
+## reviewsテーブル
 
 |Columm|Type|Options|
 |------|----|-------|
-|name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|text|text|null: false|
+|trade|references|null: false|foreign_key: true|
+|reviewer|references|null: false|foreign_key: true|
+|reviewed|references|null: false|foreign_key: true|
+|review|string|null: false|
+|rate|string|null: false|
 
 ### Association
 
- - has_many :user
- - has_many :product
- - has_many :categories
+ - belong_to :user
+ - belong_to :product
 
-##  categories
+## addressテーブル
 
 |Columm|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|tell_num|string|null: false|
+|post_code|string|null: false|
+|prefecture_name|string|null: false|
+|cities_name|string|null: false|
+|building_name|string|null: false|
+|address_num|string|null: false|
+|user|references|null: false|foreign_key: true|
 
 ### Association
 
- - has_many :product
- - has_many :pictures
+ - belong_to :user
+
+## pointsテーブル
+
+|Columm|Type|Options|
+|------|----|-------|
+|user|references|null: false|foreign_key: true|
+|point|string|null: false|
+
+### Association
+
+ - belong_to :user
+
+## imagesテーブル
+
+|Columm|Type|Options|
+|------|----|-------|
+|product|references|null: false|foreign_key: true|
+|image_url|string|null: false|
+
+### Association
+
+ - belong_to :product
+
+## commentsテーブル
+
+|Columm|Type|Options|
+|------|----|-------|
+|review|references|null: false|foreign_key: true|
+|comment|string|null: false|
+|user|references|null: false|foreign_key: true|
+
+### Association
+
+ - belong_to :user
+ - belong_to :product
+
+## creditテーブル
+
+|Columm|Type|Options|
+|------|----|-------|
+|user|references|null: false|foreign_key: true|
+|expiration_date|references|null: false|foreign_key: true|
+|card_num|references|null: false|foreign_key: true|
+
+### Association
+
+ - belong_to :user
+
+## categoriesテーブル
+
+|Columm|Type|Options|
+|------|----|-------|
+|category|string|null: false|
+
+### Association
+
+ - has_many :products
+
+## brandsテーブル
+
+|Columm|Type|Options|
+|------|----|-------|
+|brand|string|null: false|
+
+### Association
+
+ - has_many :products
