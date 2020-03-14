@@ -1,5 +1,32 @@
 .main{
   height:3710px;
+  .auction{
+    height:130px;
+    width:130px;
+    color:white;
+    font-size:18px;
+    border:1px solid green;
+    border-radius:10px;
+    background-color: green;;
+    position:fixed;
+    text-align: center;
+    bottom:30px;
+    right:30px;
+    z-index:100;
+    .auction__button{
+      .auction__button2{
+        margin:0;
+        padding:15px;
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+    .camera__button{
+      font-size:60px;
+      background-color:green;
+    }
+  }
 }
   .auction{
     height:120px;
