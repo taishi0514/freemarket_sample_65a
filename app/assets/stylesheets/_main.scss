@@ -1,0 +1,470 @@
+.main{
+  height:3710px;
+}
+
+.furima{
+    height:510px;
+    width:100%;
+    }
+    .picture1{
+      position: absolute;
+      height:540px;
+      width:100%;
+    }
+    .furima__copy{
+        color:white;
+        font-size: 60px;
+        text-shadow:1px 1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px -1px 0 #000;
+        position: relative;
+        top:200px;
+        left:50px;
+    }
+    .furima__copy2{
+        color:white;
+        font-size: 20px;
+        text-shadow:1px 1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px -1px 0 #000;
+        position: relative;
+        top:210px;
+        left:50px;
+        letter-spacing:0.05em;
+        line-height:15px;
+    }
+      .furima__download{
+          margin-top:20px;
+      }
+      .apple__btn{
+          text-decoration:none;
+      }
+        .applelogo{
+            height:50px;
+            width:170px;
+            border-radius: 10px 10px 10px 10px;
+            justify-content: space-between;
+        }
+        .googlelogo{
+            height:50px;
+            width:170px;
+        }
+
+.furima2{
+    height:680px;
+    width:100%;
+    }
+    .furima-use{
+    height:200px;
+    width:100%;
+    }
+    .furima-point{
+        font-size:24px;
+        font-weight: bolder;
+        position:relative;
+        top:100px;
+        left:550px;
+    }
+    .furima-reason{
+      height:330px;
+      width:100%;
+      display:flex;
+      justify-content:space-around;
+    }
+      .furima-reason__pic1{
+        height:250px;
+        width:250px;
+        margin-left:150px;
+        .furima-reason__namber1{
+          height:60px;
+          width:60px;
+          background-color:#2CEAA3;
+          font-size:24px;
+          color:white;
+          font-weight:bolder;
+          position:relative;
+          text-align: center;
+          padding:10px;
+        }
+      }
+      .reason1{
+        height:300px;
+        width:300px;
+        position:absolute;
+      }
+      .furima-reason__pic2{
+        height:250px;
+        width:250px;
+        .furima-reason__namber2{
+          height:60px;
+          width:60px;
+          background-color:#2CEAA3;
+          color:white;
+          font-size:24px;
+          font-weight:bolder;
+          position:relative;
+          text-align:center;
+          padding:10px;
+        }
+      }
+      .reason2{
+        height:300px;
+        width:300px;
+        position:absolute;
+      }
+      .furima-reason__pic3{
+        height:250px;
+        width:250px;
+        margin-right:200px;
+        .furima-reason__namber3{
+          height:60px;
+          width:60px;
+          background-color:#2CEAA3;
+          color:white;
+          font-size:24px;
+          font-weight:bolder;
+          position:relative;
+          text-align:center;
+          padding:10px;
+        }
+      }
+      .reason3{
+        height:300px;
+        width:300px;
+        position:absolute;
+      }
+    .furima-catch{
+        height:60px;
+        width:100%;
+        display:flex;
+        justify-content: space-around;
+        span{
+          color:#2CEAA3;
+        }
+    }
+      .furima-catch__copy{
+        font-size:22px;
+        font-weight: bolder;
+        margin-left:180px;
+      }
+      .furima-catch__copy2{
+        font-size: 22px;
+        font-weight: bolder;
+      }
+      .furima-catch__copy3{
+        font-size:22px;
+        font-weight: bolder;
+        margin-right:200px;
+      }
+    .furima-description{
+      height:150px;
+      width:100%;
+      display:flex;
+      justify-content:space-around;
+    }
+      .furima-description__1{
+        font-size: 16px;
+        margin-left:170px;
+        line-height:12px;
+      }
+      .furima-description__2{
+        font-size:16px;
+        line-height:12px;
+      }
+      .furima-description__3{
+        font-size:16px;
+        margin-right:180px;
+        line-height:12px;
+      }
+
+.furima3{
+  height:400px;
+  width:100%;
+  }
+  .picture2{
+    height:400px;
+    width:100%;
+    position:absolute;
+  }
+  .furima3__copy{
+    font-size:28px;
+    color:white;
+    font-weight: bolder;
+    position:relative;
+    text-shadow:1px 1px 0 #000,
+                -1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+    top:80px;
+    left:210px;
+  }
+  .furima3__copy2{
+    font-size:16px;
+    color:white;
+    font-weight:bolder;
+    position:relative;
+    text-shadow:1px 1px 0 #000,
+                -1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+    top:120px;
+    left:210px;
+    line-height:12px;
+    letter-spacing:0.05em;
+  }
+  .furima3__download{
+    height:130px;
+    width:800px;
+    margin-top:30px;
+  }
+    .applelogo2{
+        height:50px;
+        width:170px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .googlelogo2{
+        height:50px;
+        width:170px;
+    }
+
+.furima4{
+    height:750px;
+    width:100%;
+}
+  .furima4-use{
+    height:520px;
+    width:100%;
+  }
+    .furima4-point{
+      font-size:24px;
+      font-weight:bolder;
+      position:relative;
+      top:60px;
+      left:630px;
+    }
+  .furima-reason2{
+    height:330px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    position:relative;
+    top:100px;
+  }
+  .furima4-reason__pic1{
+    height:250px;
+    width:250px;
+    margin-left:150px;
+  }
+  .reason4{
+    height:350px;
+    width:250px;
+  }
+  .furima4-reason__pic2{
+    height:250px;
+    width:250px;
+  }
+  .reason5{
+    height:350px;
+    width:250px;
+  }
+  .furima4-reason__pic3{
+    height:250px;
+    width:250px;
+    margin-right:200px;
+  }
+  .reason6{
+    height:350px;
+    width:250px;
+  }
+  .furima4-catch{
+    height:50px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+  }
+    .furima4-catch__copy1{
+      font-size:18px;
+      font-weight:bolder;
+      margin-left:150px;
+    }
+    .furima4-catch__copy2{
+      font-size:18px;
+      font-weight:bolder;
+    }
+    .furima4-catch__copy3{
+      font-size:18px;
+      font-weight:bolder;
+      margin-right:200px;
+    }
+  .furima4-description{
+    height:200px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+  }
+    .furima4-description__1{
+      line-height:7px;
+      margin-left:150px;
+    }
+    .furima4-description__2{
+      line-height:7px;
+    }
+    .furima4-description__3{
+      line-height:7px;
+      margin-right:180px;
+    }
+
+.furima5{
+  height:1000px;
+  width:100%;
+  background-color: gainsboro;
+}
+  .furima5-category{
+    height:50px;
+    width:100%;
+    font-size:28px;
+    font-weight:bolder;
+    text-align:center;
+    position:relative;
+    top:80px;
+  }
+  .furima5-item{
+    font-size:24px;
+    font-weight:bolder;
+    color:#2CEAA3;
+    text-align:center;
+    position:relative;
+    top:75px;
+  }
+  .furima5-picture{
+    position:relative;
+    top:100px;
+    display:flex;
+    justify-content:space-between;
+  }
+    .furima5-picture1{
+      height:100px;
+      width:100px;
+      .ra-menlogo{
+        height:250px;
+        width:250px;
+        margin-left:300px;
+      }
+    }
+    .furima5-picture2{
+      height:100px;
+      width:100px;
+      .currylogo{
+        height:250px;
+        width:250px;
+        margin-left:150px;
+      }
+    }
+    .furima5-picture3{
+      .yakinikulogo{
+        height:250px;
+        width:250px;
+        margin-right:300px;
+      }
+    }
+  .furima5-brand{
+    font-size:28px;
+    font-weight:bolder;
+    position:relative;
+    text-align:center;
+    top:180px;
+  }
+  .furima5-item2{
+    font-size:24px;
+    font-weight:bolder;
+    color:#2CEAA3;
+    position:relative;
+    text-align:center;
+    top:190px;
+  }
+  .furima5-picture2__brand{
+    height:745px;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    position:absolute;
+  }
+  .furima5-picture4{
+    height:200px;
+    width:200px;
+    position:relative;
+    top:220px;
+    left:160px;
+    .ra-menlogo2{
+      height:250px;
+      width:250px;
+    }
+  }
+  .furima5-picture5{
+    height:200px;
+    width:200px;
+    position:relative;
+    top:220px;
+    right:25px;
+    .currylogo2{
+      height:250px;
+      width:250px;
+    }
+  }
+  .furima5-picture6{
+    height:200px;
+    width:200px;
+    position:relative;
+    top:220px;
+    right:210px;
+    .yakinikulogo2{
+      height:250px;
+      width:250px;
+    }
+  }
+
+.furima6{
+  height:300px;
+  width:100%;
+}
+  .picture3{
+    height:370px;
+    width:100%;
+    position:absolute;
+  }
+  .furima6-copy{
+    font-size:24px;
+    font-weight:bolder;
+    color:white;
+    text-shadow:1px 1px 0 #000,
+                -1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+    position:relative;
+    text-align:center;
+    top:100px;
+  }
+  .furima6-copy2{
+    font-size:34px;
+    font-weight:bolder;
+    color:white;
+    text-shadow:1px 1px 0 #000,
+                -1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+    position:relative;
+    text-align:center;
+    top:110px;
+  }
+  .furima6-download{
+    .applelogo3{
+      margin-top:20px;
+      margin-right:10px;
+      border-radius: 10px 10px 10px 10px;
+    }
+    .googlelogo3{
+      margin-top:20px;
+    }
+  }
