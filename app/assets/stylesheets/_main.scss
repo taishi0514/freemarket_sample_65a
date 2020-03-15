@@ -1,6 +1,39 @@
 .main{
   height:3710px;
 }
+  .auction{
+    height:120px;
+    width:120px;
+    color:white;
+    font-size:18px;
+    border:1px solid green;
+    border-radius:10px;
+    background-color: green;;
+    position:fixed;
+    text-align: center;
+    bottom:30px;
+    right:30px;
+    z-index:100;
+    .auction__button{
+      a{
+        text-decoration: none;
+      }
+      .auction2{
+        margin-top:15px;
+      }
+      .button2{
+        background-color: green;
+        color:white;
+        border:none;
+        margin-top:10px;
+      }
+    }
+    .camera__button{
+      font-size:50px;
+      background-color:green;
+      margin-top:10px;
+    }
+  }
 
 .furima{
     height:510px;
@@ -33,7 +66,7 @@
         top:210px;
         left:50px;
         letter-spacing:0.05em;
-        line-height:15px;
+        line-height:30px;
     }
       .furima__download{
           margin-top:20px;
@@ -167,16 +200,16 @@
       .furima-description__1{
         font-size: 16px;
         margin-left:170px;
-        line-height:12px;
+        line-height:24px;
       }
       .furima-description__2{
         font-size:16px;
-        line-height:12px;
+        line-height:24px;
       }
       .furima-description__3{
         font-size:16px;
         margin-right:180px;
-        line-height:12px;
+        line-height:24px;
       }
 
 .furima3{
@@ -211,7 +244,7 @@
                 -1px -1px 0 #000;
     top:120px;
     left:210px;
-    line-height:12px;
+    line-height:24px;
     letter-spacing:0.05em;
   }
   .furima3__download{
@@ -305,14 +338,14 @@
     justify-content:space-around;
   }
     .furima4-description__1{
-      line-height:7px;
+      line-height:24px;
       margin-left:150px;
     }
     .furima4-description__2{
-      line-height:7px;
+      line-height:24px;
     }
     .furima4-description__3{
-      line-height:7px;
+      line-height:24px;
       margin-right:180px;
     }
 
