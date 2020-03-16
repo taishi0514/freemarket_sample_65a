@@ -1,19 +1,18 @@
 .top-header
-  .top-logo
-    = image_tag 'logos/logo.png', class: 'hoge'
-    = fa_icon 'search', class: 'icon'
-    .categories カテゴリーから探す
-    = fa_icon 'bars', class: 'ican'
-    .tags ブランドから探す
-    = fa_icon 'tags', class: 'ipan'
-    .form
-      %form.new_message
-        %input{type: "text", class: 'input_box', placeholder: '何をお探しですか？'} 
-        
-.header__right
-  - if user_signed_in?
-    = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"
-  - else
-    = link_to "ログイン", new_user_session_path, class: "header__right--btn"
-    = link_to "新規登録", new_user_registration_path, class: "header__right--btn"
-  = yield
+  .header
+    .header__logo
+      = image_tag 'logos/logo.png', class: 'picture'
+      %form.search_bar
+        %input{type: "text", class: 'input_box', placeholder: 'キーワードから探す'}
+      %button{class: "HamlBtn", type: "submit"}
+        =fa_icon 'search', class: 'icon'
+      %ul.one
+        %li.list_man
+          = link_to 'カテゴリー', class: 'categories'
+        %li.list_men
+        = link_to 'ブランド', class: 'brand'
+      %ul.two
+        %li.nets
+          =link_to 'ログイン', class: 'news'
+        %li.bucks
+        = link_to '新規会員登録', class: 'logins'
