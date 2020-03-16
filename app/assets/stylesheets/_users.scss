@@ -1,6 +1,3 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 .top-header {
     background-color:#cfe;
     width:100%;
@@ -17,7 +14,6 @@
         padding:70px;
         display:flex;
         z-index:2;
-        // position:absolute;
         position:relative;
         bottom:60px;
         }
@@ -43,7 +39,6 @@
             .categories {
                 position:absolute;
                 bottom:55px;
-                // left:240px;
                 left:16.5%;
             }
             .ican {
