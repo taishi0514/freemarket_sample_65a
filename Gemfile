@@ -74,5 +74,5 @@ gem 'erb2haml'
 gem "font-awesome-rails"
 gem 'font-awesome-sass'
 gem 'haml-rails'
-gem 'fog-aws'
+gem 'fog-aws'	
 gem 'mini_magick'
