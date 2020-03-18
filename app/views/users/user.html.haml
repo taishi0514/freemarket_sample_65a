@@ -1,0 +1,77 @@
+.header
+  .header__logo
+    = image_tag 'logos/logo.png', class: 'picture'
+    %form.search_bar
+      %input{type: "text", class: 'input_box', placeholder: 'キーワードから探す'}
+    %button{class: "HamlBtn", type: "submit"}
+      =fa_icon 'search', class: 'icon'
+    %ul.one
+      %li.list_man
+        = link_to 'カテゴリー', class: 'categories'
+      %li.list_men
+      = link_to 'ブランド', class: 'brand'
+    %ul.two
+      %li.nets
+        = link_to 'ログイン', class: 'news'
+      %li.bucks
+      = link_to '新規会員登録', class: 'logins'
+  .manu_bar
+    %ul.three
+      %li.thing
+      = link_to 'メルカリ'
+      %li.four
+      = link_to 'マイページ'
+      %p.dow  >
+  .main
+    .main__left
+      %ul.setting
+        %li= link_to 'マイページ', '#' 
+        %li= link_to 'お知らせ', '#'
+        %li= link_to 'やることリスト', '#'
+        %li= link_to 'いいね！一覧', '#'
+        %li= link_to '出品する', '#'
+        %li= link_to '出品した商品 - 出品中', '#'
+        %li= link_to '出品した商品 - 取引中', '#'
+        %li= link_to '出品した商品 - 売却済み', '#'
+        %li= link_to '購入した商品 - 取引中', '#'
+        %li= link_to '購入した商品 - 過去の取引', '#'
+        %li= link_to 'ニュース一覧', '#'
+        %li= link_to '評価一覧', '#'
+        %li= link_to 'ガイド', '#'
+        %li= link_to 'お問い合わせ', '#', class:'got'
+    .main__left1
+      %h3.dani メルペイ
+      %ul.setted
+        %li= link_to '残高・振り込み申請','#'
+        %li= link_to 'ポイント','#', class: 'get'
+    .main__left2
+      %h3.third 設定
+      %ul.set
+        %li= link_to 'プロフィール','#'
+        %li= link_to '発送元・お届け先住所変更','#'
+        %li= link_to '支払い方法','#'
+        %li= link_to 'メール/パスワード','#'
+        %li= link_to '本人情報','#'
+        %li= link_to '電話番号の確認','#'
+        %li= link_to 'ログアウト','#', class: 'git'
+  .main__right
+    .second
+      = image_tag 'logos/logo.jpeg', class: 'rainbow'
+      .tall
+        = link_to {image_tag 'logos/donald.jpeg', class: 'duckin'}
+        %p= link_to 'たいぴー','#',class: 'lakers'
+        %p.goods 評価   
+        %p.products 出品数
+    .lister
+      %ul.choice
+      %li= link_to 'お知らせ','#', class: 'left__box'
+      %li= link_to 'やることリスト', '#', class: 'right__box'
+    .tab__box
+      %ul.choose
+        %li= link_to '#'
+        = image_tag 'logos/peach-1.jpg'
+        %li= link_to '#'
+        %li= link_to '#'
+      -# %li.notifications お知らせ
+      -# %li.doing やることリスト
+      -# = link_to '一覧を見る'
