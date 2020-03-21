@@ -1,35 +1,52 @@
-%header
-  .header__logo
-    = image_tag 'logos/logo.png',class:'logo-size'
+= render "users/header"
 %main
   %section.container
     %h2.container__message 新規会員登録
     .container__main
       .account-page__inner--right.user-form
         = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-          = devise_error_messages!
+          = render "devise/shared/error_messages", resource: @user
           .field
-            .field-label
-              = f.label :name
-            .field-input
-              = f.text_field :name, autofocus: true
+            = f.label :nickname,"ニックネーム"
+            %br/
+            = f.text_field :nickname
           .field
-            .field-label
-              = f.label :email
-            .field-input
-              = f.email_field :email
+            = f.label :email,"メールアドレス"
+            %br/
+            = f.text_field :email
           .field
-            .field-label
-              = f.label :password
-              %i (英数字8文字以上)
-            .field-input
-              = f.password_field :password, autocomplete: "off"
+            = f.label :password,"パスワード"
+            - if @minimum_password_length
+              %em
+                (#{@minimum_password_length} characters minimum)
+            %br/
+            = f.password_field :password, autocomplete: "new-password"
           .field
-            .field-label
-              = f.label :password_confirmation
-            .field-input
-              = f.password_field :password_confirmation, autocomplete: "off"
+            = f.label :password_confirmation,"確認用パスワード"
+            %br/
+            = f.password_field :password_confirmation, autocomplete: "new-password"
+          .field
+            = f.label :family_name_kanji,"姓（漢字）"
+            %br/
+            = f.text_field :family_name_kanji
+          .field
+            = f.label :last_name_kanji,"名（漢字）"
+            %br/
+            = f.text_field :last_name_kanji
+          .field
+            = f.label :family_name_kana,"姓（カタカナ全角）"
+            %br/
+            = f.text_field :family_name_kana
+          .field
+            = f.label :last_name_kana,"名（カタカナ全角）"
+            %br/
+            = f.text_field :last_name_kana
+          .field
+            = f.label :birthday,"生年月日（例：1990年05月20日は１９９００５２０と記入）"
+            %br/
+            = f.text_field :birthday
           .actions
-            = f.submit "Create Account", class: 'btn'
+            = f.submit "次へ"
+        = render "devise/shared/links"
 
-= render "users/footer_furima"
+= render "users/footer"
