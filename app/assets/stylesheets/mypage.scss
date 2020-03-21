@@ -227,7 +227,6 @@
                 position:relative;
                 bottom:130px;
                 right:56px;
-                // display:inline-block;
                 background-color:rgb(133, 209, 63);
             }
             a {
@@ -241,5 +240,36 @@
                 opacity: 0.9 ;
             }
         }
+        .tab__box {
+            background-color:#808080;
+            width:100%;
+            position:relative;
+            bottom:104%;
+            display:flex;
+            .choose {
+                display:inline-block;
+                list-style:none;
+                display:flex;
+                li {
+                    height:30px;
+                    // border-bottom:1px solid #9f99a3;
+                    display:flex;
+                    font-size:12px;
+                }
+                .image__left{
+                    width:40px;
+                    height:40px;
+                    margin-right:130%;
+                    z-index:1;
+                    display:flex;
+                    float:right;
+                }
+                    a {
+                        text-decoration:none;
+                        color:#fff;
+                        display:block;
+                    }
+                }
+            }
+        }
     }
-}   

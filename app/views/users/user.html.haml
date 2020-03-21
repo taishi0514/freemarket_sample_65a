@@ -5,12 +5,13 @@
       %input{type: "text", class: 'input_box', placeholder: 'キーワードから探す'}
     %button{class: "HamlBtn", type: "submit"}
       =fa_icon 'search', class: 'icon'
-    %ul.one
+    .nav
+    %ul.left
       %li.list_man
         = link_to 'カテゴリー', class: 'categories'
       %li.list_men
       = link_to 'ブランド', class: 'brand'
-    %ul.two
+    %ul.right
       %li.nets
         = link_to 'ログイン', class: 'news'
       %li.bucks
@@ -25,7 +26,7 @@
   .main
     .main__left
       %ul.setting
-        %li= link_to 'マイページ', '#' 
+        %li= link_to 'マイページ', '#'
         %li= link_to 'お知らせ', '#'
         %li= link_to 'やることリスト', '#'
         %li= link_to 'いいね！一覧', '#'
@@ -68,10 +69,7 @@
       %li= link_to 'やることリスト', '#', class: 'right__box'
     .tab__box
       %ul.choose
+        %li= link_to 'クーポンポイントバック（期間限定）', '#'
+        = image_tag 'logos/peach-1.jpg', class:'image__left'
         %li= link_to '#'
-        = image_tag 'logos/peach-1.jpg'
-        %li= link_to '#'
-        %li= link_to '#'
-      -# %li.notifications お知らせ
-      -# %li.doing やることリスト
-      -# = link_to '一覧を見る'
+        %li= link_to '一覧を見る', '#',class: 'mypage__list'

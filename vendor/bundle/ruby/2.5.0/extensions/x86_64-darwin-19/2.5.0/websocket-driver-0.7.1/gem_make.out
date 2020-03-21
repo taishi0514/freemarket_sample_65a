@@ -1,0 +1,15 @@
+current directory: /Users/Taipi/freemarket_sample_65a/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+/Users/Taipi/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200319-22151-5h8c0h.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Taipi/freemarket_sample_65a/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/Taipi/freemarket_sample_65a/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+
+current directory: /Users/Taipi/freemarket_sample_65a/vendor/bundle/ruby/2.5.0/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20200319-22151-ew9uvi
