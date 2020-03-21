@@ -3,8 +3,7 @@ Rails.application.routes.draw do
 
   get 'posts', to: 'users#index'
   root to: 'users#index'
-  get 'prodact/index'
-end
+  get “prodact/index/:id” => “prodact#index”
 
 
 
