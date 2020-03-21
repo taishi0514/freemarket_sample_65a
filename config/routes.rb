@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  # get 'posts', to: 'users#index'
+
+  get 'posts', to: 'users#index'
   root to: 'users#index'
-  root to: 'item#index'
-end
+  get “prodact/index/:id” => “prodact#index”
 
 
 
