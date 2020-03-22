@@ -1,0 +1,35 @@
+.main
+    .main__left
+        %ul
+            =  link_to 'マイページ'
+            =  link_to 'お知らせ'
+            =  link_to 'やることリスト'
+            =  link_to 'いいね！一覧'
+            =  link_to '出品する'
+            =  link_to '出品した商品 - 出品中'
+            =  link_to '出品した商品 - 取引中'
+            =  link_to '出品した商品 - 売却済み'
+            =  link_to '購入した商品 - 取引中'
+            =  link_to '購入した商品 - 過去の取引'
+            =  link_to 'ニュース一覧'
+            =  link_to '評価一覧'
+            =  link_to 'ガイド'
+            =  link_to 'お問い合わせ'
+        %p.one メルペイ
+            = link_to '残高・振り込み申請'
+            = link_to 'ポイント'
+        %p.two 設定
+            = link_to 'プロフィール'
+            = link_to '発送元・届け先住所変更'
+            = link_to '支払い方法'
+            = link_to 'メール/パスワード'
+            = link_to '本人情報'
+            = link_to '電話番号の確認'
+            = link_to 'ログアウト'
+    .main__right
+        =image_tag ''
+            %p. 評価
+            %p. 出品数
+        %li.notifications お知らせ
+        %li.doing やることリスト
+            = link_to '一覧を見る'
