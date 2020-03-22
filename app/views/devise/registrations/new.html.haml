@@ -13,7 +13,7 @@
           .field
             = f.label :email,"メールアドレス"
             %br/
-            = f.text_field :email
+            = f.text_field :email, :placeholder => "（例）〇〇〇＠XXX"
           .field
             = f.label :password,"パスワード"
             - if @minimum_password_length
@@ -42,9 +42,9 @@
             %br/
             = f.text_field :last_name_kana
           .field
-            = f.label :birthday,"生年月日（例：1990年05月20日は１９９００５２０と記入）"
+            = f.label :birthday,"生年月日"
             %br/
-            = f.text_field :birthday
+            = f.text_field :birthday, :placeholder => "（例：1990年05月20日は19900520と記入）"
           .actions
             = f.submit "次へ"
         = render "devise/shared/links"

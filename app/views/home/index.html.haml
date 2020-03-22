@@ -1,11 +1,3 @@
 = render "users/header"
-%h1 トップページ
-- if user_signed_in?
-  %h2 ログインしています
-  = link_to "ログアウト", destroy_user_session_path, method: :delete
-- else
-  %h2 ログインしていません
-  = link_to "新規登録", new_user_registration_path
-  = link_to "ログイン", new_user_session_path
-
+= render "users/main_furima"
 = render "users/footer"

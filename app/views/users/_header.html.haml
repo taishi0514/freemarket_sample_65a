@@ -10,11 +10,10 @@
         = link_to 'カテゴリー', class: 'categories'
       %li.list_men
       = link_to 'ブランド', class: 'brand'
-    %ul.two
-      %li.nets
-        =link_to 'ログイン', class: 'news'
-      %li.bucks
-      = link_to '新規会員登録', class: 'logins'
+      %li.login
+        - if user_signed_in?
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          = link_to "新規登録", new_user_registration_path
+          = link_to "ログイン", new_user_session_path
 
-
-      
