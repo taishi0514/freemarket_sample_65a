@@ -1,0 +1,2 @@
+class Prodact < ApplicationRecord
+end

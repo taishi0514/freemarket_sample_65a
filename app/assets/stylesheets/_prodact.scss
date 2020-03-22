@@ -45,7 +45,10 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
+    padding: 0px;
+    img{
+      height: 200px;
+    }
   }
 
 
@@ -56,11 +59,26 @@ body{
     .nedan{
       font-weight:bold;
       font-size: 46px;
-
     }
     .zeikin{
-      margin: 0px;
+      margin-top: 0px;
     }
+  }
+  .purchase{
+    background-color: #3CCACE;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    a{
+      color: white;
+      font-size: 25px;
+      line-height: 60px;
+    }
+  }
+  .name{
+    font-size: 18px;
+    margin-bottom: 30px;
   }
   .setumei{
     margin-bottom: 20px;

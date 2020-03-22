@@ -1,4 +1,4 @@
-.main{
+  .main{
   height:3710px;
   .auction{
     height:130px;
@@ -72,6 +72,7 @@
       width:100%;
     }
     .furima__copy{
+        width:800px;
         color:white;
         font-size: 60px;
         text-shadow:1px 1px 0 #000,
@@ -83,6 +84,7 @@
         left:50px;
     }
     .furima__copy2{
+      width:800px;
         color:white;
         font-size: 20px;
         text-shadow:1px 1px 0 #000,
@@ -239,6 +241,7 @@
     position:absolute;
   }
   .furima3__copy{
+    width:200px;
     font-size:28px;
     color:white;
     font-weight: bolder;
@@ -251,6 +254,7 @@
     left:210px;
   }
   .furima3__copy2{
+    width:370px;
     font-size:16px;
     color:white;
     font-weight:bolder;
@@ -292,7 +296,7 @@
       font-weight:bolder;
       position:relative;
       top:60px;
-      left:630px;
+      // left:630px;
     }
   .furima-reason2{
     height:330px;
