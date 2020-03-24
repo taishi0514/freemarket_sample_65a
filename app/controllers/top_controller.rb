@@ -1,3 +1,0 @@
-class TopController < ApplicationController
-
-end
