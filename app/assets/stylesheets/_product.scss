@@ -25,7 +25,7 @@ body{
 
 
 
-.prodact_main{
+.product_main{
   background-color: #ffffff;
   width: 700px;
   height: auto;
@@ -56,16 +56,40 @@ body{
 
   .test_test1{
     text-align: center;
-    .nedan{
+    .price{
       font-weight:bold;
       font-size: 46px;
     }
-    .zeikin{
+    .tax{
       margin-top: 0px;
     }
   }
   .purchase{
     background-color: #3CCACE;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    a{
+      color: white;
+      font-size: 25px;
+      line-height: 60px;
+    }
+  }
+  .purchase_0{
+    background-color: blue;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    a{
+      color: white;
+      font-size: 25px;
+      line-height: 60px;
+    }
+  }
+  .purchase_1{
+    background-color: red;
     height: 60px;
     width: 100%;
     text-align: center;
@@ -126,7 +150,7 @@ body{
   }
 }
 
-.prodact_from{
+.product_from{
   background-color: #ffffff;
   height: auto;
   width: 700px;
@@ -154,7 +178,7 @@ body{
 }
 
 
-.prodact_list{
+.product_list{
   height: auto;
   width: 700px;
   margin: 0 auto;
@@ -174,4 +198,29 @@ body{
   margin-bottom: 300px;
   font-size: 24px;
   font-weight: bold;
+}
+
+.contents_destory{
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+  &__inner{
+    text-align: center;
+    display: block;
+    h3{
+      color: black;
+    }
+    a{
+      color: #3CCACE;
+    }
+  }
+}
+
+.edit{
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+  h1{
+    text-align: center;
+  }
 }

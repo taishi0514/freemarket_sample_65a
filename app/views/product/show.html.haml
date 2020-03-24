@@ -1,8 +1,8 @@
-.prodact_main
+.product_main
   %h1 product3
   %ul
     %li 
-      = image_tag 'logos/main_image', alt: '魚', class: 'test'
+      = image_tag 'logos/main_image.png', alt: '魚', class: 'test'
   %ul.list_image
     %li
       = image_tag 'logos/list_01.png', alt: '魚', class: 'list'
@@ -15,9 +15,19 @@
 
 
   .test_test1
-    .nedan ¥30000
-    %p.zeikin  (税込) 送料込み
-  %p.setumei 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰
+    .price ¥30000
+    %p.tax  (税込) 送料込み
+  -# - if user_signed_in? 
+  -#   .purchase
+  -#     = link_to '購入ページ','#'
+  - if user_signed_in? && current_user.id 
+    .purchase_0
+      = link_to "変更", "/product/1/edit", method: :get
+    .purchase_1
+      = link_to '削除', "/product/1", method: :delete
+  - else
+    %p.setumei 親譲りの無鉄砲で小供の時から損ばかりしている。小学校に居る時分学校の二階から飛び降りて一週間ほど腰を抜かした事がある。なぜそんな無闇をしたと聞く人があるかも知れぬ。別段深い理由でもない。新築の二階から首を出していたら、同級生の一人が冗談に、いくら威張っても、そこから飛び降りる事は出来まい。弱虫やーい。と囃したからである。小使に負ぶさって帰って来た時、おやじが大きな眼をして二階ぐらいから飛び降りて腰
+  .name さんま
   %table
     %tr
       %td.one 出品
@@ -45,7 +55,7 @@
     %tr
       %td.one 発送元の地域		
       %td 	
-        = link_to(content_tag(:i, '岩手県', class: 'kategori'))
+        = link_to(content_tag(:i, '岩手県', class: 'categories'))
     %tr
       %td.one 発送日の目安			
       %td 4-7日で発送
@@ -60,7 +70,7 @@
 
 
 
-.prodact_from
+.product_from
   %textarea.message
   %p.meassage_inner
     相手のことを考え丁寧なコメントを心がけましょう。
@@ -70,7 +80,7 @@
     %i.fa.fa-comment
     コメント
 
-%ul.prodact_list
+%ul.product_list
   %li
     = link_to(content_tag(:i, ' 前の商品', class: 'fa fa-angle-left'))
   %li
