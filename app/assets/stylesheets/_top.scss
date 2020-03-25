@@ -10,24 +10,24 @@
     display: flex;
     align-items: center;
     .picture {
-        width: 150px;
-        display:flex;
-        position:relative;
-        right:29px;
-        left:190px;
-        bottom:20px;
-        vertical-align: bottom;
-      }
-      .input_box {
-        width:833px;
-        position:relative;
-        bottom:20px;
-        left:26%;
-        padding:8px;
-        font-size: inherit;
-        display:flex;
-        float:right;
-      }
+      width: 150px;
+      display:flex;
+      position:relative;
+      right:29px;
+      left:190px;
+      bottom:20px;
+      vertical-align: bottom;
+    }
+    .input_box {
+      width:833px;
+      position:relative;
+      bottom:20px;
+      left:26%;
+      padding:8px;
+      font-size: inherit;
+      display:flex;
+      float:right;
+    }
     .HamlBtn {
       height:43px;
       width:43px;
@@ -48,64 +48,36 @@
         font-size:20px;
       }
     }
+  }
   .one {
     list-style:none;
     display:flex;
-    height:100px;
-    width:2000px;
+    height:70px;
     position:relative;
     top:65px;
     right:830px;
     color:#fff;
     font-size:14px;
     .list_man {
-        text-decoration: none;
-        justify-content:space-between;
+      text-decoration: none;
+      justify-content:space-between;
     }
     a {
-        display:block;
-        color:#000;
-        text-decoration:none;
-        position:relative;
-        margin-right:40px;
-        height:300px;
-        width:70px;
-    }
-    a:hover {
-        color:#FFCC33   ;
-    }
-      .list_men {
-          position:absolute;
-          display:flex;
-          left:34px;
-      }
-    }
-      }
-  }
-  .two {
-      width:2200px;
-      list-style:none;
-      display:flex;
-      height:60px;
-      position:relative;
-      top:50px;
-      right:205px;
-      color:#fff;
-      font-size:14px;
-      .nets {
-          text-decoration: none;
-          justify-content:space-between;
-      }
-  a {
       display:block;
       color:#000;
       text-decoration:none;
       position:relative;
-      margin-right:20px;
-  }
-  .bucks {
+      margin-right:40px;
+      width:70px;
+    }
+    .list_men {
       position:absolute;
-      display:flex;
+        display:flex;
       left:34px;
+    }
   }
+  .login{
+    margin-left: 300px;
+    display: flex;
   }
+}
