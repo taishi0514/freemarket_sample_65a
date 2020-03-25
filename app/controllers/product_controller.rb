@@ -10,8 +10,5 @@ class ProductController < ApplicationController
   def destroy
   end
 
-  private
-
-
   
 end
