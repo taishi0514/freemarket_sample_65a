@@ -1,7 +1,8 @@
 @import "sanitize";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import 'product';
-@import "top";
+@import "./header";
+@import "./footer";
+@import "./user";
+@import "prodact";
 @import "main";
-@import "footer";
