@@ -8,5 +8,5 @@ Rails.application.routes.draw do
     post 'addresses', to: 'users/registrations#create_address'
   end
   root to: 'users#index'
-  resources :product, only: [:show, :destroy, :edit]
+  resources :item, only: [:index]
 end

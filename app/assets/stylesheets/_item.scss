@@ -1,4 +1,196 @@
-.main_item{
-  height:700px;
-  width:700px;
+.item_buypage{
+  height:1400px;
+  width:100%;
+  background-color:#CCCCCC;
 }
+  .item_top{
+    height:150px;
+    width:100%;
+    .item_toplogo{
+      height:60px;
+      width:300px;
+      margin:auto;
+      text-align:center;
+      padding-top:50px;
+      .picture{
+        height:55px;
+      }
+    }
+  }
+
+  .main_item{
+    height:950px;
+    width:100%;
+    .main_itempage{
+      height:950px;
+      width:700px;
+      background-color:white;
+      margin-left:380px;
+      .main_itempage1{
+        height:100px;
+        border-bottom:solid 1px #C0C0C0;
+        .item{
+          height:50px;
+          width:700px;
+          font-size:22px;
+          font-weight:bold;
+          letter-spacing:0.05em;
+          padding:35px;
+          padding-left:270px;
+        }
+      }
+
+      .main_itempage2{
+        height:150px;
+        border-bottom:solid 1px #C0C0C0;
+        letter-spacing:0.05em;
+        display:flex;
+        .main_itempage2_picture{
+          height:150px;
+          width:700px;
+          position:absolute;
+          .watch{
+            height:90px;
+            width:60px;
+            position:relative;
+            left:190px;
+            top:30px;
+          }
+          .main_itempage2_item{
+            width:200px;
+            font-size:12px;
+            left:270px;
+            bottom:55px;
+            line-height:25px;
+            position:relative;
+            span{
+              font-weight:bold;
+            }
+          }
+        }
+      }
+
+      .main_itempage3{
+        height:150px;
+        border-bottom:solid 1px #C0C0C0;
+        .main_itempage3_money{
+          font-size: 18px;
+          font-weight: bold;
+          width:250px;
+          margin-left:190px;
+          padding-top:30px;
+          .money{
+            font-size: 28px;
+            font-weight: bold;
+            position:relative;
+            left:130px;
+          }
+        }
+        .main_itempage3_box{
+          padding-left:190px;
+          padding-top:10px;
+          #point_check{
+            background-color: gray;
+          }
+          label{
+            color: gray;
+          }
+        }
+      }
+
+      .main_itempage4{
+        height:200px;
+        border-bottom:solid 1px #C0C0C0;
+        letter-spacing:0.05em;
+        .main_itempage4_box{
+          height:60px;
+          width:700px;
+          display:flex;
+          .main_itempage4_text{
+            font-size:14px;
+            font-weight:bold;
+            width:250px;
+            height:50px;
+            margin-left:190px;
+            padding-top:30px;
+                    }
+          .main_itempage4_button{
+            height:100px;
+            width:100px;
+            padding-top:27px;
+            a{
+              text-decoration:none;
+              font-size:14px;
+              color:skyblue;
+            }
+          }
+        }
+        .main_itempage4_card{
+          font-size: 12px;
+          width:300px;
+          padding-left:190px;
+        }
+        .main_itempage4_visa{
+          width:300px;
+          padding-left:190px;
+          padding-top:10px;
+        }
+      }
+
+      .main_itempage5{
+        height:200px;
+        border-bottom:solid 1px #C0C0C0;
+        letter-spacing:0.05em;
+        display:flex;
+        .main_itempage5_address{
+          font-size:14px;
+          font-weight:bold;
+          width:250px;
+          height:120px;
+          margin-left:190px;
+          padding-top:30px;
+          .address{
+            font-size:12px;
+            font-weight:normal;
+            position:relative;
+            top:10px;
+          }
+        }
+        .main_itempage5_button{
+          height:50px;
+          width:100px;
+          display:inline-block;
+          a{
+            font-size:14px;
+            margin-top:30px;
+            display:block;
+            text-decoration: none;
+            color: skyblue;
+          }
+        }
+      }
+
+      .main_itempage6{
+        height:145px;
+        .main_itempage6_button{
+          height:50px;
+          width:300px;
+          background-color:red;
+          text-align:center;
+          margin-left:200px;
+          margin-top:40px;
+          position: absolute;
+          display:inline-block;
+          a{
+            height:50px;
+            text-decoration:none;
+            color:white;
+            font-weight:bold;
+            position:relative;
+            display:block;
+            padding-top:15px;
+          }
+        }
+      }
+    }
+  }
