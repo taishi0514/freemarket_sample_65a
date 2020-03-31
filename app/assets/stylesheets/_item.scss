@@ -1,12 +1,13 @@
-.item_buypage{
+.item__buypage{
   height:1400px;
   width:100%;
   background-color:#CCCCCC;
 }
-  .item_top{
+
+  .item__top{
     height:150px;
     width:100%;
-    .item_toplogo{
+    &--logo{
       height:60px;
       width:300px;
       margin:auto;
@@ -18,18 +19,18 @@
     }
   }
 
-  .main_item{
+  .main__item{
     height:950px;
     width:100%;
-    .main_itempage{
+    &--page{
       height:950px;
       width:700px;
       background-color:white;
       margin-left:380px;
-      .main_itempage1{
+      &__1{
         height:100px;
         border-bottom:solid 1px #C0C0C0;
-        .item{
+        &--item{
           height:50px;
           width:700px;
           font-size:22px;
@@ -40,12 +41,12 @@
         }
       }
 
-      .main_itempage2{
+      &__2{
         height:150px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         display:flex;
-        .main_itempage2_picture{
+        &--picture{
           height:150px;
           width:700px;
           position:absolute;
@@ -56,7 +57,7 @@
             left:190px;
             top:30px;
           }
-          .main_itempage2_item{
+          &__item{
             width:200px;
             font-size:12px;
             left:270px;
@@ -70,10 +71,10 @@
         }
       }
 
-      .main_itempage3{
+      &__3{
         height:150px;
         border-bottom:solid 1px #C0C0C0;
-        .main_itempage3_money{
+        &--money{
           font-size: 18px;
           font-weight: bold;
           width:250px;
@@ -86,7 +87,7 @@
             left:130px;
           }
         }
-        .main_itempage3_box{
+        &--box{
           padding-left:190px;
           padding-top:10px;
           #point_check{
@@ -98,15 +99,15 @@
         }
       }
 
-      .main_itempage4{
+      &__4{
         height:200px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
-        .main_itempage4_box{
+        &--box{
           height:60px;
           width:700px;
           display:flex;
-          .main_itempage4_text{
+          &__text{
             font-size:14px;
             font-weight:bold;
             width:250px;
@@ -114,7 +115,7 @@
             margin-left:190px;
             padding-top:30px;
                     }
-          .main_itempage4_button{
+          &__button{
             height:100px;
             width:100px;
             padding-top:27px;
@@ -125,24 +126,24 @@
             }
           }
         }
-        .main_itempage4_card{
+        &--card{
           font-size: 12px;
           width:300px;
           padding-left:190px;
         }
-        .main_itempage4_visa{
+        &--visa{
           width:300px;
           padding-left:190px;
           padding-top:10px;
         }
       }
 
-      .main_itempage5{
+      &__5{
         height:200px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         display:flex;
-        .main_itempage5_address{
+        &--address{
           font-size:14px;
           font-weight:bold;
           width:250px;
@@ -156,7 +157,7 @@
             top:10px;
           }
         }
-        .main_itempage5_button{
+        &--button{
           height:50px;
           width:100px;
           display:inline-block;
@@ -170,9 +171,9 @@
         }
       }
 
-      .main_itempage6{
+      &__6{
         height:145px;
-        .main_itempage6_button{
+        &--button{
           height:50px;
           width:300px;
           background-color:red;
