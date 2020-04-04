@@ -19,7 +19,7 @@
           = link_to 'ログイン', class: 'news'
         %li.bucks
           = link_to '新規会員登録', class: 'logins'
-.manu_bar
+.menu_bar
   %ul.three
     %li.thing
       = link_to 'メルカリ', '#'
@@ -43,36 +43,50 @@
         %li= link_to '評価一覧', '#'
         %li= link_to 'ガイド', '#'
         %li= link_to 'お問い合わせ', '#', class:'got'
-  -#   .main__left1
-  -#     %h3.dani メルペイ
-  -#     %ul.setted
-  -#       %li= link_to '残高・振り込み申請','#'
-  -#       %li= link_to 'ポイント','#', class: 'get'
-  -#   .main__left2
-  -#     %h3.third 設定
-  -#     %ul.set
-  -#       %li= link_to 'プロフィール','#'
-  -#       %li= link_to '発送元・お届け先住所変更','#'
-  -#       %li= link_to '支払い方法','#'
-  -#       %li= link_to 'メール/パスワード','#'
-  -#       %li= link_to '本人情報','#'
-  -#       %li= link_to '電話番号の確認','#'
-  -#       %li= link_to 'ログアウト','#', class: 'git'
-  -# .main__right
-  -#   .second
-  -#     = image_tag 'logos/logo.jpeg', class: 'rainbow'
-  -#     .tall
-  -#       = link_to {image_tag 'logos/donald.jpeg', class: 'duckin'}
-  -#       %p= link_to 'たいぴー','#',class: 'lakers'
-  -#       %p.goods 評価   
-  -#       %p.products 出品数
-  -#   .lister
-  -#     %ul.choice
-  -#     %li= link_to 'お知らせ','#', class: 'left__box'
-  -#     %li= link_to 'やることリスト', '#', class: 'right__box'
-  -#   .tab__box
-  -#     %ul.choose
-  -#       %li= link_to 'クーポンポイントバック（期間限定）', '#'
-  -#       = image_tag 'logos/peach-1.jpg', class:'image__left'
-  -#       %li= link_to '#'
-  -#       %li= link_to '一覧を見る', '#',class: 'mypage__list'
+        %h3.topic メルペイ
+      %ul.setted
+        %li= link_to '残高・振り込み申請','#'
+        %li= link_to 'ポイント', '#',class: 'get'
+        %h3.setting 設定
+      %ul.set
+        %li= link_to 'プロフィール','#'
+        %li= link_to '発送元・お届け先住所変更','#'
+        %li= link_to '支払い方法','#'
+        %li= link_to 'メール/パスワード','#'
+        %li= link_to '本人情報','#'
+        %li= link_to '電話番号の確認','#'
+        %li= link_to 'ログアウト','#', class: 'git'
+  .main__right
+    %section.into_box
+      = link_to "http://www.google.co.jp" do
+        = image_tag 'logos/donald.jpeg', class: 'person'
+        %h2.my_name tech
+        .longer
+          .evaluation 評価
+          %span.number 44
+          .count 出品数
+          %span.number2 38
+    .covers
+      %ul.tab
+        %li.notifications 
+          %h3.left_tab= link_to 'お知らせ'
+        %li.todo
+          %h3.right_tab= link_to 'やることリスト'
+
+ 
+
+
+
+
+
+-# .furima6
+-#   =image_tag 'logos/picture3.jpg', class: 'picture3'
+-#   .furima6-copy
+-#     だれでもかんたん、人生を変えるフリマアプリ
+-#   .furima6-copy2
+-#     今すぐ無料ダウンロード！
+-#     .furima6-download
+-#       = link_to "http://www.google.co.jp", class:"apple__btn" do
+-#         = image_tag 'logos/applelogo.png', class: 'applelogo3'
+-#       = link_to "http://www.google.co.jp", class:"google__btn" do
+-#         = image_tag 'logos/googlelogo.png', class: 'googlelogo3'

@@ -71,3 +71,4 @@ gem 'font-awesome-sass'
 gem 'haml-rails'
 gem 'fog-aws'
 gem 'mini_magick'
+gem "jquery-rails"

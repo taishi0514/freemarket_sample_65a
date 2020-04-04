@@ -133,7 +133,7 @@
         }
     }
 } 
-.manu_bar {
+.menu_bar {
     width:100%;
     display:flex;
     border-top: 1px solid #eee;
@@ -142,6 +142,7 @@
     position:relative;
     top:108px;
     box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+    // float:left;
     .three {
         width:1020px;
         margin:0 auto;
