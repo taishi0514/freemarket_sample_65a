@@ -1,0 +1,85 @@
+body{
+  background-color: #eee;
+  main{
+    .container {
+      height: calc(105vh - 250px - 0%);
+      width: 700px;
+      margin: 0 auto;
+      &__message{
+        padding: 40px;
+        color:black;
+        font-size:25px;
+        background-color: white;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+      hr{
+        border-width: 1px 0px 0px 0px;
+      }
+      &__main{
+        background-color: white;
+        padding: 40px 200px;
+      }
+      input[type="text"] {
+        width: 300px;
+        height: 40px;
+      }
+      input[type="email"] {
+        width: 300px;
+        height: 40px;
+      }
+      input[type="password"] {
+        width: 300px;
+        height: 40px;
+      }
+      ul {
+          padding: 0px;
+      }
+      .contents__btn{
+        display: block;
+        height: 70px;
+        width :360px;
+        margin: -10px auto 23px;
+        border-radius: 4px;
+        font-size:15px;
+        color:#fff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 70px;
+        &--icon{
+          padding-right:20px;
+        }
+        &--facebook{
+          background-color: #385185;
+        }
+        &--twitter{
+          background-color: #00bfff;
+        }
+        &--instagram{
+          background-color: #fc76bf;
+        }
+        &--e-mail{
+          background-color: red;
+        }
+      }
+    }
+  }
+}
+.form-group label {
+  font-weight: 600;
+}
+.form-group .input-default {
+  width: 100%;
+  margin: 8px 0 0;
+}
+
+
+.form-require {
+  background: #ea352d;
+  margin: 0 0 0 8px;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  vertical-align: top;
+}
