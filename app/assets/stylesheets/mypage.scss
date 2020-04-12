@@ -95,7 +95,7 @@
             }
         }
     }
-    
+
     .main__right {
         float:right;
         background-color:#000;
@@ -139,7 +139,7 @@
                         margin: 0 0 0 16px;
                         display: inline-block;
                         font-size: 14px;
-                        .count {
+                        .number2 {
                             margin: 0 0 0 8px;
                             font-size: 16px;
                         }
@@ -153,31 +153,46 @@
             .tab {
                 background: #eee;
                 list-style:none;
-                display:flex;
+                display:inline;
                 padding:0;
+                .active {
+                    background-color: #EEEEEE;
+                    width:50%;
+                    border-right:1px solid #9f99a3;
+                    display: inline-block;
+                    vertical-align: top;
+                    text-align: center;
+                    height:75px;
+                    cursor: auto;
+                    .left_tab  {
+                        padding:0;
+                        display:block;
+                        
+
+                    }
+                }
+                .todo {
+                    background-color:#EEEEEE;
+                    width:50%;
+                    float:right;
+                    display:inline-block;
+                    height:75px;
+                    text-align:center;
+                    vertical-align: top;
+                    .right_tab {
+                        padding:0;
+                    } 
+                }
                 a {
                     color:#333;
                     font-size:16px;
                     text-decoration:none;
-                    display:flex;
+                    display:block;
+                    height:75px;
+
                 }
-                .notifications {
-                    background: #fff;
-                    width:50%;
-                    border-right:1px solid #9f99a3;
-                    display: inline-block;
-                    text-align: center;
-                    vertical-align: top;
-                    .left_tab  {
-                        text-align:center;
-                        margin:0 auto;
-                    }
-                }
-                .todo {
-                    background: #fff;
-                    width:50%;
-                    margin:0;
-                    float:right;
+                a:hover {
+                    opacity:0.7;
                 }
             }
         }
