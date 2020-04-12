@@ -21,7 +21,7 @@
   }
   }
   .content__head {
-  margin: 0 0 20px;
+  margin: 0 0 0 20px;
   font-size: 16px;
   font-weight: bold;
   }
@@ -29,7 +29,7 @@
     width:240px;
     list-style:none;
     line-height:30px;
-    margin-right:100px;
+    margin: 0 0 0 20px;
     a{
       color:white;
       text-decoration:none;
@@ -39,4 +39,7 @@
 }
 img {
 height: 47px;
+}
+ul{
+  padding: 0;
 }
