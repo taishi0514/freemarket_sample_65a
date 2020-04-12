@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   end
   root to: 'users#index'
   resources :item, only: [:index]
+  resources :product, only: [:index, :edit, :show, :destroy]
 end
