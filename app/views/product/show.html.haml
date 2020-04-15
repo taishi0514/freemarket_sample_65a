@@ -18,17 +18,13 @@
   .test_test1
     .price ¥30000
     %p.tax  (税込) 送料込み
+  - if user_signed_in? 
     .purchase
       = link_to '購入ページ','#'
     .purchase_0
       = link_to '編集','1/edit', method: :get
     .purchase_1 
       %p  削除 
-    
-
-  - if user_signed_in? 
-
-    
   - elsif user_signed_in? && current_user.id ==@product.user_id
 
 
