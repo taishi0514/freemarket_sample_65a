@@ -1,9 +1,12 @@
+body{
+    background-color: rgb(245, 245, 245);
+}
 .header {
     background-color:#cfe;
     width:100%;
     position:absolute;
     height: 108px;
-    .header__second {
+    &__second {
         align-items: center;
         width:1020px;
         margin: 0 auto;
@@ -34,7 +37,7 @@
                     height:40px;
                     line-height: 1.4em;
                     width:830px;
-                    position:relative;
+                    // position:relative;
                     padding: 0px 50px 0px 10px;
                     border-radius:5px;
                     margin-top:10px;
@@ -51,12 +54,13 @@
                     margin-top:10px;
                     position:absolute;
                     left:94.3%;
+                    // left:90%;
                     border-radius:2px;
                     background-color: #3CCACE;
                     .icon {
                         color:#fff;
                         font-size:20px;
-                        display:flex;
+                        // display:flex;
                     }
                 }
             }

@@ -1,3 +1,4 @@
+%body
 .header
   .header__second
     .header__third
@@ -66,12 +67,62 @@
           %span.number 44
           .count 出品数
           %span.number2 38
-    .covers
-      %ul.tab.clearfix
+    %section.covers
+      %ul.tab
         %li.active
           %h3.left_tab= link_to 'お知らせ'
         %li.todo
           %h3.right_tab= link_to 'やることリスト'
+      .tab_content
+        %ul.tab_menu
+          %li
+            = link_to "http://www.google.co.jp" do
+              %figure.tom
+                = image_tag 'logos/LtXe7958_400x400.jpeg', class: 'others'
+              .ground
+                .in_content ヒロさん、他１２名が「ドラゴンボール」にいいねしました
+                %time
+                  =fa_icon 'clock', class: 'hours'
+                  %span.timer 10時間前
+          %li
+            = link_to "http://www.google.co.jp" do
+              %figure.tom
+                = image_tag 'logos/LtXe7958_400x400.jpeg', class: 'others'
+              .ground
+                .in_content ヒロさん、他１２名が「ドラゴンボール」にいいねしました
+                %time 
+                  =fa_icon 'clock', class: 'hours'
+                  %span.timer 10時間前
+          %li
+            = link_to "http://www.google.co.jp" do
+              %figure.tom
+                = image_tag 'logos/LtXe7958_400x400.jpeg', class: 'others'
+              .ground
+                .in_content ヒロさん、他１２名が「ドラゴンボール」にいいねしました
+                %time 
+                  =fa_icon 'clock', class: 'hours'
+                  %span.timer 10時間前
+          %li.last_tab
+            = link_to "一覧を見る" 
+    %section.bottom_tab
+      %h2.bought　購入した商品
+      %ul.deals
+        %li.activo 
+          %h3.deal=link_to '取引中' 
+        %li.vel
+          %h3.ago=link_to '過去の取引'
+      .bomber  
+        %ul.lister
+          %li.buy_one
+            = link_to "http://www.google.co.jp" do
+              %figure.user_inner
+                = image_tag 'logos/LtXe7958_400x400.jpeg', class: 'user_image'
+              .ground
+                .in_content 「ドラゴンボール」を購入しました。受取評価をしました。
+                .out_content 評価待ち
+          %li.last_one
+            = link_to "一覧を見る" 
+
 -# .furima6
 -#   =image_tag 'logos/picture3.jpg', class: 'picture3'
 -#   .furima6-copy

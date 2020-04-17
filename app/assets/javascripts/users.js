@@ -1,8 +1,8 @@
 $(function() {
-    $('li.notifications').click(function() {
-        var index = $('li.notifications').index(this);
+    $('tab.li').click(function() {
+        var index = $('tab.li').index(this);
         
-        $('li.notifications').removeClass('active');
+        $('tab.li').removeClass('active');
 
         $(this).addClass('active');
     });
