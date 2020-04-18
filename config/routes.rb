@@ -10,8 +10,7 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
   resources :item, only: [:index]
-  
   resources :product, only: [:edit, :show]
   post "product/:id/destroy" => "product#destroy"
-
+  get 'listingpage/index'
 end
