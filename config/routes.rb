@@ -10,7 +10,6 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
   resources :item, only: [:index]
-  
   resources :product, only: [:edit, :show, :destroy]
-
+  get 'listingpage/index'
 end
