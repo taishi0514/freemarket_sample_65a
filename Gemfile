@@ -77,4 +77,4 @@ gem 'haml-rails'
 gem 'fog-aws'	
 gem 'mini_magick'
 gem 'rails-i18n'
-
+gem 'jquery-rails'
