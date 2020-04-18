@@ -89,6 +89,8 @@
 .other
   = link_to(content_tag(:i, ' ベビー・キッズをもっと見る'))
     
+= render "users/footer
+
 .destroy
   .destroy__item
     .destroy__item__main
@@ -99,3 +101,4 @@
     .destroy__item__footer
       .destroy__item__footer__cancel キャンセル
       = link_to "削除","/product/#{@Product.id}",method: :DELETE, class: 'destroy__item__footer__delete'
+
