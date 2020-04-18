@@ -1,15 +1,26 @@
 class ProductController < ApplicationController
+  before_action :set_product
+  
   def show
-    @user = Product.find_by(id: params[:id])
   end
 
   def edit
   end
 
   def destroy
-    @Product = Product.find_by(id: params[:id])
-    @Product.destroy
-    redirect_to("/")
+    if @Product.destroy
+      flash[:notice] = "削除されました"
+      redirect_to(root_path)
+    else
+      flash[:notice] = "削除できませんでした"
+      redirect_to(root_path)
+    end
+  end
+
+  private
+
+  def set_product
+    @Product = Product.find(params[:id])
   end
 
   
