@@ -4,6 +4,17 @@
   padding: 40px;
 }
 
+.listingpage-text {
+  display: flex;
+  margin-bottom: 20px;
+  &__right{
+    background-color: #ff0211;
+    margin-left: 10px;
+    padding: 0px 5px;
+    color: #fff;
+  }
+}
+
 .listingpage{
   background-color: #F8F8F8;
 }
@@ -54,15 +65,7 @@ input{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   &__image{
-    &__text{
-      display: flex;
-      &__right{
-        background-color: #ff0211;
-        margin-left: 10px;
-        padding: 0px 5px;
-        color: #fff;
-      }
-    }
+
     &__text1{
       margin-top: 16px;
     }
@@ -93,6 +96,7 @@ input{
 
   &__boder{
     border-top: solid 1px black;
+    margin-bottom: 24px;
   }
 
 
@@ -107,7 +111,7 @@ input{
       }
     }
     &__text2{
-      margin-top: 20px;
+      margin-bottom: 20px;
     }
     &__text3{
       margin-top: 20px;
@@ -120,7 +124,6 @@ input{
       }
     }
     &__text4{
-      margin-top: 20px;
       textarea{
         width: 100%;
         border: 1px solid #ccc;
