@@ -136,6 +136,9 @@
         position:relative;
         top:100px;
         text-align: center;
+        text-decoration:underline;
+        text-decoration-color:#33CCFF;
+        text-decoration-style: double;
     }
     .furima-reason{
       height:330px;
@@ -170,7 +173,6 @@
         .furima-reason__namber2{
           height:60px;
           width:60px;
-          // background-color:#2CEAA3;
           background-color:#33CCFF;
           color:white;
           font-size:24px;
@@ -187,7 +189,6 @@
         .furima-reason__namber3{
           height:60px;
           width:60px;
-          // background-color:#2CEAA3;
           background-color:#33CCFF;
           color:white;
           font-size:24px;
@@ -203,7 +204,6 @@
         display:flex;
         justify-content: space-around;
         span{
-          // color:#2CEAA3;
           color:#33CCFF;
         }
     }
@@ -293,7 +293,9 @@
         height:50px;
         width:170px;
     }
-
+    .googlelogo2:hover {
+      opacity:0.7;
+    }
 .furima4{
     height:750px;
     width:100%;
@@ -377,7 +379,7 @@
 .furima5{
   height:1000px;
   width:100%;
-  background-color: gainsboro;
+  background-color:#EEEEEE;
 }
   .furima5-category{
     height:50px;
@@ -391,7 +393,6 @@
   .furima5-item{
     font-size:24px;
     font-weight:bolder;
-    // color:#2CEAA3;
     color:#33CCFF;
     text-align:center;
     position:relative;
@@ -438,7 +439,6 @@
   .furima5-item2{
     font-size:24px;
     font-weight:bolder;
-    // color:#2CEAA3;
     color:#33CCFF;
     position:relative;
     text-align:center;
@@ -526,6 +526,9 @@
     }
     .googlelogo3{
       margin-top:20px;
+    }
+    .googlelogo3:hover {
+      opacity:0.7;
     }
   }
   
