@@ -87,11 +87,6 @@ ActiveRecord::Schema.define(version: 2020_04_18_050414) do
     t.index ["user_id"], name: "index_points_on_user_id"
   end
 
-  create_table "prodacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "trade_id", null: false
@@ -130,6 +125,7 @@ ActiveRecord::Schema.define(version: 2020_04_18_050414) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "nickname", null: false
