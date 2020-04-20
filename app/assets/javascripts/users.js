@@ -1,9 +1,9 @@
 $(function() {
-    $('tab.li').click(function() {
-        var index = $('tab.li').index(this);
-        
-        $('tab.li').removeClass('active');
-
+    $('.tab li').on('click' ,function() {
+        var num = $('.tab li').index(this);
+        $('.tab_content').removeClass('active');
+        $('.tab_content').eq(num).addClass('active');
+        $('.tab li').removeClass('active');
         $(this).addClass('active');
     });
 });

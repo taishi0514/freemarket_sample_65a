@@ -4,12 +4,12 @@
     display:flex;
     position:relative;
     top:110px;
-    height:1200px;
+    height:1800px;
     &__left {
         width:280px;
+        height:1200px;
         float:left;
         margin:0 40px 0 0;
-        // background-color:#fff;
         background-color: rgb(245, 245, 245);
         .setting {
             list-style:none;
@@ -18,9 +18,6 @@
             li {
                 display:flex;
             }
-            .got {
-                // border-bottom:1px solid #9f99a3;
-            }
             a {
                 text-decoration:none;
                 font-size:14px;
@@ -28,13 +25,14 @@
                 display:block;
                 border-top: 1px solid #EEEEEE;
                 background-color: #fff;
-                // padding:10px 10px;
                 padding:16px;
                 width:280px;
                 margin:0;
                 float:left;
             }
-        
+            a:hover {
+                background-color:#EEEEEE;
+            }
             .topic {
                 font-size:16px;
                 padding:0;
@@ -50,9 +48,6 @@
                 font-size:14px;
                 display:flex;
             }
-            .get {
-                // border-bottom:1px solid #9f99a3;
-            }
             a {
                 text-decoration:none;
                 color:#333;
@@ -63,6 +58,9 @@
                 width:280px;
                 margin:0;
                 float:left;
+            }
+            a:hover {
+                background-color:#EEEEEE;
             }
             .setting {
                 font-size:16px;
@@ -76,9 +74,6 @@
             li {
                 font-size:14px;
             }
-            .git {
-                // border-bottom: 1px solid #EEEEEE;
-            }
             a {
                 text-decoration:none;
                 color:#333;
@@ -89,6 +84,9 @@
                 width:280px;
                 margin:0;
                 float:left;
+            }
+            a:hover {
+                background-color:#EEEEEE;
             }
         }
     }
@@ -118,7 +116,6 @@
                     width:60px;
                     height:60px;
                     border-radius:29px;
-                    // margin: 50px 0 0 320px;
                     margin:0 auto;
                     display:flex;
                 }
@@ -273,7 +270,6 @@
                             padding:0;
                             margin: 0 auto;
                             background-color: #eeeeee;
-                            // background-color:#fff;
                             color: #333;
                             line-height: 56px;
                             text-align: center;
@@ -423,46 +419,45 @@
                 }  
             }
 
-.furima6{
-    height:300px;
-    width:100%;
-    margin-top:150px;
-  }
-    .picture3{
-      height:370px;
-      width:100%;
-      position:absolute;
+.footer{
+    padding: 60px 0;
+    color: #fff;
+    background-color: #272727;
+    text-align: center;
+    bottom: 0;
+    .contents{
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    font-size: 14px;
+    .content{
+    display: flex;
+    flex-direction: column;
+    width: calc(1 / 3 * 100%);
+    margin: 0 2% 0 0;
+    line-height:32px;
+    a{
+        text-decoration:none;
+        color:white;
     }
-    .furima6-copy{
-      font-size:24px;
-      font-weight:bolder;
-      color:white;
-      text-shadow:1px 1px 0 #000,
-                  -1px 1px 0 #000,
-                  1px -1px 0 #000,
-                  -1px -1px 0 #000;
-      position:relative;
-      text-align:center;
-      top:100px;
     }
-    .furima6-copy2{
-      font-size:34px;
-      font-weight:bolder;
-      color:white;
-      text-shadow:1px 1px 0 #000,
-                  -1px 1px 0 #000,
-                  1px -1px 0 #000,
-                  -1px -1px 0 #000;
-      position:relative;
-      text-align:center;
-      top:110px;
+    .content__head {
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: bold;
     }
-    .furima6-download{
-      .applelogo3{
-        margin-top:20px;
-        margin-right:10px;
-      }
-      .googlelogo3{
-        margin-top:20px;
-      }
+    .content__main{
+        width:240px;
+        list-style:none;
+        line-height:30px;
+        margin-right:100px;
+        a{
+        color:white;
+        text-decoration:none;
+        }
+    }
+    }
+    }
+    img {
+    height: 47px;
     }
