@@ -1,0 +1,54 @@
+= render "users/top"
+%main
+  %section.container
+    %h2.container__message 住所情報登録
+    .container__main
+      .account-page__inner--right.user-form
+        = form_for @address do |f|
+          = render "devise/shared/error_messages", resource: @address
+          .field
+            = f.label :family_name_kanji,"姓（漢字）"
+            %br/
+            = f.text_field :family_name_kanji
+          .field
+            = f.label :last_name_kanji,"名（漢字）"
+            %br/
+            = f.text_field :last_name_kanji
+          .field
+            = f.label :family_name_kana,"姓（カタカナ全角）"
+            %br/
+            = f.text_field :family_name_kana
+          .field
+            = f.label :last_name_kana,"名（カタカナ全角）"
+            %br/
+            = f.text_field :last_name_kana
+          .field
+            = f.label :zipcode,"郵便番号（必須）"
+            %br/
+            = f.text_field :zipcode
+          .field
+            = f.label :prefecture_name,"都道府県名（必須）"
+            %br/
+            = f.text_field :prefecture_name
+          .field
+            = f.label :cities_name,"市区町村名（必須）"
+            %br/
+            = f.text_field :cities_name
+          .field
+            = f.label :address,"番地（必須）"
+            %br/
+            = f.text_field :address
+          .field
+            = f.label :building_name,"ビルまたは、建物名（任意）"
+            %br/
+            = f.text_field :building_name
+          .field
+            = f.label :tell_num,"電話番号（任意）"
+            %br/
+            = f.text_field :tell_num
+          .actions
+            = f.submit "Sign up"
+        = render "devise/shared/links"
+        = link_to "トップへ戻る", root_path
+
+= render "users/footer"

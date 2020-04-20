@@ -1,0 +1,379 @@
+// 部分テンプレート
+
+.listingpage-reuse{
+  padding: 40px;
+}
+
+.listingpage-text {
+  display: flex;
+  margin-bottom: 20px;
+  &__right{
+    background-color: #ff0211;
+    margin-left: 10px;
+    padding: 0px 5px;
+    color: #fff;
+  }
+}
+
+.listingpage{
+  background-color: #F8F8F8;
+}
+
+select{
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #222;
+  font-size: 16px;
+  height: 48px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+input{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  height: 48px;
+  margin: 0;
+  outline: none;
+  padding: 0 16px;
+  width: 100%;
+}
+
+// ここから headr
+
+.listingpage-header{
+  text-align: center;
+  &__logo{
+    display: inline-block;
+    height: 50px;
+    width: 160px;
+    margin: 50px 0px;
+  }
+}
+
+// こっから mina 
+
+.listingpage-main{
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  &__image{
+
+    &__text1{
+      margin-top: 16px;
+    }
+    &__input{
+      margin-top: 16px;
+      width: 620px;
+      height: 160px;
+      background-color: #F8F8F8;
+      text-align: center;
+      cursor: pointer;
+      &__icon{
+        fill: rgb(34, 34, 34);
+        height: 24px;
+        margin:30px 0px 8px;
+        width: 24px;
+      }
+      &__text{
+        font-size: 12px;
+        line-height: 1.4em;
+        width: 100%;
+      }
+    }
+    input{
+      display: none;
+    }
+  }
+
+
+  &__boder{
+    border-top: solid 1px black;
+    margin-bottom: 24px;
+  }
+
+
+  &__title{
+    &__text1{
+      display: flex;
+      &__right{
+        background-color: #ff0211;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+    &__text2{
+      margin-bottom: 20px;
+    }
+    &__text3{
+      margin-top: 20px;
+      display: flex;
+      &__right{
+        background-color: #ff0211;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+    &__text4{
+      textarea{
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: #222;
+        font-size: 16px;
+        margin: 0;
+        outline: none;
+        padding: 13px 16px;
+        resize: vertical;
+        vertical-align: middle;
+      }
+    }
+    &__text5{
+      margin-top: 16px;
+      text-align: right;
+      color: #888;
+      font-size: 12px;
+    }
+  }
+
+
+  &__details{
+    &__p{
+      color: #888;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    &__text1{
+      display: flex;
+      margin-bottom: 24px;
+      &__right{
+        background-color: #ff0211;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+    &__text2{
+      display: flex;
+      margin-bottom: 24px;
+      &__right{
+        background-color: #ccc;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+    &__text3{
+      margin-bottom: 24px;
+    }
+    &__text4{
+      display: flex;
+      margin-bottom: 24px;
+      &__right{
+        background-color: red;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+  }
+  &__delivery{
+    &__text1{
+      display: flex;
+      line-height: 10px;
+      margin-bottom: 24px;
+      &__left{
+        color: rgb(136, 136, 136);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      &__right{
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: skyblue;
+      }
+    }
+    &__text2{
+      display: flex;
+      margin-bottom: 24px;
+      &__right{
+        background-color: red;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+    &__text3{
+      display: flex;
+      margin-bottom: 24px;
+      &__right{
+        background-color: red;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+    &__text4{
+      display: flex;
+      margin-bottom: 24px;
+      &__right{
+        background-color: red;
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: #fff;
+      }
+    }
+  }
+  &__price{
+    &__text1{
+      display: flex;
+      line-height: 10px;
+      margin-bottom: 24px;
+      &__left{
+        color: rgb(136, 136, 136);
+        font-size: 14px;
+        font-weight: 600;
+      }
+      &__right{
+        margin-left: 10px;
+        padding: 0px 5px;
+        color: skyblue;
+      }
+    }
+    &__text2{
+      align-items: center;
+      display: flex;
+      height: 46px;
+      margin-bottom: 24px;
+      &__left{
+        margin-right: auto;
+        display: flex;
+        &__right{
+          background-color: red;
+          margin-left: 10px;
+          padding: 0px 5px;
+          color: #fff;
+        }
+      }
+      &__icon{
+        margin-right: 10px;
+      }
+      &__right{
+        width: 285px;
+        text-align: right;
+      }
+    }
+    &__text3{
+      align-items: center;
+      display: flex;
+      height: 46px;
+      margin-bottom: 24px;
+      &__left{
+        margin-right: auto;
+        display: flex;
+      }
+      &__right{
+        width: 285px;
+        text-align: right;
+      }
+    }
+    &__text4{
+      border-top: solid 1px black;
+      margin-bottom: 24px;
+    }
+    &__text5{
+      align-items: center;
+      display: flex;
+      height: 46px;
+      margin-bottom: 24px;
+      &__left{
+        margin-right: auto;
+        display: flex;
+      }
+      &__right{
+        width: 285px;
+        text-align: right;
+      }
+    }
+    &__text6{
+      margin: 0px auto 24px;
+      width: 360px;
+      &__btn1{
+        display: block;
+        width: 100%;
+        font-size: 17px;
+        min-height: 48px;
+        padding: 0 24px;
+        background-color: #ff0211;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+      }
+      &__btn2{
+        display: block;
+        width: 100%;
+        font-size: 17px;
+        min-height: 48px;
+        padding: 0 24px;
+        background-color: #888;
+        margin-bottom: 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        color: black;
+        font-weight: bold;
+      }
+      &__btn3{
+        display: flex;
+        width: 100%;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+        color: #0095ee;
+      }
+    }
+    &__text7{
+      font-size: 12px;
+      line-height: 1.4em;
+      color: #333333;
+      margin-bottom: 20px;
+      a{
+        color: #0095ee;
+      }
+    }
+  }
+}
+
+// こっから footer
+
+.listingpage-footer{
+  padding: 40px 0px 41px;
+  background-color: white;
+  text-align: center;
+  ul{
+    font-size: 12px;
+    li{
+      display: inline;
+      margin: 20px 10px;
+      a{
+        color: #333333;
+      }
+    }
+  }
+  p{
+    font-size: 12px;
+  }
+}
+

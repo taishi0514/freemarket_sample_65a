@@ -8,7 +8,8 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '7db7195593a9e2c59868b92c453344e7bf5ddfcb7e260e32ddf403bb44c6204ff08c16f6902c326b29ba41eed4798f5063ca81f9b2e6bb61449c2b7ec53183c6'
+  # config.secret_key = '52158baea4854146c48280d52ebe41c426bd22a05e3f86178c7f4d513e80a4fd894b8c6a0f382b7b16d5a9a258d20d3ab76c6423a55c728e38bca74da9541230'
+
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -114,6 +115,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
+
   # config.pepper = '2ad5c771aa81f024c06da9836571ec0fa8cf9141221cd57dd464ccfbcd87e2c32aaa70304f02c9e2f31f0c8ffd8a41931ffe27e27169bd71db0be9e98d2e774b'
 
   # Send a notification to the original email when the user's email is changed.
@@ -166,7 +168,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 6..128
+  config.password_length = 7..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly

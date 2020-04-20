@@ -1,0 +1,120 @@
+.header {
+  background-color:#fff;
+  width:100%;
+  position:absolute;
+  height: 108px;
+  z-index:1;
+  &__second {
+      align-items: center;
+      width:1020px;
+      margin: 0 auto;
+      padding-top:5px;
+      .header__third {
+          align-items:center;
+          position: relative;
+          display: flex;
+          width:100%;
+          justify-content: space-between;
+          .inner { 
+              display:flex;
+              width:100%;
+              .picture {
+                  height:36px;
+                  width:134px;
+                  margin-top:10px;
+                  margin-right:20px;
+              }
+          }
+          .search_bar {
+            width:100%;
+            position:relative;
+            display:flex;
+            .input_box {
+              background-color: rgb(245, 245, 245);
+              font-size: 16px;
+              height:40px;
+              line-height: 1.4em;
+              width:815px;
+              padding: 0px 50px 0px 10px;
+              border-radius:5px;
+              margin-top:10px;
+              margin-left:10px;
+              margin-right:50px;
+              border-width: 1px;
+              border-style: solid;
+              border-color: rgb(204, 204, 204);
+              border-image: initial;
+            }
+            .HamlBtn {
+              width:40px;
+              height:40px;
+              margin-top:10px;
+              position:absolute;
+              left:94.3%;
+              border-radius:2px;
+              background-color: #3CCACE;
+              .icon {
+                  color:#fff;
+                  font-size:20px;
+              }
+            }
+          }
+      }
+    .nav-bar {
+        justify-content: space-between;
+        display:flex;
+        width:100%;
+        height:53px;
+        padding:0;
+        .left {
+            display:flex;
+            list-style:none;
+            padding:0;
+            .list_man {
+                height: 44px;
+                position: relative;
+                z-index: 3;
+                margin-right:25px;
+                a {
+                    display:flex;
+                    font-size:14px;
+                    text-decoration:none;
+                    font-weight:600;
+                    color:#222222;
+                }
+                a:hover {
+                    color:#FFCC33;
+                }
+            }
+            .list_men {
+                color:#000;
+                a {
+                    display:flex;
+                    font-size:14px;
+                    text-decoration:none;
+                    font-weight:600;
+                    color:#222222;
+                }
+                a:hover {
+                    color:#FFCC33;
+                }
+            }
+        }
+        .right {
+          display:flex;
+          list-style:none;
+          padding:0;    
+          .login{
+                display: inline;
+          }
+          .login_new {
+            margin-right:20px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+

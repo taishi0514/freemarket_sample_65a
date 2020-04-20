@@ -1,4 +1,3 @@
-
 ## usersテーブル 
 |Column|Type|Options|
 |------|----|-------|
