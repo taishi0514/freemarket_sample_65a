@@ -5,7 +5,7 @@
 
 -# こっから mina 
 .listingpage-main
-  = form_with do |f|
+  = form_with model:@product,local: true,url: "/listingpage/create" do |f|
     -# コンテンツ1
     %div{:class=>"listingpage-main__image listingpage-reuse"}
       .listingpage-text 
@@ -22,7 +22,8 @@
             ドラッグアンドドロップ
             %br/
             またはクリックしてファイルをアップロード
-          =f.file_field :image, type: 'file', tabindex: "0"
+          =f.fields_for :images do |i|
+            =i.file_field :src
 
 
 
@@ -36,14 +37,14 @@
         .listingpage-text__right 必須
 
       .listingpage-main__title__text2
-        %input(type="text" placeholder="40文字まで")
+        =f.text_field :title, :placeholder=>"40文字まで"
 
       .listingpage-text 
         .listingpage-text__left 商品の説明
         .listingpage-text__right 必須
       
       .listingpage-main__title__text4
-        %textarea(rows="7" placeholder="商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。")
+        = f.text_area :detail, rows:7 ,:placeholder=>"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
       
       .listingpage-main__title__text5 0/1000
 
@@ -56,29 +57,16 @@
       .listingpage-text 
         .listingpage-text__left カテゴリー
         .listingpage-text__right 必須
-      %select{:name => "category"}
-        %option{:value => "0"} 選択してください
-        %option{:value => "1"} レディース
-        %option{:value => "2"} メンズ
-        %option{:value => "3"} ベビー・キッズ
-        %option{:value => "4"} インテリア・住まい・小物
+      = f.select :category,[['レディース','レディース'],['メンズ','メンズ'],['ベビー・キッズ','ベビー・キッズ'],['インテリア・住まい・小物','インテリア・住まい・小物']],prompt:'選択してください'
       .listingpage-text 
         .listingpage-text__left ブランド
         .listingpage-text__right 必須
       .listingpage-main__details__text3
-        %input(type="text" placeholder="例）よっぴー")
+        =f.text_field :brand, :placeholder=>"例）よっぴー"
       .listingpage-text 
         .listingpage-text__left 商品の状態
         .listingpage-text__right 必須
-      %select{:name => "category" ,:class=>"listingpage-main__details__category2"}
-        %option{:value => "0"} 選択してください
-        %option{:value => "1"} 新品、未使用
-        %option{:value => "2"} 未使用に近い
-        %option{:value => "3"} 目立った傷や汚れなし
-        %option{:value => "4"} やや傷や汚れあり
-        %option{:value => "5"} 傷や汚れあり
-        %option{:value => "6"} 全体的に状態が悪い
-      
+      = f.select :condition,[['新品、未使用','新品、未使用'],['未使用に近い','未使用に近い'],['目立った傷や汚れなし','目立った傷や汚れなし'],['やや傷や汚れあり','やや傷や汚れあり'],['傷や汚れあり','傷や汚れあり'],['全体的に状態が悪い','全体的に状態が悪い']],prompt:'選択してください',:class=>"listingpage-main__details__category2"
     -# コンテンツ3終わり
     .listingpage-main__boder
 
@@ -90,25 +78,15 @@
       .listingpage-text 
         .listingpage-text__left 配送料の負担
         .listingpage-text__right 必須
-      %select{:name => "delivery-fee"}
-        %option{:value => "0"} 選択してください
-        %option{:value => "1"} 送料込み(出品者負担)
-        %option{:value => "1"} 着払い(購入者負担)
+      = f.select :ship_fee,[['送料込み(出品者負担)','送料込み(出品者負担)'],['着払い(購入者負担)','着払い(購入者負担)']],prompt:'選択してください',:class=>"listingpage-main__details__category2"
       .listingpage-main__delivery__text3
         .listingpage-main__delivery__text3__left 発送元の地域
         .listingpage-main__delivery__text3__right 必須
-      %select{:name => "delivery-fee"}
-        %option{:value => "0"} 選択してください
-        %option{:value => "1"} 大阪
-        %option{:value => "1"} 東京
+      = f.select :ship_area,[['大阪','大阪'],['東京','東京']],prompt:'選択してください'
       .listingpage-text 
         .listingpage-text__left 発送までの日数
         .listingpage-text__right 必須
-      %select{:name => "delivery-fee"}
-        %option{:value => "0"} 選択してください
-        %option{:value => "1"} 1~2日で発送
-        %option{:value => "1"} 2~3日で発送
-        %option{:value => "1"} 4~7日で発送
+      = f.select :ship_period,[['1~2日で発送','1~2日で発送'],['2~3日で発送','2~3日で発送'],['4~7日で発送','4~7日で発送']],prompt:'選択してください'
 
     -# コンテンツ4終わり
     .listingpage-main__boder
@@ -124,7 +102,7 @@
           .listingpage-main__price__text2__left__left 販売価格
           .listingpage-main__price__text2__left__right 必須
         .listingpage-main__price__text2__icon ¥
-        %input.listingpage-main__price__text2__right(type="text" placeholder="0")
+        =f.text_field :price, :placeholder=>'0',:class=>'listingpage-main__price__text2__right'
 
       .listingpage-main__price__text3
         .listingpage-main__price__text3__left 販売手数料（10%）
@@ -137,7 +115,7 @@
         .listingpage-main__price__text3__right —
       
       .listingpage-main__price__text6
-        %button{:class=>"listingpage-main__price__text6__btn1" ,:type=>"submit"} 出品する
+        = f.submit '出品する' ,:class=>"listingpage-main__price__text6__btn1" 
         %button{:class=>"listingpage-main__price__text6__btn2" ,:type=>"submit"} 下書きに保存
         = link_to 'もどる', "#", class: "listingpage-main__price__text6__btn3" 
       

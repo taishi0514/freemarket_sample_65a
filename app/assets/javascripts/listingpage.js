@@ -1,8 +1,4 @@
 $(function(){
-  //DataTransferオブジェクトで、データを格納する箱を作る
-  var dataBox = new DataTransfer();
-  //querySelectorでfile_fieldを取得
-  var file_field = document.querySelector('input[type=file]')
   //fileが選択された時に発火するイベント
   $('.listingpage-main__image__input__box').change(function(){
     //アップロード情報を取得して変数に格納
@@ -32,6 +28,7 @@ $(function(){
     target_image.remove();
     //inputタグに入ったファイルを削除
   })
+
 
 });
 
