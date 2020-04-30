@@ -1,0 +1,22 @@
+= form_for @product do |f|
+  商品名#{f.text_field :name}
+  %br/
+  価格#{f.number_field :price}
+  %br/
+  #image-box
+    #previews
+      - if @product.persisted?
+        - @product.images.each_with_index do |image, i|
+          = image_tag image.src.url, data: { index: i }, width: "100", height: '100'
+    = f.fields_for :images do |image|
+      .js-file_group{"data-index" => "#{image.index}"}
+        = image.file_field :src, class: 'js-file'
+        %br/
+        %span.js-remove 削除
+      - if @product.persisted?
+        = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
+    - if @product.persisted?
+      .js-file_group{"data-index" => "#{@product.images.count}"}
+        = file_field_tag :src, name: "product[images_attributes][#{@product.images.count}][src]", class: 'js-file'
+        .js-remove 削除
+  = f.submit

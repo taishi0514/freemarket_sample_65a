@@ -7,9 +7,8 @@ Rails.application.routes.draw do
     get 'addresses', to: 'users/registrations#new_address'
     post 'addresses', to: 'users/registrations#create_address'
   end
-
-  root to: 'users#index'
+  resources :products
+  root to: 'products#index'
   resources :item, only: [:index]
-  resources :product, only: [:edit, :show, :destroy]
   get 'listingpage/index'
 end

@@ -1,4 +1,10 @@
--# = render "users/header"
+-# -# = link_to '出品', new_product_path
+-# %br/
+-# .contents
+-#   = render @products
+
+
+-# -# = render "users/header"
 = render "users/top"
 
 
@@ -105,20 +111,17 @@
       ピックアップカテゴリー
     .furima5-item
       新規投稿商品
-    -# - @product.images.each do |image|
-    -#   .product-exhibit-photo
-    -#     .product-exhibit-photo__high
-    -#       = image_tag "#{image.image_url}", class:"product-box-container__main__photo__img", width: "500px", height: "500px" 
     .furima5-picture
       .furima5-picture1
-        = link_to "products/1", class:"ra-men__btn" do
-          = image_tag 'https://illust8.com/wp-content/uploads/2018/06/fruit_apple_illust_150.png', class: 'ra-menlogo'
-      .furima5-picture2
-        = link_to "products/2", class:"curry__btn" do
-          = image_tag 'logos/curry.jpg', class: 'currylogo'
-      .furima5-picture3
-        = link_to "products/3", class:"yakiniku__btn" do
-          = image_tag 'logos/yakiniku.jpg', class: 'yakinikulogo'
+        = render @products
+      -#   = link_to "products/1", class:"ra-men__btn" do
+      -#     = image_tag 'https://illust8.com/wp-content/uploads/2018/06/fruit_apple_illust_150.png', class: 'ra-menlogo'
+      -# .furima5-picture2
+      -#   = link_to "products/2", class:"curry__btn" do
+      -#     = image_tag 'logos/curry.jpg', class: 'currylogo'
+      -# .furima5-picture3
+      -#   = link_to "products/3", class:"yakiniku__btn" do
+      -#     = image_tag 'logos/yakiniku.jpg', class: 'yakinikulogo'
     .furima5-brand
       ピックアップブランド
     .furima5-item2

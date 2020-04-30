@@ -406,12 +406,21 @@
     justify-content:space-between;
   }
     .furima5-picture1{
-      height:100px;
+      height:260px;
       width:100px;
+      display: flex;
+      margin: 0 0 0 250px;
       .ra-menlogo{
         height:250px;
         width:250px;
         margin-left:300px;
+      }
+    }
+    .product_contents{
+      padding: 0 0 0 45px;
+      img{
+        width: 250px;
+        height: 250px;
       }
     }
     .furima5-picture2{
