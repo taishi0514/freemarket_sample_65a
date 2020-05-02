@@ -33,8 +33,11 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    @product.destroy
-    redirect_to root_path
+    if @product.destroy
+      redirect_to root_path
+    else
+      render 'errors/record_not_found'
+    end
   end
   
   private
