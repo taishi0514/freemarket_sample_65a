@@ -2,10 +2,9 @@
 .main
   .auction
     .auction__button
-      = link_to new_product_path,　class: 'auction', target: '_self' do
-        出品する
-        =fa_icon 'camera', class: 'camera__button'
-
+      = link_to new_product_path, class: 'auction', target: '_self' do
+        .action__button__head 出品する
+        %i.fas.fa-camera
   .furima
     = image_tag 'logos/picture1.jpg', class: 'picture1'
     .furima__copy
