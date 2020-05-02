@@ -1,14 +1,10 @@
--# = render "users/header"
 = render "users/top"
-
-
-
 .main
   .auction
     .auction__button
-      = link_to "http://www.google.co.jp", class:"auction" do
-        %p.auction2 出品する
-        =fa_icon 'camera', class: 'camera__button'
+      = link_to new_product_path, class: 'auction', target: '_self' do
+        .action__button__head 出品する
+        %i.fas.fa-camera
   .furima
     = image_tag 'logos/picture1.jpg', class: 'picture1'
     .furima__copy
@@ -107,14 +103,7 @@
       新規投稿商品
     .furima5-picture
       .furima5-picture1
-        = link_to "product/1", class:"ra-men__btn" do
-          = image_tag 'logos/ra-men.jpg', class: 'ra-menlogo'
-      .furima5-picture2
-        = link_to "product/1", class:"curry__btn" do
-          = image_tag 'logos/curry.jpg', class: 'currylogo'
-      .furima5-picture3
-        = link_to "product/1", class:"yakiniku__btn" do
-          = image_tag 'logos/yakiniku.jpg', class: 'yakinikulogo'
+        = render @products
     .furima5-brand
       ピックアップブランド
     .furima5-item2
