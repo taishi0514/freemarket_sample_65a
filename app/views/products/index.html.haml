@@ -1,20 +1,11 @@
--# -# = link_to '出品', new_product_path
--# %br/
--# .contents
--#   = render @products
-
-
--# -# = render "users/header"
 = render "users/top"
-
-
-
 .main
   .auction
     .auction__button
-      = link_to "products/new", class:"auction" do
-        %p.auction2 出品する
+      = link_to new_product_path,{ :class => "auction", :target => "_self"} do
+        出品する
         =fa_icon 'camera', class: 'camera__button'
+
   .furima
     = image_tag 'logos/picture1.jpg', class: 'picture1'
     .furima__copy
@@ -114,14 +105,6 @@
     .furima5-picture
       .furima5-picture1
         = render @products
-      -#   = link_to "products/1", class:"ra-men__btn" do
-      -#     = image_tag 'https://illust8.com/wp-content/uploads/2018/06/fruit_apple_illust_150.png', class: 'ra-menlogo'
-      -# .furima5-picture2
-      -#   = link_to "products/2", class:"curry__btn" do
-      -#     = image_tag 'logos/curry.jpg', class: 'currylogo'
-      -# .furima5-picture3
-      -#   = link_to "products/3", class:"yakiniku__btn" do
-      -#     = image_tag 'logos/yakiniku.jpg', class: 'yakinikulogo'
     .furima5-brand
       ピックアップブランド
     .furima5-item2
