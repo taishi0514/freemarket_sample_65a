@@ -62,9 +62,9 @@
       %option{:value => "4"} インテリア・住まい・小物
     .listingpage-text 
       .listingpage-text__left ブランド
-      .listingpage-text__right 必須
+      .listingpage-text__right 任意
     .listingpage-main__details__text3
-      %input(type="text" placeholder="例）よっぴー")
+      %input(type="text" placeholder="例）グッチ")
     .listingpage-text 
       .listingpage-text__left 商品の状態
       .listingpage-text__right 必須
@@ -123,10 +123,11 @@
         .listingpage-main__price__text2__left__right 必須
       .listingpage-main__price__text2__icon ¥
       %input.listingpage-main__price__text2__right(type="text" placeholder="0")
-
+        -# = f.number_field :score, step: "0.1" 
+    -# js計算
     .listingpage-main__price__text3
       .listingpage-main__price__text3__left 販売手数料（10%）
-      .listingpage-main__price__text3__right —
+      .listingpage-main__price__text3__right
 
     .listingpage-main__price__text4
 
@@ -168,10 +169,3 @@
   %p © Mercari, Inc.
 
 -# footer終わり
-
-
-
-
-
-
-
