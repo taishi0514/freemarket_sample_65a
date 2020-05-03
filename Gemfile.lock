@@ -46,6 +46,8 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
+    ancestry (3.0.7)
+      activerecord (>= 3.2.0)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -113,6 +115,8 @@ GEM
     erubis (2.7.0)
     excon (0.73.0)
     execjs (2.7.0)
+    faker (2.10.2)
+      i18n (>= 1.6, < 2)
     ffi (1.12.2)
     ffi (1.12.2-java)
     ffi (1.12.2-x64-mingw32)
@@ -275,6 +279,9 @@ GEM
       ffi (~> 1.9)
     sassc (2.2.1-x86-mingw32)
       ffi (~> 1.9)
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -333,6 +340,7 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  ancestry
   bootsnap (>= 1.1.0)
   byebug
   capistrano
@@ -346,6 +354,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+  faker
   fog-aws
   font-awesome-rails
   font-awesome-sass
@@ -359,6 +368,7 @@ DEPENDENCIES
   rails (~> 5.2.4)
   rails-i18n
   sass-rails (~> 5.0)
+  seed-fu
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)

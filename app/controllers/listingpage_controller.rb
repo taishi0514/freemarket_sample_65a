@@ -1,4 +1,5 @@
 class ListingpageController < ApplicationController
+  before_action :set_categories, :set_shippingways, :set_Area,only:[:new,:edit]
   before_action :set_product, except: [:index, :new, :create]
 
   def show
@@ -43,6 +44,21 @@ class ListingpageController < ApplicationController
   end
 
   private
+
+  def set_categories
+    @categories = []
+    @categories.push(Category.new(id:0,name:"---"))
+    @categories.concat(Category.where(ancestry: nil))
+  end
+  def set_shippingways
+    @shippingways = []
+    @shippingways.push(Shippingway.new(id:0,name:"---"))
+    @shippingways.concat(Shippingway.where(ancestry: nil))
+  end
+  def set_Area
+    @Area = []
+    @Area = Area.all.order("id ASC")
+  end
 
 
   def product_params

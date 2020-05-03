@@ -57,7 +57,15 @@
       .listingpage-text 
         .listingpage-text__left カテゴリー
         .listingpage-text__right 必須
-      = f.select :category,[['レディース','レディース'],['メンズ','メンズ'],['ベビー・キッズ','ベビー・キッズ'],['インテリア・住まい・小物','インテリア・住まい・小物']],prompt:'選択してください'
+      .items-second__head--first
+        = select_tag 'parent', options_for_select(@categories.pluck(:name,:id))
+      .items-second__head--second
+      .items-second__head--third
+      .items-second__head--fourth{style:"display:none;"}
+        = f.label :"サイズ"
+        %span.form-require 必須
+        %br/
+        
       .listingpage-text 
         .listingpage-text__left ブランド
         .listingpage-text__right 必須
@@ -78,11 +86,15 @@
       .listingpage-text 
         .listingpage-text__left 配送料の負担
         .listingpage-text__right 必須
-      = f.select :ship_fee,[['送料込み(出品者負担)','送料込み(出品者負担)'],['着払い(購入者負担)','着払い(購入者負担)']],prompt:'選択してください',:class=>"listingpage-main__details__category2"
+      = select_tag 'shippingway', options_for_select(@shippingways.pluck(:name,:id)),:class=>"listingpage-main__details__category2"
+      .items-third__center{style:"display:none;"}
+        = f.label :"配送の方法"
+        %span.form-require 必須
+        %br/
       .listingpage-main__delivery__text3
         .listingpage-main__delivery__text3__left 発送元の地域
         .listingpage-main__delivery__text3__right 必須
-      = f.select :ship_area,[['大阪','大阪'],['東京','東京']],prompt:'選択してください'
+      = select_tag :ship_area , options_for_select(@Area.pluck(:name,:id))
       .listingpage-text 
         .listingpage-text__left 発送までの日数
         .listingpage-text__right 必須
