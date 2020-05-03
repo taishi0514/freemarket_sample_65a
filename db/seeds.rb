@@ -7,7 +7,6 @@
 
 require './db/seeds/area.rb'
 require './db/seeds/category.rb'
-require './db/seeds/brand.rb'
 require './db/seeds/shippingway.rb'
 require './db/seeds/product_size.rb'
 require './db/seeds/category_size.rb'

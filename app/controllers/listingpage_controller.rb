@@ -47,12 +47,12 @@ class ListingpageController < ApplicationController
 
   def set_categories
     @categories = []
-    @categories.push(Category.new(id:0,name:"---"))
+    @categories.push(Category.new(id:0,name:"選択してください"))
     @categories.concat(Category.where(ancestry: nil))
   end
   def set_shippingways
     @shippingways = []
-    @shippingways.push(Shippingway.new(id:0,name:"---"))
+    @shippingways.push(Shippingway.new(id:0,name:"選択してください"))
     @shippingways.concat(Shippingway.where(ancestry: nil))
   end
   def set_Area
@@ -60,9 +60,8 @@ class ListingpageController < ApplicationController
     @Area = Area.all.order("id ASC")
   end
 
-
   def product_params
-    params.require(:product).permit(:title, :detail, :category, :brand, :condition, :ship_fee, :ship_area, :ship_period, :price, images_attributes: [:src])
+    params.require(:product).permit(:title, :detail, :category_id, :brand, :condition, :ship_fee, :ship_area, :ship_period, :price, images_attributes: [:src])
   end
 
   def set_product

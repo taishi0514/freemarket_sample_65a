@@ -35,12 +35,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "brands", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -56,11 +50,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_category_sizes_on_category_id"
     t.index ["product_size_id"], name: "index_category_sizes_on_product_size_id"
-  end
-
-  create_table "conditions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "credits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -114,17 +103,6 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.string "ancestry"
     t.index ["ancestry"], name: "index_shippingways_on_ancestry"
     t.index ["name"], name: "index_shippingways_on_name"
-  end
-
-  create_table "trades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "vender_id", null: false
-    t.bigint "product_id", null: false
-    t.bigint "customer_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["customer_id"], name: "index_trades_on_customer_id"
-    t.index ["product_id"], name: "index_trades_on_product_id"
-    t.index ["vender_id"], name: "index_trades_on_vender_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

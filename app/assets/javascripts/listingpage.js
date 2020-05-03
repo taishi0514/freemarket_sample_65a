@@ -22,7 +22,7 @@ $(document).on('turbolinks:load', function() {
       })
       .done(function(categories) {
         var insertHTML = `<select name="child" id="child">
-                          <option value=0>---</option>`;
+                          <option value=0>選択してください</option>`;
         $.each(categories, function(i, category) {
           insertHTML += buildHTML(category)
         });
@@ -59,7 +59,7 @@ $(document).on('turbolinks:load', function() {
       })
       .done(function(categories) {
         var insertHTML = `<select name="item[category_id]" id="item_category_id">
-                          <option value=0>---</option>`;
+                          <option value=0>選択してください</option>`;
         $.each(categories, function(i, category) {
           insertHTML += buildHTML(category)
         });
@@ -91,7 +91,8 @@ $(document).on('turbolinks:load', function() {
         data: {id: str}
       })
       .done(function(product_sizes) {
-        var insertHTML = `<select name="item[product_size_id]" id="item_product_size_id">`;
+        var insertHTML = `<select name="item[product_size_id]" id="item_product_size_id">
+                          <option value=0>選択してください</option>`;
         $.each(product_sizes, function(i, product_size) {
           insertHTML += buildHTML(product_size)
         });
