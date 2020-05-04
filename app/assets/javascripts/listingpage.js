@@ -58,7 +58,7 @@ $(document).on('turbolinks:load', function() {
         data: {id: str}
       })
       .done(function(categories) {
-        var insertHTML = `<select name="item[category_id]" id="item_category_id">
+        var insertHTML = `<select name="products[category_id]" id="item_category_id">
                           <option value=0>選択してください</option>`;
         $.each(categories, function(i, category) {
           insertHTML += buildHTML(category)
@@ -91,7 +91,7 @@ $(document).on('turbolinks:load', function() {
         data: {id: str}
       })
       .done(function(product_sizes) {
-        var insertHTML = `<select name="item[product_size_id]" id="item_product_size_id">
+        var insertHTML = `<select name="products[product_size_id]" id="item_product_size_id">
                           <option value=0>選択してください</option>`;
         $.each(product_sizes, function(i, product_size) {
           insertHTML += buildHTML(product_size)
@@ -124,7 +124,7 @@ $(document).on('turbolinks:load', function() {
         data: {id: str}
       })
       .done(function(shippingways) {
-          var insertHTML = ` <select name="item[shippingway_id]" id="item_shippingway_id">`;
+          var insertHTML = ` <select name="products[shippingway_id]" id="item_shippingway_id">`;
         $.each(shippingways, function(i, shippingway) {
           insertHTML += buildHTML(shippingway)
         });

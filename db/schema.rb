@@ -84,15 +84,18 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.bigint "user_id"
     t.string "title"
     t.string "detail"
-    t.string "category"
+    t.bigint "category_id"
     t.string "brand"
     t.string "condition"
-    t.string "ship_fee"
-    t.string "ship_area"
+    t.bigint "shippingway_id"
+    t.bigint "area_id"
     t.string "ship_period"
     t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["area_id"], name: "index_products_on_area_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["shippingway_id"], name: "index_products_on_shippingway_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
 

@@ -1,5 +1,5 @@
 class ListingpageController < ApplicationController
-  before_action :set_categories, :set_shippingways, :set_Area,only:[:new,:edit]
+  before_action :set_categories, :set_shippingways, :set_Area,only:[:new,:edit, :create]
   before_action :set_product, except: [:index, :new, :create]
 
   def show
@@ -61,7 +61,7 @@ class ListingpageController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title, :detail, :category_id, :brand, :condition, :ship_fee, :ship_area, :ship_period, :price, images_attributes: [:src])
+    params.require(:product).permit(:title, :detail, :category_id, :brand, :condition, :shippingway_id, :area_id, :ship_period, :price, images_attributes:  [:src, :_destroy, :id])
   end
 
   def set_product

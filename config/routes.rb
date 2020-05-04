@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   resources :shippingways,only: :index, defaults: {format: 'json'}
   # 出品画面
   resources :listingpage, except: :index 
+  post 'listingpage/create', to: 'listingpage#create'
 
   # カテゴリー機能
   namespace :api do
