@@ -4,4 +4,7 @@
     = product.price
     円
   - product.images.each do |image|
-    = image_tag image.src.url,class:"product_contents__img", width: "250px", height: "250px"
+    = image_tag image.src.url
+-# = link_to '詳細', product
+-# = link_to '編集', edit_product_path(product)
+-# = link_to '削除', product, method: :delete, data: { confirm: 'Are you sure?' }
