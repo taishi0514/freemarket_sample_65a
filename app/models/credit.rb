@@ -1,2 +1,0 @@
-class Credit < ApplicationRecord
-end

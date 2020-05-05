@@ -1,15 +1,29 @@
 class ProductsController < ApplicationController
+
+  # GET /products
+  # GET /products.json
   def index
+    # @products = Product.all
     @products = Product.includes(:images).order('created_at DESC').limit(3)
   end
 
+  # GET /products/1
+  # GET /products/1.json
+  def show
+  end
+
+  # GET /products/new
   def new
     @product = Product.new
     @product.images.new
   end
 
+  # GET /products/1/edit
+  def edit
+  end
 
-
+  # POST /products
+  # POST /products.json
   def create
     @product = Product.new(product_params)
     if @product.save
@@ -19,8 +33,9 @@ class ProductsController < ApplicationController
     end
   end
 
-  def edit
-  end
+  # PATCH/PUT /products/1
+  # PATCH/PUT /products/1.json
+  before_action :set_product, except: [:index, :new, :create]
 
   def update
     if @product.update(product_params)
@@ -29,13 +44,10 @@ class ProductsController < ApplicationController
       render :edit
     end
   end
-
+  
   def destroy
-    if @product.destroy
-      redirect_to root_path
-    else
-      render 'errors/record_not_found'
-    end
+    @product.destroy
+    redirect_to root_path
   end
   
   private
@@ -47,5 +59,4 @@ class ProductsController < ApplicationController
   def set_product
     @product = Product.find(params[:id])
   end
-
 end
