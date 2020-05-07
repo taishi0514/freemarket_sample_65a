@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   resources :product_sizes,only: :index, defaults: {format: 'json'}
   # 発送方法
   resources :shippingways,only: :index, defaults: {format: 'json'}
+
   # 出品画面
   resources :listingpage, except: :index 
   post 'listingpage/create', to: 'listingpage#create'

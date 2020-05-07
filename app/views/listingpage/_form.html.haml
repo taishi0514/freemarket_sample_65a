@@ -5,7 +5,7 @@
 
 -# こっから mina 
 .listingpage-main
-  = form_with model:@product,local:true, url:'/listingpage/create' do |f|
+  = form_with(model:@product,local:true, url:'/listingpage/create') do |f|
     -# コンテンツ1
     %div{:class=>"listingpage-main__image listingpage-reuse"}
       .listingpage-text 
@@ -54,17 +54,16 @@
     -# コンテンツ3
     %div{:class=>"listingpage-main__details listingpage-reuse"}
       .listingpage-main__details__p 商品の詳細
-      .listingpage-text 
-        .listingpage-text__left カテゴリー
-        .listingpage-text__right 必須
-      .items-second__head--first
-        = select_tag 'parent', options_for_select(@categories.pluck(:name,:id))
-      .items-second__head--second
-      .items-second__head--third
-      .items-second__head--fourth{style:"display:none;"}
-        .listingpage-text
-          .listingpage-text__left サイズ
-          .listingpage-text__right 必須
+      .items-second__head
+        %span.form-require 必須
+        %br/
+        .items-second__head--first
+          = select_tag 'parent', options_for_select(@categories.pluck(:name,:id))
+        .items-second__head--second
+        .items-second__head--third
+        .items-second__head--fourth{style:"display:none;"}
+          %span.form-require 必須
+          %br/
 
         
       .listingpage-text 
@@ -87,7 +86,7 @@
       .listingpage-text 
         .listingpage-text__left 配送料の負担
         .listingpage-text__right 必須
-      = select_tag 'shippingway', options_for_select(@shippingways.pluck(:name,:id)),:class=>"listingpage-main__details__category2"
+      = select_tag :shippingway, options_for_select(@shippingways.pluck(:name,:id)),:class=>"listingpage-main__details__category2"
       .items-third__center{style:"display:none;"}
         = f.label :"配送の方法"
         %span.form-require 必須
@@ -95,7 +94,7 @@
       .listingpage-main__delivery__text3
         .listingpage-main__delivery__text3__left 発送元の地域
         .listingpage-main__delivery__text3__right 必須
-      = select_tag :ship_area , options_for_select(@Area.pluck(:name,:id))
+      = select_tag :area , options_for_select(@Area.pluck(:name,:id))
       .listingpage-text 
         .listingpage-text__left 発送までの日数
         .listingpage-text__right 必須

@@ -12,14 +12,10 @@ class ListingpageController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-    if @product.save
-      redirect_to root_path
-    else
-      render :new
-    end
+    @product.save
+    binding.pry
+    redirect_to root_path
   end
-
-
 
   def edit
   end
@@ -60,8 +56,11 @@ class ListingpageController < ApplicationController
     @Area = Area.all.order("id ASC")
   end
 
+  # def product_params
+  #   params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [item_images_attributes: [:id, :image]])
+  # end
   def product_params
-    params.require(:product).permit(:title, :detail, :category_id, :brand, :condition, :shippingway_id, :area_id, :ship_period, :price, images_attributes:  [:src, :_destroy, :id])
+    params.require(:product).permit(:brand_id,:category_id,:shippingway_id,:product_size_id,:condition_num,:daystoship_num,:title,:description,:price,:feerate,:profit_price, [item_images_attributes: [:id, :image]])
   end
 
   def set_product

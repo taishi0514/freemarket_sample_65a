@@ -81,13 +81,13 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
     t.string "title"
     t.string "detail"
     t.bigint "category_id"
     t.string "brand"
     t.string "condition"
     t.bigint "shippingway_id"
+    t.bigint "product_size_id"
     t.bigint "area_id"
     t.string "ship_period"
     t.string "price"
@@ -95,8 +95,8 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_products_on_area_id"
     t.index ["category_id"], name: "index_products_on_category_id"
+    t.index ["product_size_id"], name: "index_products_on_product_size_id"
     t.index ["shippingway_id"], name: "index_products_on_shippingway_id"
-    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "shippingways", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
