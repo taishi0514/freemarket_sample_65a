@@ -58,10 +58,27 @@
     -# コンテンツ3
     %div{:class=>"listingpage-main__details listingpage-reuse"}
       .listingpage-main__details__p 商品の詳細
-      .listingpage-text 
-        .listingpage-text__left カテゴリー
-        .listingpage-text__right 必須
-      = f.select :category,[['レディース',0],['メンズ',1],['ベビー・キッズ',2],['インテリア・住まい・小物',3]],prompt:'選択してください'
+      .items-second__head
+        = f.label :"カテゴリー"
+        %span.form-require 必須
+        %br/
+        .items-second__head--first
+          = select_tag 'parent', options_for_select(@categories.pluck(:name,:id),selected:@product.category.parent.parent.id)
+        .items-second__head--second
+          = select_tag 'child' , options_for_select(Category.where(ancestry: @product.category.parent.parent.id).pluck(:name,:id),selected:@product.category.parent.id)
+        .items-second__head--third
+          = f.collection_select :category_id,Category.where(ancestry: "#{@product.category.parent.parent.id.to_s + '/' + @product.category.parent.id.to_s}"),:id,:name,selected:@product.category.id
+        -if ProductSize.where(ancestry: CategorySize.find_by(category_id: @product.category.id).product_size_id).present?
+          .items-second__head--fourth
+            = f.label :"サイズ"
+            %span.form-require 必須
+            %br/
+            = f.collection_select :product_size_id,ProductSize.where(ancestry: CategorySize.find_by(category_id: @product.category.id).product_size_id),:id,:name,selected:@product.category.id
+        - else
+          .items-second__head--fourth{style:"display:none;"}
+            = f.label :"サイズ"
+            %span.form-require 必須
+            %br/
       .listingpage-text 
         .listingpage-text__left ブランド
         .listingpage-text__right 必須
@@ -82,11 +99,15 @@
       .listingpage-text 
         .listingpage-text__left 配送料の負担
         .listingpage-text__right 必須
-      = f.select :ship_fee,[['送料込み(出品者負担)',],['着払い(購入者負担)',2]],prompt:'選択してください',:class=>"listingpage-main__details__category2"
+      = select_tag 'shippingway', options_for_select(Shippingway.where(ancestry: nil).pluck(:name,:id),selected:@product.shippingway.parent.id),:class=>"listingpage-main__details__category2"
+      .listingpage-text
+        .listingpage-text__left 配送の方法
+        .listingpage-text__right 必須
+      = f.collection_select :shippingway_id ,Shippingway.where(ancestry: @product.shippingway.parent.id),:id,:name,selected:@product.shippingway.id
       .listingpage-main__delivery__text3
         .listingpage-main__delivery__text3__left 発送元の地域
         .listingpage-main__delivery__text3__right 必須
-      = f.select :ship_area,[['大阪',1],['東京',2]],prompt:'選択してください'
+      = f.collection_select :area_id,@Area,:id,:name,selected: @product.area_id
       .listingpage-text 
         .listingpage-text__left 発送までの日数
         .listingpage-text__right 必須

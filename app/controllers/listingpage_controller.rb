@@ -1,5 +1,5 @@
 class ListingpageController < ApplicationController
-  before_action :set_categories, :set_shippingways, :set_Area,only:[:new,:edit, :create]
+  before_action :set_categories, :set_shippingways, :set_Area,only:[:new,:edit]
   before_action :set_product, except: [:index, :new, :create]
 
   def show
@@ -13,7 +13,6 @@ class ListingpageController < ApplicationController
   def create
     @product = Product.new(product_params)
     @product.save
-    binding.pry
     redirect_to root_path
   end
 
@@ -56,14 +55,11 @@ class ListingpageController < ApplicationController
     @Area = Area.all.order("id ASC")
   end
 
-  # def product_params
-  #   params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [item_images_attributes: [:id, :image]])
-  # end
   def product_params
-    params.require(:product).permit(:brand_id,:category_id,:shippingway_id,:product_size_id,:condition_num,:daystoship_num,:title,:description,:price,:feerate,:profit_price, [item_images_attributes: [:id, :image]])
+    params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [item_images_attributes: [:id, :image]])
   end
 
   def set_product
-    @product = Product.find(3)
+    @product = Product.find(10)
   end
 end

@@ -94,7 +94,7 @@
       .listingpage-main__delivery__text3
         .listingpage-main__delivery__text3__left 発送元の地域
         .listingpage-main__delivery__text3__right 必須
-      = select_tag :area , options_for_select(@Area.pluck(:name,:id))
+      = f.collection_select :area_id,@Area,:id,:name
       .listingpage-text 
         .listingpage-text__left 発送までの日数
         .listingpage-text__right 必須
