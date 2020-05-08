@@ -14,6 +14,25 @@
     color: #fff;
   }
 }
+.form-image{
+  &__title{
+  padding: 35px 35px 0 35px;
+    span{
+      background-color: #ff0211;
+      margin-left: 10px;
+      padding: 3px 5px;
+      color: #fff;
+    }
+  }
+  &__text{
+    padding: 20px 0 0 0;
+  }
+}
+
+.image-preview_btn{
+  display: flex;
+  padding-left: 30px;
+}
 
 .listingpage{
   background-color: #F8F8F8;
@@ -92,7 +111,36 @@ input{
       display: none;
     }
   }
-
+.clearfix{
+  padding: 0 0 35px 0;
+  ul#previews{
+    background-color: #F8F8F8;
+    li{
+      text-align: center;
+      .input{
+        margin-top: 16px;
+        width: 620px;
+        height: 160px;
+        background-color: #F8F8F8;
+        text-align: center;
+        cursor: pointer;
+      }
+      .upload-label{
+        &__icon{
+          fill: rgb(34, 34, 34);
+          height: 24px;
+          width: 24px;
+        }
+        &__text{
+          text-align: center;
+          .input-area{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
 
   &__boder{
     border-top: solid 1px black;
