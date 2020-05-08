@@ -26,18 +26,18 @@
 // });
 
 
-$(document).on('click', '.image-preview_btn_delete', function(){
-    var append_input = $(`<li>`)
-    $ul = $('#previews')
-    $lis = $ul.find('image-preview');
-    $input = $ul.find('.input');
-    $ul = $('#previews')
-    $li = $(this).parents('.image-preview');
+// $(document).on('click', '.image-preview_btn_delete', function(){
+//     var append_input = $(`<li>`)
+//     $ul = $('#previews')
+//     $lis = $ul.find('image-preview');
+//     $input = $ul.find('.input');
+//     $ul = $('#previews')
+//     $li = $(this).parents('.image-preview');
 
 
 
-    $li.remove();
+//     $li.remove();
 
 
-    $lis
-})
+//     $lis
+// })
