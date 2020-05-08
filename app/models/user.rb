@@ -7,4 +7,6 @@ class User < ApplicationRecord
     format: { with: /\A[ぁ-んァ-ン一-龥]/, message: 'は全角で入力して下さい。'}
   validates :nickname, :birthday, presence: true
   has_one :address
+  has_many :products
+  has_many :credits
 end
