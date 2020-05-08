@@ -1,6 +1,7 @@
 .header
   .header__logo
-    = image_tag 'logos/logo.png', class: 'picture'
+    = link_to "/", class:"top" do
+      = image_tag 'logos/logo.png', class: 'picture'
     %form.search_bar
       %input{type: "text", class: 'input_box', placeholder: 'キーワードから探す'}
     %button{class: "HamlBtn", type: "submit"}

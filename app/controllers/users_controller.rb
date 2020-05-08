@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-    def index
-    end
+  def index
+    @products = Product.includes(:images).order('created_at DESC')
+  end
     
 end
