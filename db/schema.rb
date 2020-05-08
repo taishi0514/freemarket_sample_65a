@@ -91,7 +91,7 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.bigint "product_size_id"
     t.bigint "area_id"
     t.string "ship_period"
-    t.string "price"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_products_on_area_id"

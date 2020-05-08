@@ -11,7 +11,6 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.references  :product_size	
       t.references  :area  
       t.string :ship_period  
-      t.string :name
       t.integer :price
       t.timestamps
     end
