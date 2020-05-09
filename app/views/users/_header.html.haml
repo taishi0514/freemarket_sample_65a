@@ -1,23 +1,24 @@
+-# header
 .header
-  .header__second
-    .header__third
-      .inner
-        =link_to root_path do
-          = image_tag 'logos/logo.png', class: 'picture'
-      %form.search_bar
-        %input{type: "text", class: 'input_box', placeholder: 'キーワードから探す'}
-        %button{class: "HamlBtn", type: "submit"}
-          =fa_icon 'search', class: 'icon'
-    .nav-bar
-      %ul.left
-        %li.list_man
-          = link_to 'カテゴリー', class: 'categories'
-        %li.list_men
-          = link_to 'ブランド', class: 'brand'
-      %ul.right
-        %li.login
-          - if user_signed_in?
-            = link_to "ログアウト", destroy_user_session_path, method: :delete
-          - else
-            %li.login_new= link_to "新規登録", new_user_registration_path
-            = link_to "ログイン", new_user_session_path
+  .header__headerInner
+    -# 検索bar
+    .header__headerInner__mainHeader
+      = link_to image_tag("logos/logo.png", alt: "サンプル画像"), root_path, class: 'header__headerInner__mainHeader__logo'
+      
+      .header__headerInner__mainHeader__search
+        %input{type: "text",placeholder: 'キーワードから探す'}
+        %button{type: "submit"}
+          =fa_icon 'search', class: 'header__headerInner__mainHeader__search__icon'
+          
+    -# ナビbar
+    .header__headerInner__nav
+      %ul.header__headerInner__nav__left
+        %li= link_to 'カテゴリー','#', class: 'header__headerInner__nav__left__categories'
+        %li= link_to 'ブランド','#', class: 'header__headerInner__nav__left__brand'
+
+      %ul.header__headerInner__nav__right
+        - if user_signed_in?
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+        - else
+          %li.header__headerInner__nav__right__login= link_to "新規登録", new_user_registration_path
+          = link_to "ログイン", new_user_session_path

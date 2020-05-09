@@ -54,16 +54,20 @@
     -# コンテンツ3
     %div{:class=>"listingpage-main__details listingpage-reuse"}
       .listingpage-main__details__p 商品の詳細
+      .listingpage-text 
+        .listingpage-text__left カテゴリー
+        .listingpage-text__right 必須
+
       .items-second__head
-        %span.form-require 必須
-        %br/
+
         .items-second__head--first
           = select_tag 'parent', options_for_select(@categories.pluck(:name,:id))
         .items-second__head--second
         .items-second__head--third
         .items-second__head--fourth{style:"display:none;"}
-          %span.form-require 必須
-          %br/
+          .listingpage-text 
+            .listingpage-text__left サイズ
+            .listingpage-text__right 必須
 
         
       .listingpage-text 

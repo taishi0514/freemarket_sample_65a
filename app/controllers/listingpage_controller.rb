@@ -60,6 +60,6 @@ class ListingpageController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(10)
+    @product = Product.find(1)
   end
 end
