@@ -1,6 +1,6 @@
 = render "users/header"
 .product_main
-  %h1 product3
+  %h1= @product.title
   %ul
     %li 
       = image_tag 'logos/main_image.png', alt: '魚', class: 'test'
@@ -16,7 +16,7 @@
 
 
   .test_test1
-    .price ¥30000
+    .price= @product.price
     %p.tax  (税込) 送料込み
   - if user_signed_in? 
     .purchase
@@ -36,27 +36,29 @@
     %tr
       %td.one カテゴリー
       %td 
-        = link_to(content_tag(:i, 'ベビー・キッズ', class: 'kategori'))
+        = link_to @product.category.parent.parent.name,'#'
         %br/
-        = link_to(content_tag(:i, 'ベビー服(男女兼用) ~95cm', class: 'kategori'))
+        = link_to @product.category.parent.name,'#'
         %br/
-        = link_to(content_tag(:i, 'アウター', class: 'kategori'))
+        = link_to @product.category.name,'#'
     %tr
       %td.one ブランド
-      %td 
+      %td=@product.brand
     %tr
       %td.one 商品のサイズ	
-      %td
+      %td       
+        - if @product.product_size
+          = @product.product_size.name
     %tr
       %td.one 商品の状態		
-      %td 未使用に近い
+      %td= @product.condition
     %tr
       %td.one 配送料の負担		
-      %td 送料込み（出品者負担）
+      %td= @product.shippingway.parent.name
     %tr
       %td.one 発送元の地域		
       %td 	
-        = link_to(content_tag(:i, '岩手県', class: 'categories'))
+        =@product.area.name
     %tr
       %td.one 発送日の目安			
       %td 4-7日で発送
@@ -99,3 +101,4 @@
     .destroy__item__footer
       .destroy__item__footer__cancel キャンセル
       -# = link_to "削除","/product/#{@Product.id}",method: :DELETE, class: 'destroy__item__footer__delete'
+= render "users/footer"

@@ -7,7 +7,7 @@
   .item__top{
     height:150px;
     width:100%;
-    &--logo{
+    &__logo{
       height:60px;
       width:300px;
       margin:auto;
@@ -22,7 +22,7 @@
   .main__item{
     height:950px;
     width:100%;
-    &--page{
+    &__page{
       height:950px;
       width:700px;
       background-color:white;
@@ -30,7 +30,7 @@
       &__1{
         height:100px;
         border-bottom:solid 1px #C0C0C0;
-        &--item{
+        &__item{
           height:50px;
           width:700px;
           font-size:22px;
@@ -46,7 +46,7 @@
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         display:flex;
-        &--picture{
+        &__picture{
           height:150px;
           width:700px;
           position:absolute;
@@ -74,7 +74,7 @@
       &__3{
         height:150px;
         border-bottom:solid 1px #C0C0C0;
-        &--money{
+        &__money{
           font-size: 18px;
           font-weight: bold;
           width:250px;
@@ -87,7 +87,7 @@
             left:130px;
           }
         }
-        &--box{
+        &__box{
           padding-left:190px;
           padding-top:10px;
           #point_check{
@@ -103,7 +103,7 @@
         height:200px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
-        &--box{
+        &__box{
           height:60px;
           width:700px;
           display:flex;
@@ -126,12 +126,12 @@
             }
           }
         }
-        &--card{
+        &__card{
           font-size: 12px;
           width:300px;
           padding-left:190px;
         }
-        &--visa{
+        &__visa{
           width:300px;
           padding-left:190px;
           padding-top:10px;
@@ -143,7 +143,7 @@
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         display:flex;
-        &--address{
+        &__address{
           font-size:14px;
           font-weight:bold;
           width:250px;
@@ -157,7 +157,7 @@
             top:10px;
           }
         }
-        &--button{
+        &__button{
           height:50px;
           width:100px;
           display:inline-block;
@@ -173,7 +173,7 @@
 
       &__6{
         height:145px;
-        &--button{
+        &__button{
           height:50px;
           width:300px;
           background-color:red;
