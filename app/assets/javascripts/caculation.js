@@ -28,4 +28,11 @@
 
 $(function(){
     $('.listingpage-main__price__text3__right').html('---');
+    $('.listingpage-main__price__text3__right').html('---');
+    $('').on('input', function(){
+        var data = $('')
+        var profit =
+        var fee =
+    })
+
 })
