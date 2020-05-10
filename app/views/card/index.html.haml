@@ -1,0 +1,32 @@
+= render "users/header"
+
+%main
+  %section.container
+    %h2.container__message クレジットカード情報登録
+    .container__main
+      .account-page__inner--right.user-form
+        = form_with model:@card, url:card_index_path , local: true do |f|
+          .field
+            = f.label :credit_namber,"クレジット番号"
+            %br/
+            = f.text_field :credit_number, :placeholder => "半角数字のみ"
+          .field
+            = f.label :security_code,"セキュリティーコード"
+            %br/
+            = f.password_field :security_code, autocomplete: "security_code", :placeholder => "カード背面3,4桁の番号"
+          .field
+            = f.label :expiration_data,"有効期限"
+            %br/
+            = f.select :expiration_data_month, ['1','2','3','4','5','6','7','8','9','10','11','12'],{include_blank: ''}
+            %span 月/
+            = f.select :expiration_data_year, ['20','21','22','23','24','25','26','27','28','29','30'],{include_blank: ''}
+            %span 年
+          .field
+            = f.label :account_holder,"口座名義"
+            %br/
+            = f.text_field :account_holder, :placeholder => "（例：YOHEI KAWASE）"
+          .actions
+            = f.submit "登録する"
+
+
+= render "users/footer"
