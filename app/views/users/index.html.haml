@@ -102,9 +102,13 @@
     .furima5-item
       新規投稿商品
     .furima5-picture
-      .furima5-picture1
-      -# 一時的にコメントアウト一覧表示
-        -# = render @products
+      - @products.each do |item|
+        = image_tag item.images.first.src.url 
+        = item.title
+        = item.price
+
+
+
     .furima5-brand
       ピックアップブランド
     .furima5-item2
