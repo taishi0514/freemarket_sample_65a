@@ -79,7 +79,7 @@ $(document).on('turbolinks:load', function(){
       if($lis.length <= 4 ){
         $ul.append(append_input)
         $('#previews li:last-child').css({
-          // 'width': `calc(100% - (20% * ${$lis.length}))`
+          'width': `calc(100% - (20% * ${$lis.length}))`
         })
       }
       else if($lis.length == 5 ){
