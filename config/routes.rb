@@ -13,8 +13,11 @@ Rails.application.routes.draw do
   # ホーム画面
   root to: 'users#index'
 
+  # マイページ
+  resources :home, only: [:show]
+
   # 購入画面
-  resources :item, only: [:index]
+  resources :item, only: [:show]
 
   # カテゴリー
   resources :categories,only: [:index,:show]

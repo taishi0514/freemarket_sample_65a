@@ -9,8 +9,9 @@
         &__mainHeader{
             padding-top: 15px;
             display: flex;
-            &__logo{
+            img{
                 margin-right: 20px;
+                height:47px;
             }
             &__search{
                 width: 100%;
@@ -40,6 +41,9 @@
                 margin-top: 0px;
                 margin-bottom: 0px;
                 margin-left: auto;
+                &__left{
+                    margin-right: 10px;
+                }
                 &__login{
                     margin-right: 10px;
                 }
