@@ -97,32 +97,22 @@
         %p あります。
     
   .furima5
-    .furima5-category
+    .furima5__category
       ピックアップカテゴリー
-    .furima5-item
+    .furima5__item
       新規投稿商品
-    .furima5-picture
+    .furima5__picture
       - @products.each do |item|
-        = image_tag item.images.first.src.url 
-        = item.title
-        = item.price
-
-
+        = link_to listingpage_path(item.id),class:'furima5__picture__list' do
+          .list1= image_tag item.images.first.src.url,width:'100%',height:'200px'
+          .list2= item.title
+          .list3= item.price
 
     .furima5-brand
       ピックアップブランド
     .furima5-item2
       アーカイブ
-    .furima5-picture2__brand
-      .furima5-picture4
-        = link_to "product/1", class:"ra-men__btn" do
-          = image_tag 'logos/ra-men.jpg', class: 'ra-menlogo2'
-      .furima5-picture5
-        = link_to "product/1", class:"curry__btn" do
-          = image_tag 'logos/curry.jpg', class: 'currylogo2'
-      .furima5-picture6
-        = link_to "product/1", class:"yakiniku__btn" do
-          = image_tag 'logos/yakiniku.jpg', class: 'yakinikulogo2'
+
   
   .furima6
     =image_tag 'logos/picture3.jpg', class: 'picture3'

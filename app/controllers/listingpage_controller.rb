@@ -12,6 +12,7 @@ class ListingpageController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+    @product["user_id"] = current_user.id
     if @product.price.nil?
       redirect_to new_listingpage_path, notice:"販売価格を入力してください"
       return
@@ -79,6 +80,6 @@ class ListingpageController < ApplicationController
   end
 
   def set_product
-    @product = Product.find(2)
+    @product = Product.find(params[:id])
   end
 end
