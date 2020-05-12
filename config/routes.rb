@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   resources :home, only: [:show]
 
   # 購入画面
-  resources :item, only: [:index]
+  resources :item, only: [:show]
 
   # カテゴリー
   resources :categories,only: [:index,:show]
