@@ -1,8 +1,0 @@
--# トップページの商品一覧表示  
-.product_contents
-  %p= product.name
-  %p
-    = product.price
-    円
-  - product.images.each do |image|
-    = image_tag image.src.url,class:"product_contents__img", width: "250px", height: "250px"

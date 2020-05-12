@@ -18,7 +18,9 @@
 
       %ul.header__headerInner__nav__right
         - if user_signed_in?
-          = link_to "ログアウト", destroy_user_session_path, method: :delete
+          = link_to "ログアウト", destroy_user_session_path, method: :delete,class:'header__headerInner__nav__right__left'
+          -# 実際の記述
+          = link_to "マイページ" ,home_path(current_user.id)
         - else
           %li.header__headerInner__nav__right__login= link_to "新規登録", new_user_registration_path
           = link_to "ログイン", new_user_session_path
