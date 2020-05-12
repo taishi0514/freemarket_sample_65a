@@ -1,32 +1,18 @@
 .item__buypage{
   height:1400px;
   width:100%;
-  background-color:#CCCCCC;
 }
 
-  .item__top{
-    height:150px;
-    width:100%;
-    &__logo{
-      height:60px;
-      width:300px;
-      margin:auto;
-      text-align:center;
-      padding-top:50px;
-      .picture{
-        height:55px;
-      }
-    }
-  }
 
   .main__item{
     height:950px;
     width:100%;
+    margin-top: 50px;
     &__page{
       height:950px;
       width:700px;
       background-color:white;
-      margin-left:380px;
+      margin:0 auto;
       &__1{
         height:100px;
         border-bottom:solid 1px #C0C0C0;
