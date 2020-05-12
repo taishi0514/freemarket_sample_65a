@@ -3,10 +3,15 @@
 .main
   .auction
     .auction__button
-      = link_to new_listingpage_path, class: 'auction', target: '_self' do
-        .action__button__head 出品する
-        %i.fas.fa-camera
-  
+      - if user_signed_in?
+        = link_to new_listingpage_path, class: 'auction', target: '_self' do
+          .action__button__head 出品する
+          %i.fas.fa-camera
+      - else
+        = link_to new_user_registration_path, class: 'auction', target: '_self' do
+          .action__button__head 出品する
+          %i.fas.fa-camera
+    
   .furima
     = image_tag 'logos/picture1.jpg', class: 'picture1'
     .furima__copy

@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  # associations
+  # アソシエーション
   belongs_to    :user
   belongs_to    :category
   belongs_to    :area
