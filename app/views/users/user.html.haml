@@ -1,32 +1,12 @@
 %body
-.header
-  .header__second
-    .header__third
-      .inner
-        =link_to "#" do
-          = image_tag 'logos/logo.png', class: 'picture'
-      %form.search_bar
-        %input{type: "text", class: 'input_box', placeholder: 'キーワードから探す'}
-        %button{class: "HamlBtn", type: "submit"}
-          =fa_icon 'search', class: 'icon'
-    .nav-bar
-      %ul.left
-        %li.list_man
-          = link_to 'カテゴリー', class: 'categories'
-        %li.list_men
-          = link_to 'ブランド', class: 'brand'
-      %ul.right
-        %li.nets
-          = link_to 'ログイン', class: 'news'
-        %li.bucks
-          = link_to '新規会員登録', class: 'logins'
+= render 'header'
 .menu_bar
   %ul.three
     %li.thing
       = link_to 'メルカリ', '#'
       =fa_icon 'greater-than', class:'mark'
     %li.four マイページ
-.main
+.main2
   .main__left
     .main__left2
       %ul.setting

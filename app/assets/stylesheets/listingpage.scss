@@ -1,7 +1,29 @@
 // 部分テンプレート
-
 .listingpage-reuse{
   padding: 40px;
+}
+
+
+
+
+.item{
+  width: 20%;
+  height: 150px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 0px 4px;
+  background-color: #F8F8F8;
+  border: 3px solid white;
+  img{
+    margin-top: 10px;
+    background-size: contain;
+    height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &__delete{
+    margin-top: 20px;
+  }
 }
 
 .listingpage-text {
@@ -57,7 +79,7 @@ input{
 // こっから mina 
 
 .listingpage-main{
-  width: 700px;
+  width: 750px;
   height: auto;
   margin: 0 auto;
   margin-bottom: 50px;
@@ -65,27 +87,35 @@ input{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   &__image{
-
     &__text1{
       margin-top: 16px;
     }
     &__input{
-      margin-top: 16px;
-      width: 620px;
-      height: 160px;
-      background-color: #F8F8F8;
-      text-align: center;
-      cursor: pointer;
-      &__icon{
-        fill: rgb(34, 34, 34);
-        height: 24px;
-        margin:30px 0px 8px;
-        width: 24px;
-      }
-      &__text{
-        font-size: 12px;
-        line-height: 1.4em;
-        width: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      background-color: white;
+      &__box{
+        border-width: 1px;
+        border-style: dashed;
+        border-color: rgb(204, 204, 204);
+        border-image: initial;
+        height: 150px;
+        margin-top: 10px;
+        flex: 1 1 0%;
+        background-color: #F8F8F8;
+        cursor: pointer;
+        padding: 0px 4px;
+        text-align: center;
+        &__icon{
+          margin: 60px 0px 5px;
+          font-size: 20px;
+        }
+        &__text{
+          font-size: 12px;
+          line-height: 1.4em;
+        }
       }
     }
     input{

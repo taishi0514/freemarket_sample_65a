@@ -14,17 +14,28 @@
     right:30px;
     z-index:100;
     .auction__button{
+      &__head{
+        height: 22px;
+        margin: 32px 0 3px 0;
+        font-size: 22px;
+        line-height: 1.1;
+      }
       .auction__button2{
         margin:0;
         padding:15px;
       }
       a{
         text-decoration: none;
+        padding: 15px 0 0 0;
+        color: white;
       }
     }
     .camera__button{
       font-size:60px;
       background-color: #FF3333	;
+    }
+    i {
+      font-size: 60px;
     }
   }
 }
@@ -58,6 +69,7 @@
     .camera__button{
       font-size:50px;
       background-color:green;
+      color: white;
       margin-top:10px;
     }
   }
@@ -406,12 +418,21 @@
     justify-content:space-between;
   }
     .furima5-picture1{
-      height:100px;
+      height:260px;
       width:100px;
+      display: flex;
+      margin: 0 0 0 250px;
       .ra-menlogo{
         height:250px;
         width:250px;
         margin-left:300px;
+      }
+    }
+    .product_contents{
+      padding: 0 0 0 45px;
+      img{
+        width: 250px;
+        height: 250px;
       }
     }
     .furima5-picture2{
@@ -532,4 +553,3 @@
       opacity:0.7;
     }
   }
-  

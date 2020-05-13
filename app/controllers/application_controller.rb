@@ -14,6 +14,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found 
+
+  def record_not_found(e) 
+    @exception = e
+    render 'errors/record_not_found'
+  end 
+
   protected
 
   def configure_permitted_parameters

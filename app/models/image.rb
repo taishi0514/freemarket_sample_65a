@@ -1,6 +1,4 @@
 class Image < ApplicationRecord
-    # validates :product
-    # validates :image_url, presence: true, length: { in: 1..10}
-    belongs_to :product
-    mount_uploader :image, ImageUploader
+  mount_uploader :src, ImageUploader
+  belongs_to :product
 end
