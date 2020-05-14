@@ -19,10 +19,9 @@
           %i.fas.fa-camera.listingpage-main__image__input__box__icon
           %p.listingpage-main__image__input__box__text
             ドラッグアンドドロップ
-            %br/
             またはクリックしてファイルをアップロード
           =f.fields_for :images do |i|
-            =i.file_field :src,name: "images[src][]"
+            = i.file_field :src, multiple: true, class: 'image-upload-dropfile-hidden',type: 'file', name: "images[src][]"
 
 
 
