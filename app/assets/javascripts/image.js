@@ -8,10 +8,9 @@ $(document).on('turbolinks:load', function() {
 
     function buildImage(loadedImageUri,i){
       var html =
-        `<div class="item-image-container__unit--preview" data-image-id=${i}>
-          <div class="item-image-container__unit--caption">
+        `<div class="item" data-image-id=${i}>
             <img src="${loadedImageUri}">
-          </div>
+            <div class="item__delete">削除</div>
         </div>`
       return html
     };
@@ -37,7 +36,8 @@ $(document).on('turbolinks:load', function() {
           // result＝システム識別子を読み込む作業(画像を表示しようとしているブラウザーを読み込んで表示させる)
           var loadedImageUri = fileReader.result
           var html = buildImage(loadedImageUri,i)
-          $(html).appendTo(".listingpage-main__image__input").trigger("build");
+          // $(html).appendTo(".listingpage-main__image__input").trigger("build");
+          $(html).prependTo(".listingpage-main__image__input").trigger("build");
         };
         if(dataBox.items.length > 4){
           return false;
