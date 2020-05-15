@@ -3,6 +3,17 @@
   width:100%;
 }
 
+.main__item__page__4__box__button{
+  height:100px;
+  width:100px;
+  padding-top:27px;
+  a{
+    text-decoration:none;
+    font-size:14px;
+    color:skyblue;
+  }
+}
+
 
   .main__item{
     height:950px;
@@ -16,43 +27,29 @@
       &__1{
         height:100px;
         border-bottom:solid 1px #C0C0C0;
-        &__item{
-          height:50px;
-          width:700px;
-          font-size:22px;
-          font-weight:bold;
-          letter-spacing:0.05em;
-          padding:35px;
-          padding-left:270px;
-        }
+        font-size:22px;
+        font-weight:bold;
+        text-align: center;
+        padding-top:35px;
       }
 
       &__2{
-        height:150px;
+        height:auto;
         border-bottom:solid 1px #C0C0C0;
-        letter-spacing:0.05em;
-        display:flex;
+        width: 100%;
         &__picture{
           height:150px;
-          width:700px;
-          position:absolute;
+          width: 300px;
+          margin: 0 auto;
+          padding-top: 20px;
           .watch{
             height:90px;
             width:60px;
-            position:relative;
-            left:190px;
-            top:30px;
           }
           &__item{
-            width:200px;
             font-size:12px;
-            left:270px;
-            bottom:55px;
             line-height:25px;
-            position:relative;
-            span{
-              font-weight:bold;
-            }
+            float: right;
           }
         }
       }
@@ -100,16 +97,6 @@
             height:50px;
             margin-left:190px;
             padding-top:30px;
-                    }
-          &__button{
-            height:100px;
-            width:100px;
-            padding-top:27px;
-            a{
-              text-decoration:none;
-              font-size:14px;
-              color:skyblue;
-            }
           }
         }
         &__card{
@@ -141,18 +128,6 @@
             font-weight:normal;
             position:relative;
             top:10px;
-          }
-        }
-        &__button{
-          height:50px;
-          width:100px;
-          display:inline-block;
-          a{
-            font-size:14px;
-            margin-top:30px;
-            display:block;
-            text-decoration: none;
-            color: skyblue;
           }
         }
       }

@@ -1,4 +1,5 @@
 class Image < ApplicationRecord
+  # アソシエーション
   mount_uploader :src, ImageUploader
   belongs_to :product
 

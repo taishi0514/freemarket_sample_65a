@@ -1,28 +1,27 @@
 .listingpage-header
-  = image_tag 'logos/logo.png', class: 'listingpage-header__logo'
+  = link_to image_tag('logos/logo.png', class: 'listingpage-header__logo',alt: "サンプル画像"),root_path
 
 .listingpage-main
   = form_with(model:@product,local:true, url:'/listingpage/create') do |f|
     -# コンテンツ1
     %div{:class=>"listingpage-main__image listingpage-reuse"}
-      .form-image
-        .form-image__title
-          %label 出品画像
-          %span 必須
-          .form-image__text 最大10枚までアップロードできます
-      .clearfix
-        // 写真のプレビューとインプットボタンのul
-        %ul#previews
-          %li.input
-            // 画像を取り込むインプットボタン
-            %label.upload-label
-              .upload-label__text
-                ドラッグアンドドロップ
-                %br
-                またはクリックしてファイルをアップロード
-                .input-area
-                  =f.fields_for :images do |i|
-                    =i.file_field :src,name: "images[src][]",class: "hidden image_upload"
+      .listingpage-text 
+        .listingpage-text__left 出品画像
+        .listingpage-text__right 必須
+      .listingpage-main__image__text1
+        最大5枚までアップロードできます
+
+      -# 一時的にラベルタグにしてる 画像を読み込む機能
+      .listingpage-main__image__input
+        %label.listingpage-main__image__input__box
+          %i.fas.fa-camera.listingpage-main__image__input__box__icon
+          %p.listingpage-main__image__input__box__text
+            ドラッグアンドドロップ
+            またはクリックしてファイルをアップロード
+          =f.fields_for :images do |i|
+            = i.file_field :src, multiple: true, class: 'image-upload-dropfile-hidden',type: 'file', name: "images[src][]"
+
+
     -# コンテンツ1終わり
     .listingpage-main__boder
     

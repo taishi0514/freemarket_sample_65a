@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   # 出品画面
   resources :listingpage, except: :index 
   post 'listingpage/create', to: 'listingpage#create'
+  post 'listingpage/update', to: 'listingpage#update'
 
   # カテゴリー機能
   namespace :api do

@@ -51,6 +51,18 @@ p{
   .list_image{
     display:flex;
     margin:0 auto;
+    padding: 0px;
+    margin-top: 10px;
+    li{
+      width: 20%;
+      img{
+        width: 100%;
+        background-size: contain;
+        height: 80px;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
   }
 
 
