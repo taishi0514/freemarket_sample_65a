@@ -27,12 +27,19 @@
 
 
 $(function(){
+    $('.listingpage-main__price__text3__right2').html('---');
     $('.listingpage-main__price__text3__right').html('---');
-    $('.listingpage-main__price__text3__right').html('---');
-    $('').on('input', function(){
-        var data = $('')
-        var profit =
-        var fee =
+    $('#price-calc').on('input', function(){
+        var data = $('#price-calc').val();
+        var profit = Math.round(data * 0.9)
+        var fee = (data - profit)
+        $('.listingpage-main__price__text3__right').html(fee)
+        $('.listingpage-main__price__text3__right').prepend('¥')
+        $('.listingpage-main__price__text3__right2').html(profit)
+        $('.listingpage-main__price__text3__right2').prepend('¥')
+        if(profit == '') {
+        $('.listingpage-main__price__text3__right2').html('---');
+        $('.listingpage-main__price__text3__right').html('---');
+        }
     })
-
 })

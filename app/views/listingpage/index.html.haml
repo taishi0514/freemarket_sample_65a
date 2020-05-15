@@ -122,8 +122,8 @@
         .listingpage-main__price__text2__left__left 販売価格
         .listingpage-main__price__text2__left__right 必須
       .listingpage-main__price__text2__icon ¥
-      -# %input.listingpage-main__price__text2__right(type="text" placeholder="0")
-      = f.text_field :price, placeholder: "0", type: "number", value: "", id: "price-calc"
+        = f.text_field :price, placeholder: "0", type: "number", id: "price-calc"
+
     -# js計算
     .listingpage-main__price__text3
       .listingpage-main__price__text3__left 販売手数料（10%）
@@ -133,7 +133,7 @@
 
     .listingpage-main__price__text5
       .listingpage-main__price__text3__left 販売利益
-      .listingpage-main__price__text3__right
+      .listingpage-main__price__text3__right2
     
     .listingpage-main__price__text6
       %button{:class=>"listingpage-main__price__text6__btn1" ,:type=>"submit"} 出品する
