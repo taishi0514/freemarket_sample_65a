@@ -76,7 +76,7 @@ class ListingpageController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [images_attributes: [:id, :image]])
+    params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [images_attributes: [:id, :src]])
   end
 
   def set_product
