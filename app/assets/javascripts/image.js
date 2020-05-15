@@ -5,6 +5,8 @@ $(document).on('turbolinks:load', function() {
     var dataBox = new DataTransfer();
     //querySelectorでfile_fieldを取得
     var file_field = document.querySelector('input[type=file]')
+    var files_array = [];
+
 
     function buildImage(loadedImageUri,i){
       var html =
@@ -17,7 +19,6 @@ $(document).on('turbolinks:load', function() {
 
     function imageUpdate(files){
       $.each(files, function(i, file){
-        console.log('ok')
         //DataTransferオブジェクトに対して、fileを追加
         dataBox.items.add(file)
         //DataTransferオブジェクトに入ったfile一覧をfile_fieldの中に代入
@@ -26,7 +27,6 @@ $(document).on('turbolinks:load', function() {
         $('.item-image-container__unit--preview').length + 1 + i
         //FileReaderのreadAsDataURLで指定したFileオブジェクトを読み込む
         var fileReader = new FileReader();
-        console.log(fileReader)
         // fileReaderの読み込み
         fileReader.readAsDataURL(file);
 
@@ -47,10 +47,28 @@ $(document).on('turbolinks:load', function() {
     //fileが選択された時に発火するイベント
     $('.image-upload-dropfile-hidden').change(function(){
       //選択したfileのオブジェクトをpropで取得
-      console.log(this.files)
       var files = this.files
       // 非同期てきに表示する記述
       imageUpdate(files);
+    });
+    
+
+    $('.listingpage-main__image__input__box').on('dragover',function(e){
+      e.preventDefault();
+    });
+    $('.listingpage-main__image__input__box').on('drop',function(e){
+      e.preventDefault();
+      var files = e.originalEvent.dataTransfer.files;
+      imageUpdate(files)
+    });
+
+    $(document).on('click','.item__delete',function(){
+      var index = $(".item__delete").index(this);
+      var id = $(this).attr('data-image-id')
+      files_array.splice(index - 1, 1);
+      $(this).parent().remove();
+      dataBox.items.remove(dataBox.items[id])
+      file_field.files = dataBox.files
     });
   }
 
