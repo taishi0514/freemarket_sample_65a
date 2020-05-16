@@ -85,4 +85,4 @@ gem 'faker'
 gem 'seed-fu'
 gem 'pry-rails'
 gem 'rmagick'
-
+gem 'gon'

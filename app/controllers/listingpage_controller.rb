@@ -1,6 +1,6 @@
 class ListingpageController < ApplicationController
   before_action :set_categories, :set_shippingways, :set_Area,only:[:new,:edit]
-  before_action :set_product, except: [:index, :new, :create]
+  before_action :set_product, only: [:edit,:show,:destroy,:update]
 
   def show
   end
@@ -36,6 +36,7 @@ class ListingpageController < ApplicationController
   end
 
   def edit
+    gon.item_images = @product.images
   end
 
 
@@ -50,12 +51,27 @@ class ListingpageController < ApplicationController
   end
 
   def update
-    if product_params[:images_attributes]
-      @product.update(product_params)
+    length = @product.images.length
+    i = 0
+    while i < length do
+      if  product_update_params[:images_attributes]["#{i}"]["_destroy"] == "0"
+        if @product.update(product_update_params)
+          redirect_to listingpage_path(@product.id)
+          return
+        else
+          redirect_to listingpage_path(@product.id), notice:"出品情報の更新に失敗しました。"
+          return
+        end
+      else
+        i += 1
+      end
+    end
+    if product_update_params[:images_attributes]["#{i}"]
+      @product.update(prduct_update_params)
       redirect_to listingpage_path(@product.id)
       return
     end
-    redirect_to edit_item_path(@item.id), notice:"画像がない商品は登録できません。"
+    redirect_to edit_listingpage_path(@product.id), notice:"画像がない商品は登録できません。"
   end
 
   private
@@ -76,7 +92,11 @@ class ListingpageController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [images_attributes: [:id, :image]])
+    params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [images_attributes: [:src]])
+  end
+
+  def product_update_params
+    params.require(:product).permit(:title,:detail,:category_id,:brand,:condition,:shippingway_id,:product_size_id,:area_id,:ship_period,:price, [images_attributes: [:id, :src, :_destroy]])
   end
 
   def set_product
