@@ -27,11 +27,16 @@
           有効期限06/21
       .main__item__page__5
         .main__item__page__5__address
-          配送先</p>
+          配送先
+          %br/
           %span.address
-            〒503-0805</p>
-            岐阜県大垣市鶴見町55番地2</p>
-            川瀬洋平
+            = "〒" + @address.zipcode
+            %br/
+            = @address.prefecture_name + @address.cities_name
+            %br/
+            = @address.address
+
+
         .main__item__page__4__box__button
           =link_to '変更する', class: 'edit2'
       .main__item__page__6

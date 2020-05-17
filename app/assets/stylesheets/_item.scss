@@ -1,5 +1,5 @@
 .item__buypage{
-  height:1400px;
+  height:auto;
   width:100%;
 }
 
@@ -43,8 +43,8 @@
           margin: 0 auto;
           padding-top: 20px;
           .watch{
-            height:90px;
-            width:60px;
+            height:100px;
+            width:100px;
           }
           &__item{
             font-size:12px;
@@ -83,7 +83,7 @@
       }
 
       &__4{
-        height:200px;
+        height:150px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         &__box{
@@ -112,7 +112,7 @@
       }
 
       &__5{
-        height:200px;
+        height:150px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         display:flex;

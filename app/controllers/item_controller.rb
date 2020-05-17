@@ -9,6 +9,7 @@ class ItemController < ApplicationController
 
   def home_set_product
     @product = Product.find(params[:id])
+    @address = Address.find_by(user_id: current_user.id)
   end
 
   def login?
