@@ -19,5 +19,5 @@ class Product < ApplicationRecord
   # コンディション 空でない事 
   validates :condition, presence: true
   # 価格 1000以上10000000以下or等しく 空でない事
-  validates :price,presence: true ,numericality: {greater_than_or_equal_to: 1000,less_than:10000000}
+  validates :price,presence: true ,numericality: {greater_than_or_equal_to: 300,less_than:99999999999}
 end
