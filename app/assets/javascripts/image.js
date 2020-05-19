@@ -24,7 +24,7 @@ $(document).on('turbolinks:load', function() {
         //DataTransferオブジェクトに入ったfile一覧をfile_fieldの中に代入
         file_field.files = dataBox.files
 
-        $('.item-image-container__unit--preview').length + 1 + i
+        $('.item').length + 1 + i
         //FileReaderのreadAsDataURLで指定したFileオブジェクトを読み込む
         var fileReader = new FileReader();
         // fileReaderの読み込み

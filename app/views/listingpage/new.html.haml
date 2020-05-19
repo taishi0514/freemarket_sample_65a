@@ -1,8 +1,10 @@
+-# ここから headr
 .listingpage-header
   = link_to image_tag('logos/logo.png', class: 'listingpage-header__logo',alt: "サンプル画像"),root_path
 
+-# こっから mina 
 .listingpage-main
-  = form_with(model:@product,local:true, url:'/listingpage/create') do |f|
+  = form_with(model:@product,local:true, url: '/listingpage/create') do |f|
     -# コンテンツ1
     %div{:class=>"listingpage-main__image listingpage-reuse"}
       .listingpage-text 
@@ -20,6 +22,7 @@
             またはクリックしてファイルをアップロード
           =f.fields_for :images do |i|
             = i.file_field :src, multiple: true, class: 'image-upload-dropfile-hidden',type: 'file', name: "images[src][]"
+
 
 
     -# コンテンツ1終わり
