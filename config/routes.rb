@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   # 購入画面
   resources :item, only: [:index]
-  resources :card, only: [:index, :new, :create]
+  resources :card, only: [:index, :new, :create,:destroy]
 
   # カテゴリー
   resources :categories,only: [:index,:show]
