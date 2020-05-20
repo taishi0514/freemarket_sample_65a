@@ -393,64 +393,32 @@
   height:1000px;
   width:100%;
   background-color:#fff;
-}
-  .furima5-category{
-    height:50px;
-    width:100%;
+  text-align: center;
+  padding: 20px 40px;
+  &__category{
     font-size:28px;
     font-weight:bolder;
-    text-align:center;
-    position:relative;
-    top:80px;
   }
-  .furima5-item{
+  &__item{
     font-size:24px;
     font-weight:bolder;
     color:#33CCFF;
-    text-align:center;
-    position:relative;
-    top:75px;
+    margin-top: 10px;
   }
-  .furima5-picture{
-    position:relative;
-    top:100px;
+  &__picture{
     display:flex;
-    justify-content:space-between;
+    &__list{
+      margin-right: 50px;
+      height: 200px;
+      width: 220px;
+      background-color: skyblue;
+      color: black;
+    }
   }
-    .furima5-picture1{
-      height:260px;
-      width:100px;
-      display: flex;
-      margin: 0 0 0 250px;
-      .ra-menlogo{
-        height:250px;
-        width:250px;
-        margin-left:300px;
-      }
-    }
-    .product_contents{
-      padding: 0 0 0 45px;
-      img{
-        width: 250px;
-        height: 250px;
-      }
-    }
-    .furima5-picture2{
-      height:100px;
-      width:100px;
-      .currylogo{
-        height:250px;
-        width:250px;
-        margin-left:150px;
-      }
-    }
-    .furima5-picture3{
-      .yakinikulogo{
-        height:250px;
-        width:250px;
-        margin-right:300px;
-      }
-    }
+}
+
+
+
   .furima5-brand{
     font-size:28px;
     font-weight:bolder;
@@ -466,46 +434,8 @@
     text-align:center;
     top:190px;
   }
-  .furima5-picture2__brand{
-    height:745px;
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-    position:absolute;
-  }
-  .furima5-picture4{
-    height:200px;
-    width:200px;
-    position:relative;
-    top:220px;
-    left:160px;
-    .ra-menlogo2{
-      height:250px;
-      width:250px;
-    }
-  }
-  .furima5-picture5{
-    height:200px;
-    width:200px;
-    position:relative;
-    top:220px;
-    right:25px;
-    .currylogo2{
-      height:250px;
-      width:250px;
-    }
-  }
-  .furima5-picture6{
-    height:200px;
-    width:200px;
-    position:relative;
-    top:220px;
-    right:210px;
-    .yakinikulogo2{
-      height:250px;
-      width:250px;
-    }
-  }
+
+
 
 .furima6{
   height:300px;
@@ -545,6 +475,9 @@
       margin-top:20px;
       margin-right:10px;
       border-radius: 10px 10px 10px 10px;
+    }
+    img{
+      height: 46px;
     }
     .googlelogo3{
       margin-top:20px;

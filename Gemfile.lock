@@ -46,6 +46,8 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     airbrussh (1.4.0)
       sshkit (>= 1.6.1, != 1.7.0)
+    ancestry (3.0.7)
+      activerecord (>= 3.2.0)
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -57,7 +59,7 @@ GEM
     bootsnap (1.4.6-java)
       msgpack (~> 1.0)
     builder (3.2.4)
-    byebug (11.1.1)
+    byebug (11.1.3)
     capistrano (3.12.1)
       airbrussh (>= 1.0.0)
       i18n
@@ -73,7 +75,7 @@ GEM
       sshkit (~> 1.3)
     capistrano3-unicorn (0.2.1)
       capistrano (~> 3.1, >= 3.1.0)
-    capybara (3.31.0)
+    capybara (3.32.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -92,6 +94,7 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    coderay (1.1.2)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -113,11 +116,13 @@ GEM
     erubis (2.7.0)
     excon (0.73.0)
     execjs (2.7.0)
+    faker (2.11.0)
+      i18n (>= 1.6, < 2)
     ffi (1.12.2)
     ffi (1.12.2-java)
     ffi (1.12.2-x64-mingw32)
     ffi (1.12.2-x86-mingw32)
-    fog-aws (3.5.2)
+    fog-aws (3.6.3)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
       fog-xml (~> 0.1)
@@ -140,6 +145,11 @@ GEM
     formatador (0.2.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gon (6.3.2)
+      actionpack (>= 3.0.20)
+      i18n (>= 0.7)
+      multi_json
+      request_store (>= 1.0)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -163,7 +173,7 @@ GEM
     ipaddress (0.8.3)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
-    jquery-rails (4.3.5)
+    jquery-rails (4.4.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
@@ -172,7 +182,7 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.4.0)
+    loofah (2.5.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -182,8 +192,8 @@ GEM
     method_source (1.0.0)
     mime-types (3.3.1)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.1009)
-    mimemagic (0.3.4)
+    mime-types-data (3.2020.0425)
+    mimemagic (0.3.5)
     mini_magick (4.10.1)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
@@ -197,9 +207,9 @@ GEM
     mysql2 (0.5.3-x64-mingw32)
     mysql2 (0.5.3-x86-mingw32)
     mysql2 (0.5.3-x86-mswin32-60)
-    net-scp (2.0.0)
-      net-ssh (>= 2.6.5, < 6.0.0)
-    net-ssh (5.2.0)
+    net-scp (3.0.0)
+      net-ssh (>= 2.6.5, < 7.0.0)
+    net-ssh (6.0.2)
     nio4r (2.5.2)
     nio4r (2.5.2-java)
     nokogiri (1.10.9)
@@ -210,7 +220,16 @@ GEM
     nokogiri (1.10.9-x86-mingw32)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    public_suffix (4.0.3)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry (0.13.1-java)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+      spoon (~> 0.0)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
+    public_suffix (4.0.5)
     puma (3.12.4)
     puma (3.12.4-java)
     rack (2.2.2)
@@ -245,13 +264,16 @@ GEM
       thor (>= 0.19.0, < 2.0)
     raindrops (0.19.1)
     rake (13.0.1)
-    rb-fsevent (0.10.3)
+    rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
+    request_store (1.5.0)
+      rack (>= 1.4)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rmagick (4.1.2)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     ruby_dep (1.5.0)
@@ -269,16 +291,19 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sassc (2.2.1)
+    sassc (2.3.0)
       ffi (~> 1.9)
-    sassc (2.2.1-x64-mingw32)
+    sassc (2.3.0-x64-mingw32)
       ffi (~> 1.9)
-    sassc (2.2.1-x86-mingw32)
-      ffi (~> 1.9)
+    seed-fu (2.3.9)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
     sexp_processor (4.14.1)
+    spoon (0.0.6)
+      ffi
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -301,9 +326,9 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2019.3)
+    tzinfo-data (1.2020.1)
       tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
@@ -333,9 +358,10 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  ancestry
   bootsnap (>= 1.1.0)
   byebug
-  capistrano
+  capistrano (= 3.12.1)
   capistrano-bundler
   capistrano-rails
   capistrano-rbenv
@@ -346,19 +372,24 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
+  faker
   fog-aws
   font-awesome-rails
   font-awesome-sass
+  gon
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
   mini_magick
   mysql2 (>= 0.4.4, < 0.6.0)
+  pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4)
   rails-i18n
+  rmagick
   sass-rails (~> 5.0)
+  seed-fu
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)

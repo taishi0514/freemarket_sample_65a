@@ -1,0 +1,180 @@
+-# ここから headr
+.listingpage-header
+  = link_to image_tag('logos/logo.png', class: 'listingpage-header__logo',alt: "サンプル画像"),root_path
+
+-# こっから mina 
+.listingpage-main
+  = form_with(model:@product,local:true, url: '/listingpage/create') do |f|
+    -# コンテンツ1
+    %div{:class=>"listingpage-main__image listingpage-reuse"}
+      .listingpage-text 
+        .listingpage-text__left 出品画像
+        .listingpage-text__right 必須
+      .listingpage-main__image__text1
+        最大5枚までアップロードできます
+
+      -# 一時的にラベルタグにしてる 画像を読み込む機能
+      .listingpage-main__image__input
+        %label.listingpage-main__image__input__box
+          %i.fas.fa-camera.listingpage-main__image__input__box__icon
+          %p.listingpage-main__image__input__box__text
+            ドラッグアンドドロップ
+            またはクリックしてファイルをアップロード
+          =f.fields_for :images do |i|
+            = i.file_field :src, multiple: true, class: 'image-upload-dropfile-hidden',type: 'file', name: "images[src][]"
+
+
+
+    -# コンテンツ1終わり
+    .listingpage-main__boder
+    
+    -# コンテンツ２
+    %div{:class=>"listingpage-main__title listingpage-reuse"}
+      .listingpage-text 
+        .listingpage-text__left 商品名
+        .listingpage-text__right 必須
+
+      .listingpage-main__title__text2
+        =f.text_field :title, :placeholder=>"40文字まで"
+
+      .listingpage-text 
+        .listingpage-text__left 商品の説明
+        .listingpage-text__right 必須
+      
+      .listingpage-main__title__text4
+        = f.text_area :detail, rows:7 ,:placeholder=>"商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+      
+      .listingpage-main__title__text5 0/1000
+
+    -# コンテンツ2終わり
+    .listingpage-main__boder
+
+    -# コンテンツ3
+    %div{:class=>"listingpage-main__details listingpage-reuse"}
+      .listingpage-main__details__p 商品の詳細
+      .listingpage-text 
+        .listingpage-text__left カテゴリー
+        .listingpage-text__right 必須
+
+      .items-second__head
+
+        .items-second__head--first
+          = select_tag 'parent', options_for_select(@categories.pluck(:name,:id))
+        .items-second__head--second
+        .items-second__head--third
+        .items-second__head--fourth{style:"display:none;"}
+          .listingpage-text 
+            .listingpage-text__left サイズ
+            .listingpage-text__right 必須
+
+        
+      .listingpage-text 
+        .listingpage-text__left ブランド
+        .listingpage-text__right 必須
+      .listingpage-main__details__text3
+        =f.text_field :brand, :placeholder=>"例）よっぴー"
+      .listingpage-text 
+        .listingpage-text__left 商品の状態
+        .listingpage-text__right 必須
+      = f.select :condition,[['新品、未使用','新品、未使用'],['未使用に近い','未使用に近い'],['目立った傷や汚れなし','目立った傷や汚れなし'],['やや傷や汚れあり','やや傷や汚れあり'],['傷や汚れあり','傷や汚れあり'],['全体的に状態が悪い','全体的に状態が悪い']],prompt:'選択してください',:class=>"listingpage-main__details__category2"
+    -# コンテンツ3終わり
+    .listingpage-main__boder
+
+    -# コンテンツ4
+    %div{:class=>"listingpage-main__delivery listingpage-reuse"}
+      .listingpage-main__delivery__text1
+        .listingpage-main__delivery__text1__left 配送について
+        %i.fab.fa-whmcs.listingpage-main__delivery__text1__right
+      .listingpage-text 
+        .listingpage-text__left 配送料の負担
+        .listingpage-text__right 必須
+      = select_tag :shippingway, options_for_select(@shippingways.pluck(:name,:id)),:class=>"listingpage-main__details__category2"
+      .items-third__center{style:"display:none;"}
+        = f.label :"配送の方法"
+        %span.form-require 必須
+        %br/
+      .listingpage-main__delivery__text3
+        .listingpage-main__delivery__text3__left 発送元の地域
+        .listingpage-main__delivery__text3__right 必須
+      = f.collection_select :area_id,@Area,:id,:name
+      .listingpage-text 
+        .listingpage-text__left 発送までの日数
+        .listingpage-text__right 必須
+      = f.select :ship_period,[['1~2日で発送','1~2日で発送'],['2~3日で発送','2~3日で発送'],['4~7日で発送','4~7日で発送']],prompt:'選択してください'
+
+    -# コンテンツ4終わり
+    .listingpage-main__boder
+    .sell-content.clearfix
+      %h3
+        販売価格(300〜9,999,999)
+      = link_to "?", 'https://www.mercari.com/jp/help_center/article/64/', class:"round-icon" 
+      .sell-form-box
+        %ul
+          %li.price-group
+            .clear-fix
+              .sell-price-title
+                %label
+                  価格
+                  %span
+                    必須
+              .sell-price-input
+                %p
+                  ¥
+                %div
+                  = f.number_field :price, min:300, max:9999999, class: "input-default", id: "sell-price", placeholder: "例）300", value: ""
+          %li.price-group.border
+            .clear-fix
+              .sell-price-title
+                販売手数料(10%)
+              .sell-price-input
+                .right
+                  #mercari_fee
+          %li.price-group.border
+            .clear-fix
+              .sell-price-title.bold
+                販売利益
+              .sell-price-input
+                .right
+                  #seller_gain
+
+    .listingpage-main__price__text6
+      = f.submit '出品する' ,:class=>"listingpage-main__price__text6__btn1" 
+      %button{:class=>"listingpage-main__price__text6__btn2" ,:type=>"submit"} 下書きに保存
+      = link_to 'もどる', "#", class: "listingpage-main__price__text6__btn3" 
+    
+    %p.listingpage-main__price__text7
+      禁止されている
+      = link_to '行為', "#"
+      および
+      = link_to '出品物', "#"
+      を必ずご確認ください。
+      = link_to '偽ブランド品', "#"
+      や
+      = link_to '盗品物', "#"
+      などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして
+      = link_to '加盟店規約', "#"
+      に同意したことになります。
+
+
+  -# コンテンツ5終わり
+-# メインページここまで
+
+-# footerスタート
+
+.listingpage-footer
+  %ul
+    %li= link_to "プライバシーポリシー", "#"
+    %li= link_to "メルカリ利用規約", "#"
+    %li= link_to "特定商取引に関する表記", "#"
+  = link_to image_tag("logos/logo.png", alt: "サンプル画像")
+
+  %p © Mercari, Inc.
+
+-# footer終わり
+
+
+
+
+
+
+

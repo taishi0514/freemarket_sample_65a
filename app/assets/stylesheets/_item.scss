@@ -1,72 +1,55 @@
 .item__buypage{
-  height:1400px;
+  height:auto;
   width:100%;
-  background-color:#CCCCCC;
 }
 
-  .item__top{
-    height:150px;
-    width:100%;
-    &--logo{
-      height:60px;
-      width:300px;
-      margin:auto;
-      text-align:center;
-      padding-top:50px;
-      .picture{
-        height:55px;
-      }
-    }
+.main__item__page__4__box__button{
+  height:100px;
+  width:100px;
+  padding-top:27px;
+  a{
+    text-decoration:none;
+    font-size:14px;
+    color:skyblue;
   }
+}
+
 
   .main__item{
     height:950px;
     width:100%;
-    &--page{
+    margin-top: 50px;
+    &__page{
       height:950px;
       width:700px;
       background-color:white;
-      margin-left:380px;
+      margin:0 auto;
       &__1{
         height:100px;
         border-bottom:solid 1px #C0C0C0;
-        &--item{
-          height:50px;
-          width:700px;
-          font-size:22px;
-          font-weight:bold;
-          letter-spacing:0.05em;
-          padding:35px;
-          padding-left:270px;
-        }
+        font-size:22px;
+        font-weight:bold;
+        text-align: center;
+        padding-top:35px;
       }
 
       &__2{
-        height:150px;
+        height:auto;
         border-bottom:solid 1px #C0C0C0;
-        letter-spacing:0.05em;
-        display:flex;
-        &--picture{
+        width: 100%;
+        &__picture{
           height:150px;
-          width:700px;
-          position:absolute;
+          width: 300px;
+          margin: 0 auto;
+          padding-top: 20px;
           .watch{
-            height:90px;
-            width:60px;
-            position:relative;
-            left:190px;
-            top:30px;
+            height:100px;
+            width:100px;
           }
           &__item{
-            width:200px;
             font-size:12px;
-            left:270px;
-            bottom:55px;
             line-height:25px;
-            position:relative;
-            span{
-              font-weight:bold;
-            }
+            float: right;
           }
         }
       }
@@ -74,7 +57,7 @@
       &__3{
         height:150px;
         border-bottom:solid 1px #C0C0C0;
-        &--money{
+        &__money{
           font-size: 18px;
           font-weight: bold;
           width:250px;
@@ -87,7 +70,7 @@
             left:130px;
           }
         }
-        &--box{
+        &__box{
           padding-left:190px;
           padding-top:10px;
           #point_check{
@@ -100,10 +83,10 @@
       }
 
       &__4{
-        height:200px;
+        height:150px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
-        &--box{
+        &__box{
           height:60px;
           width:700px;
           display:flex;
@@ -114,24 +97,14 @@
             height:50px;
             margin-left:190px;
             padding-top:30px;
-                    }
-          &__button{
-            height:100px;
-            width:100px;
-            padding-top:27px;
-            a{
-              text-decoration:none;
-              font-size:14px;
-              color:skyblue;
-            }
           }
         }
-        &--card{
+        &__card{
           font-size: 12px;
           width:300px;
           padding-left:190px;
         }
-        &--visa{
+        &__visa{
           width:300px;
           padding-left:190px;
           padding-top:10px;
@@ -139,11 +112,11 @@
       }
 
       &__5{
-        height:200px;
+        height:150px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         display:flex;
-        &--address{
+        &__address{
           font-size:14px;
           font-weight:bold;
           width:250px;
@@ -157,23 +130,11 @@
             top:10px;
           }
         }
-        &--button{
-          height:50px;
-          width:100px;
-          display:inline-block;
-          a{
-            font-size:14px;
-            margin-top:30px;
-            display:block;
-            text-decoration: none;
-            color: skyblue;
-          }
-        }
       }
 
       &__6{
         height:145px;
-        &--button{
+        &__button{
           height:50px;
           width:300px;
           background-color:red;

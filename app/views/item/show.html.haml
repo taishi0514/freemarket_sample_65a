@@ -1,0 +1,47 @@
+= render "users/header"
+.item__buypage
+  .main__item
+    .main__item__page
+      .main__item__page__1
+        購入内容の確認
+      .main__item__page__2
+        .main__item__page__2__picture
+          = image_tag @product.images.first.src.url, class: 'watch'
+          .main__item__page__2__picture__item
+            =@product.title
+            %br/
+            =@product.price 
+            (税込)送料込み
+      .main__item__page__4
+        .main__item__page__4__box
+          .main__item__page__4__box__text
+            支払い方法
+            %br/
+          .main__item__page__4__box__button
+            = link_to '変更する', class: 'edit'
+        .main__item__page__4__card
+          クレジットカード
+          %br/
+          ************3432
+          %br/
+          有効期限06/21
+      .main__item__page__5
+        .main__item__page__5__address
+          配送先
+          %br/
+          %span.address
+            = "〒" + @address.zipcode
+            %br/
+            = @address.prefecture_name + @address.cities_name
+            %br/
+            = @address.address
+
+
+        .main__item__page__4__box__button
+          =link_to '変更する', class: 'edit2'
+      .main__item__page__6
+        .main__item__page__6__button
+          = link_to '購入する',root_path, class: 'buy-button'
+
+  .footer_item
+= render "users/footer"

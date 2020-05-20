@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
   def index
-    @products = Product.includes(:images).order('created_at DESC')
+    @products = Product.order('products.created_at desc').limit(3)
   end
-    
 end
