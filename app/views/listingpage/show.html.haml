@@ -23,7 +23,6 @@
   - elsif user_signed_in? 
     .purchase
       = link_to '購入ページ',"/item/#{@product.id}", method: :get
-
     %p.setumei= @product.detail
   .name= @product.title
   %table
