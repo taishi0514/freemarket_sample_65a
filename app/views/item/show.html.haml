@@ -19,7 +19,7 @@
             支払い方法
             %br/
           .main__item__page__4__box__button
-            = link_to '変更する', class: 'edit'
+            = link_to '変更する',root_path, class: 'edit'
         .main__item__page__4__card
           = "**** **** **** " + @card_info.last4
           = @exp_month + " / " + @exp_year
@@ -38,8 +38,8 @@
 
 
         .main__item__page__4__box__button
-          =link_to '変更する', class: 'edit2'
-      .main__item__page__
+          =link_to '変更する',root_path, class: 'edit2'
+      .main__item__page__6
         .main__item__page__6__button
           = form_with(url: "/item/#{@product.id}/pay",method: :post, local: true) do
             %button.main__item__page__6__button__buy 購入する  
