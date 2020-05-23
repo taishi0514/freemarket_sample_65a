@@ -116,49 +116,57 @@
         .listingpage-text__right 必須
       = f.select :ship_period,[['1~2日で発送',1],['2~3日で発送',2],['4~7日で発送',3]],prompt:'選択してください'
 
-    -# コンテンツ4終わり
     .listingpage-main__boder
-
-    -# コンテンツ5
-    %div{:class=>"listingpage-main__price listingpage-reuse"}
-      .listingpage-main__price__text1
-        .listingpage-main__delivery__text1__left 価格（¥300〜9,999,999）
-        %i.fab.fa-whmcs.listingpage-main__delivery__text1__right
-
-      .listingpage-main__price__text2
-        .listingpage-main__price__text2__left 
-          .listingpage-main__price__text2__left__left 販売価格
-          .listingpage-main__price__text2__left__right 必須
-        .listingpage-main__price__text2__icon ¥
-        =f.text_field :price, :placeholder=>'0',:class=>'listingpage-main__price__text2__right'
-
-      .listingpage-main__price__text3
-        .listingpage-main__price__text3__left 販売手数料（10%）
-        .listingpage-main__price__text3__right —
-
-      .listingpage-main__price__text4
-
-      .listingpage-main__price__text5
-        .listingpage-main__price__text3__left 販売利益
-        .listingpage-main__price__text3__right —
+    .sell-content.clearfix
+      %h4
+        販売価格(300〜9,999,999)
+      = link_to "?", 'https://www.mercari.com/jp/help_center/article/64/', class:"round-icon" 
+      .sell-form-box
+        %ul
+          %li.price-group
+            .clear-fix
+              .sell-price-title
+                %label
+                  価格
+                  %span
+                    必須
+              .sell-price-input
+                %p
+                  ¥
+                %div
+                  = f.number_field :price, min:300, max:9999999, class: "input-default", id: "sell-price", placeholder: "例）300", value: ""
+          %li.price-group.border
+            .clear-fix
+              .sell-price-title
+                販売手数料(10%)
+              .sell-price-input
+                .right
+                  #mercari_fee
+          %li.price-group.border
+            .clear-fix
+              .sell-price-title.bold
+                販売利益
+              .sell-price-input
+                .right
+                  #seller_gain
       
-      .listingpage-main__price__text6
-        = f.submit '出品する' ,:class=>"listingpage-main__price__text6__btn1" 
-        %button{:class=>"listingpage-main__price__text6__btn2" ,:type=>"submit"} 下書きに保存
-        = link_to 'もどる', "#", class: "listingpage-main__price__text6__btn3" 
-      
-      %p.listingpage-main__price__text7
-        禁止されている
-        = link_to '行為', "#"
-        および
-        = link_to '出品物', "#"
-        を必ずご確認ください。
-        = link_to '偽ブランド品', "#"
-        や
-        = link_to '盗品物', "#"
-        などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして
-        = link_to '加盟店規約', "#"
-        に同意したことになります。
+    .listingpage-main__price__text6
+      = f.submit '出品する' ,:class=>"listingpage-main__price__text6__btn1" 
+      %button{:class=>"listingpage-main__price__text6__btn2" ,:type=>"submit"} 下書きに保存
+      = link_to 'もどる', "#", class: "listingpage-main__price__text6__btn3" 
+    
+    %p.listingpage-main__price__text7
+      禁止されている
+      = link_to '行為', "#"
+      および
+      = link_to '出品物', "#"
+      を必ずご確認ください。
+      = link_to '偽ブランド品', "#"
+      や
+      = link_to '盗品物', "#"
+      などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして
+      = link_to '加盟店規約', "#"
+      に同意したことになります。
 
 
   -# コンテンツ5終わり
