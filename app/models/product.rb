@@ -21,3 +21,4 @@ class Product < ApplicationRecord
   # 価格 300以上10000000以下or等しく 空でない事
   validates :price,presence: true ,numericality: {greater_than_or_equal_to: 300,less_than:99999999999}
 end
+
