@@ -1,22 +1,22 @@
-body{
+body {
   background-color: #eee;
-  main{
+  main {
     .container {
       height: calc(105vh - 250px - 0%);
       width: 700px;
       margin: 50px auto;
-      &__message{
+      &__message {
         padding: 40px;
-        color:black;
-        font-size:25px;
+        color: black;
+        font-size: 25px;
         background-color: white;
         text-align: center;
         border-bottom: 1px solid #eee;
       }
-      hr{
+      hr {
         border-width: 1px 0px 0px 0px;
       }
-      &__main{
+      &__main {
         background-color: white;
         padding: 40px 200px;
       }
@@ -33,32 +33,32 @@ body{
         height: 40px;
       }
       ul {
-          padding: 0px;
+        padding: 0px;
       }
-      .contents__btn{
+      .contents__btn {
         display: block;
         height: 70px;
-        width :360px;
+        width: 360px;
         margin: -10px auto 23px;
         border-radius: 4px;
-        font-size:15px;
-        color:#fff;
+        font-size: 15px;
+        color: #fff;
         text-decoration: none;
         text-align: center;
         line-height: 70px;
-        &--icon{
-          padding-right:20px;
+        &--icon {
+          padding-right: 20px;
         }
-        &--facebook{
+        &--facebook {
           background-color: #385185;
         }
-        &--twitter{
+        &--twitter {
           background-color: #00bfff;
         }
-        &--instagram{
+        &--instagram {
           background-color: #fc76bf;
         }
-        &--e-mail{
+        &--e-mail {
           background-color: red;
         }
       }
@@ -73,7 +73,6 @@ body{
   margin: 8px 0 0;
 }
 
-
 .form-require {
   background: #ea352d;
   margin: 0 0 0 8px;
@@ -82,4 +81,21 @@ body{
   color: #fff;
   font-size: 12px;
   vertical-align: top;
+}
+
+.field {
+  [type="checkbox"] {
+    width: auto;
+    vertical-align: middle;
+  }
+  label {
+    vertical-align: middle;
+  }
+  input::-webkit-input-placeholder {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  em {
+    display: none;
+  }
 }
