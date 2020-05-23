@@ -60,7 +60,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
-    capistrano (3.14.0)
+    capistrano (3.12.1)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -151,6 +151,11 @@ GEM
     formatador (0.2.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    gon (6.3.2)
+      actionpack (>= 3.0.20)
+      i18n (>= 0.7)
+      multi_json
+      request_store (>= 1.0)
     haml (5.1.2)
       temple (>= 0.8.0)
       tilt
@@ -275,6 +280,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.0)
+    request_store (1.5.0)
+      rack (>= 1.4)
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -301,6 +308,7 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rmagick (4.1.2)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     ruby_dep (1.5.0)
@@ -394,7 +402,7 @@ DEPENDENCIES
   ancestry
   bootsnap (>= 1.1.0)
   byebug
-  capistrano
+  capistrano (= 3.12.1)
   capistrano-bundler
   capistrano-rails
   capistrano-rbenv
@@ -410,6 +418,7 @@ DEPENDENCIES
   fog-aws
   font-awesome-rails
   font-awesome-sass
+  gon
   haml-rails
   jbuilder (~> 2.5)
   jquery-rails
@@ -421,6 +430,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.4)
   rails-i18n
+  rmagick
   sass-rails (~> 5.0)
   seed-fu
   selenium-webdriver

@@ -9,7 +9,6 @@ $(document).on('turbolinks:load',function(){
 
   $("#charge-submit").click(function(e) {
     e.preventDefault()
-    console.log(1)
     form.find("input[type=submit]").prop("disabled", true);
 
     var card = {
@@ -23,7 +22,6 @@ $(document).on('turbolinks:load',function(){
     Payjp.createToken(card, function(status, response) {
       console.log(3)
       if (response.error){
-        console.log(2)
         form.find('.payment-errors').text(response.error.message);
         form.find('button').prop('disabled', false);
       }   
@@ -33,7 +31,6 @@ $(document).on('turbolinks:load',function(){
         $("#exp_month").removeAttr("name");
         $("#exp_year").removeAttr("name");
         var token = response.id;
-        console.log(token)
         form.append($('<input type="hidden" name="payjpToken" />').val(token));
         form.get(0).submit();
       };

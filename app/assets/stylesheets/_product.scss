@@ -35,27 +35,44 @@ p{
   width: 700px;
   height: auto;
   margin: 50px auto;
-  padding: 24px 40px 40px 40px;
+  padding:40px;
+  .item_sold{
+    width:100px;
+    transform: rotate(-45deg);
+    font-size: 28px;
+    margin:-35px 0px 0px -55px;
+    color: red;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
   h1{
     text-align: center;
     padding-top: 10px;
   }
+
   .test{
-    height: 346px;
-    width: 100%;
-    margin-bottom: -60px;
+    display:block;
+    margin:0 auto;
+    width: 360px;
+    height: 500px;
   }
 
   .list_image{
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    display:flex;
+    margin:0 auto;
     padding: 0px;
-    img{
-      height: 200px;
+    margin-top: 10px;
+    li{
+      width: 20%;
+      img{
+        width: 100%;
+        background-size: contain;
+        height: 80px;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
     }
   }
-
 
 
 

@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2020_05_14_061407) do
     t.string "last_name_kanji", null: false
     t.string "family_name_kana", null: false
     t.string "last_name_kana", null: false
-    t.integer "zipcode"
+    t.string "zipcode"
     t.text "prefecture_name", null: false
     t.text "cities_name", null: false
     t.text "address", null: false
@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(version: 2020_05_14_061407) do
   end
 
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "title"
     t.string "detail"
     t.bigint "category_id"
@@ -101,12 +102,15 @@ ActiveRecord::Schema.define(version: 2020_05_14_061407) do
     t.bigint "area_id"
     t.string "ship_period"
     t.integer "price"
+    t.bigint "purchaser_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_products_on_area_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["product_size_id"], name: "index_products_on_product_size_id"
+    t.index ["purchaser_id"], name: "index_products_on_purchaser_id"
     t.index ["shippingway_id"], name: "index_products_on_shippingway_id"
+    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "shippingways", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

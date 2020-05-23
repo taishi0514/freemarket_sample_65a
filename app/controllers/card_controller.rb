@@ -33,9 +33,9 @@ class CardController < ApplicationController
   end
 
   def new
-    @card = Card.new
-     # .where(user_id: current_user.id).first
-     # redirect_to action: "index" if @card.present?    
+    # @card = Card.new
+    @card = Card.where(user_id: current_user.id).first
+     redirect_to action: "index" if @card.present?    
   end
 
   def create
@@ -51,12 +51,12 @@ class CardController < ApplicationController
         metadata: {user_id: current_user.id}
       )
       @card = Card.new(user_id: current_user.id, payjp_id: customer.id)
-      if @card.save
-        if request.referer&.include?("/registrations/step5")
-          redirect_to controller: 'registrations', action: "step6"
-        else
-          redirect_to url:"card_index_path",method: :post, notice:"支払い情報の登録が完了しました"
-        end
+      if @card.save!
+        # if request.referer&.include?("/registrations/step5")
+        #   redirect_to controller: 'registrations', action: "step6"
+        # else
+        #   redirect_to url:"card_index_path",method: :post, notice:"支払い情報の登録が完了しました"
+        # end
       else
         render 'new'
       end
@@ -64,40 +64,20 @@ class CardController < ApplicationController
   end
 
 
- def destroy     
+ def destroy
+   
+   @card = Card.where(user_id: current_user.id).first
+
    Payjp.api_key = Rails.application.credentials.payjp[:private_key]
    customer = Payjp::Customer.retrieve(@card.payjp_id)
    customer.delete
    if @card.destroy
-     redirect_to action: "index", notice: "削除しました"
+    render 'destroy', notice: "削除しました"
    else
-     redirect_to action: "index", alert: "削除できませんでした"
+    redirect_to action: "index", alert: "削除できませんでした"
    end
   end
 
-  # def buy
-  #   @product = Product.find(params[:product_id])
-  #   if @product.buyer.present? 
-  #     redirect_back(fallback_location: root_path) 
-  #   elsif @card.blank?
-  #     redirect_to action: "new"
-  #     flash[:alert] = '購入にはクレジットカード登録が必要です'
-  #   else
-  #     Payjp.api_key = ENV["PAYJP_PRIVATE_KEY"]
-  #     Payjp::Charge.create(
-  #     amount: @product.price,
-  #     customer: @card.customer_id,
-  #     currency: 'jpy',
-  #     )
-  #     if @product.update(buyer_id: current_user.id)
-  #       flash[:notice] = '購入しました。'
-  #       redirect_to controller: 'products', action: 'show', id: @product.id
-  #     else
-  #       flash[:alert] = '購入に失敗しました。'
-  #       redirect_to controller: 'products', action: 'show', id: @product.id
-  #     end
-  #   end
-  # end
 
   private
 

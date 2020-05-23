@@ -12,7 +12,7 @@
       .card_brand
       = image_tag "logos/#{@card_image}"
       .card_delete
-      = link_to "削除する",card_index_path,method: :destroy
+      = link_to "削除する",card_path(@card.id),method: "delete"
       
 
 = render "users/footer"

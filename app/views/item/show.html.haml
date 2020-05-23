@@ -1,0 +1,48 @@
+= render "users/header"
+.item__buypage
+  .main__item
+    .main__item__page
+      .main__item__page__1
+        .main__item__page__1__item
+          購入内容の確認
+      .main__item__page__2
+        .main__item__page__2__picture
+          = image_tag @product.images.first.src.url, class: 'watch'
+          .main__item__page__2__picture__item
+            =@product.title
+            %br/
+            =@product.price 
+            (税込)送料込み
+      .main__item__page__4
+        .main__item__page__4__box
+          .main__item__page__4__box__text
+            支払い方法
+            %br/
+          .main__item__page__4__box__button
+            = link_to '変更する', class: 'edit'
+        .main__item__page__4__card
+          = "**** **** **** " + @card_info.last4
+          = @exp_month + " / " + @exp_year
+          = @card_brand
+          = image_tag "logos/#{@card_image}",width:'45',height:'30'
+      .main__item__page__5
+        .main__item__page__5__address
+          配送先
+          %br/
+          %span.address
+            = "〒" + @address.zipcode
+            %br/
+            = @address.prefecture_name + @address.cities_name
+            %br/
+            = @address.address
+
+
+        .main__item__page__4__box__button
+          =link_to '変更する', class: 'edit2'
+      .main__item__page__
+        .main__item__page__6__button
+          = form_with(url: "/item/#{@product.id}/pay",method: :post, local: true) do
+            %button.main__item__page__6__button__buy 購入する  
+
+  .footer_item
+= render "users/footer"

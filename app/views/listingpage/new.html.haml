@@ -1,18 +1,17 @@
 -# ここから headr
 .listingpage-header
-  = image_tag 'logos/logo.png', class: 'listingpage-header__logo'
-
+  = link_to image_tag('logos/logo.png', class: 'listingpage-header__logo',alt: "サンプル画像"),root_path
 
 -# こっから mina 
 .listingpage-main
-  = form_with(model:@product,local:true, url:'/listingpage/create') do |f|
+  = form_with(model:@product,local:true, url: '/listingpage/create') do |f|
     -# コンテンツ1
     %div{:class=>"listingpage-main__image listingpage-reuse"}
       .listingpage-text 
         .listingpage-text__left 出品画像
         .listingpage-text__right 必須
       .listingpage-main__image__text1
-        最大10枚までアップロードできます
+        最大5枚までアップロードできます
 
       -# 一時的にラベルタグにしてる 画像を読み込む機能
       .listingpage-main__image__input
@@ -20,10 +19,9 @@
           %i.fas.fa-camera.listingpage-main__image__input__box__icon
           %p.listingpage-main__image__input__box__text
             ドラッグアンドドロップ
-            %br/
             またはクリックしてファイルをアップロード
           =f.fields_for :images do |i|
-            =i.file_field :src
+            = i.file_field :src, multiple: true, class: 'image-upload-dropfile-hidden',type: 'file', name: "images[src][]"
 
 
 
