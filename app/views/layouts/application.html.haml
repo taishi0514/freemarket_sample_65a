@@ -9,6 +9,8 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %script(src="https://kit.fontawesome.com/e76e9d0fb6.js" crossorigin="anonymous")
+    %script{src: "https://js.pay.jp/", type: "text/javascript"}
+
 %body
 %header
   -if flash[:notice]

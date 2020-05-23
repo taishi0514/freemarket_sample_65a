@@ -1,0 +1,18 @@
+= render "users/header"
+
+%main
+  %section.container
+    %h2.container__message クレジットカード情報
+    .container__main
+      .card_namber
+      = "**** **** **** " + @card_info.last4
+      .card_period
+      = @exp_month + " / " + @exp_year
+      = @card_brand
+      .card_brand
+      = image_tag "logos/#{@card_image}"
+      .card_delete
+      = link_to "削除する",card_path(@card.id),method: "delete"
+      
+
+= render "users/footer"

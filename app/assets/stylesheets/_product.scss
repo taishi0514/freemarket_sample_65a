@@ -36,6 +36,15 @@ p{
   height: auto;
   margin: 50px auto;
   padding:40px;
+  .item_sold{
+    width:100px;
+    transform: rotate(-45deg);
+    font-size: 28px;
+    margin:-35px 0px 0px -55px;
+    color: red;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
   h1{
     text-align: center;
     padding-top: 10px;
