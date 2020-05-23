@@ -308,7 +308,6 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    rmagick (4.1.2)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     ruby_dep (1.5.0)
@@ -430,7 +429,6 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (~> 5.2.4)
   rails-i18n
-  rmagick
   sass-rails (~> 5.0)
   seed-fu
   selenium-webdriver
