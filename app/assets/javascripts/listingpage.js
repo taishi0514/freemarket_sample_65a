@@ -9,10 +9,13 @@ $(document).on('turbolinks:load', function() {
   $("#parent").on("change",function(){
     var str = document.getElementById("parent").value
     if(str == 0){
+      console.log('ok')
       $('#child').remove();
       $('#item_category_id').remove();
-      $('.items-second__head--fourth').css('display','none');
+      $('#product_category_id').remove();
       $("#item_product_size_id").remove();
+      $("#product_product_size_id").remove();
+      $(".items-second__head--third").remove();
     }else{
       $.ajax({
         url: "/api/categories",
@@ -30,7 +33,9 @@ $(document).on('turbolinks:load', function() {
         if($('#child').length){
           $('#child').replaceWith(insertHTML);
           $('#item_category_id').remove();
+          $('#product_category_id').remove();
           $('#item_product_size_id').remove();
+          $("#product_product_size_id").remove();
           $('.items-second__head--fourth').css('display','block');
         } else {
           $('.items-second__head--second').append(insertHTML);

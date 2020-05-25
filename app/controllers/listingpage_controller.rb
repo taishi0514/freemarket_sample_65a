@@ -83,6 +83,7 @@ class ListingpageController < ApplicationController
     @categories.push(Category.new(id:0,name:"選択してください"))
     @categories.concat(Category.where(ancestry: nil))
   end
+
   def set_shippingways
     @shippingways = []
     @shippingways.push(Shippingway.new(id:0,name:"選択してください"))
