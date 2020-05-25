@@ -116,9 +116,7 @@
         .listingpage-text__right 必須
       = f.select :ship_period,[['1~2日で発送',1],['2~3日で発送',2],['4~7日で発送',3]],prompt:'選択してください'
 
-    -# コンテンツ4終わり
     .listingpage-main__boder
-
     -# コンテンツ5
     %div{:class=>"listingpage-main__price listingpage-reuse"}
       .listingpage-main__price__text1
@@ -142,23 +140,23 @@
         .listingpage-main__price__text3__left 販売利益
         .listingpage-main__price__text3__right —
       
-      .listingpage-main__price__text6
-        = f.submit '出品する' ,:class=>"listingpage-main__price__text6__btn1" 
-        %button{:class=>"listingpage-main__price__text6__btn2" ,:type=>"submit"} 下書きに保存
-        = link_to 'もどる', "#", class: "listingpage-main__price__text6__btn3" 
-      
-      %p.listingpage-main__price__text7
-        禁止されている
-        = link_to '行為', "#"
-        および
-        = link_to '出品物', "#"
-        を必ずご確認ください。
-        = link_to '偽ブランド品', "#"
-        や
-        = link_to '盗品物', "#"
-        などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして
-        = link_to '加盟店規約', "#"
-        に同意したことになります。
+    .listingpage-main__price__text6
+      = f.submit '出品する' ,:class=>"listingpage-main__price__text6__btn1" 
+      %button{:class=>"listingpage-main__price__text6__btn2" ,:type=>"submit"} 下書きに保存
+      = link_to 'もどる', "#", class: "listingpage-main__price__text6__btn3" 
+    
+    %p.listingpage-main__price__text7
+      禁止されている
+      = link_to '行為', "#"
+      および
+      = link_to '出品物', "#"
+      を必ずご確認ください。
+      = link_to '偽ブランド品', "#"
+      や
+      = link_to '盗品物', "#"
+      などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして
+      = link_to '加盟店規約', "#"
+      に同意したことになります。
 
 
   -# コンテンツ5終わり

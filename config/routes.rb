@@ -17,7 +17,15 @@ Rails.application.routes.draw do
   resources :home, only: [:show]
 
   # 購入画面
-  resources :item, only: [:show]
+  resources :item, only: [:show,] do
+    collection do
+      get 'index', to: 'item#index'
+      post ':id/pay', to: 'item#pay'
+      get 'done', to:'item#done'
+    end
+  end
+
+  resources :card, only: [:index, :new, :create,:destroy,:buy]
 
   # カテゴリー
   resources :categories,only: [:index,:show]

@@ -1,0 +1,23 @@
+= render "users/header"
+%main
+  %section.container
+    %h2.container__message ログイン
+    .container__main
+      .account-page__inner--right.user-form
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .field
+            = f.label :email,"メールアドレス"
+            %br/
+            = f.email_field :email, autofocus: true, autocomplete: "email"
+          .field
+            = f.label :password,"パスワード"
+            %br/
+            = f.password_field :password, autocomplete: "current-password"
+          - if devise_mapping.rememberable?
+            .field
+              = f.check_box :remember_me
+              = f.label :remember_me,"パスワード保存する場合はチェック"
+          .actions
+            = f.submit "Log in"
+        = render "devise/shared/links"
+= render "users/footer"

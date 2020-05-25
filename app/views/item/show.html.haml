@@ -3,7 +3,8 @@
   .main__item
     .main__item__page
       .main__item__page__1
-        購入内容の確認
+        .main__item__page__1__item
+          購入内容の確認
       .main__item__page__2
         .main__item__page__2__picture
           = image_tag @product.images.first.src.url, class: 'watch'
@@ -18,13 +19,12 @@
             支払い方法
             %br/
           .main__item__page__4__box__button
-            = link_to '変更する', class: 'edit'
+            = link_to '変更する',root_path, class: 'edit'
         .main__item__page__4__card
-          クレジットカード
-          %br/
-          ************3432
-          %br/
-          有効期限06/21
+          = "**** **** **** " + @card_info.last4
+          = @exp_month + " / " + @exp_year
+          = @card_brand
+          = image_tag "logos/#{@card_image}",width:'45',height:'30'
       .main__item__page__5
         .main__item__page__5__address
           配送先
@@ -38,10 +38,11 @@
 
 
         .main__item__page__4__box__button
-          =link_to '変更する', class: 'edit2'
+          =link_to '変更する',root_path, class: 'edit2'
       .main__item__page__6
         .main__item__page__6__button
-          = link_to '購入する',root_path, class: 'buy-button'
+          = form_with(url: "/item/#{@product.id}/pay",method: :post, local: true) do
+            %button.main__item__page__6__button__buy 購入する  
 
   .footer_item
 = render "users/footer"

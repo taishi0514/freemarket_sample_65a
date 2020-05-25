@@ -8,14 +8,17 @@
           = render "devise/shared/error_messages", resource: @user
           .field
             = f.label :nickname,"ニックネーム"
+            %span.listingpage-text__right 必須
             %br/
             = f.text_field :nickname
           .field
             = f.label :email,"メールアドレス"
+            %span.listingpage-text__right 必須
             %br/
             = f.text_field :email, :placeholder => "（例）〇〇〇＠XXX"
           .field
             = f.label :password,"パスワード"
+            %span.listingpage-text__right 必須
             - if @minimum_password_length
               %em
                 (#{@minimum_password_length} characters minimum)
@@ -23,30 +26,37 @@
             = f.password_field :password, autocomplete: "new-password"
           .field
             = f.label :password_confirmation,"確認用パスワード"
+            %span.listingpage-text__right 必須
             %br/
             = f.password_field :password_confirmation, autocomplete: "new-password"
           .field
             = f.label :family_name_kanji,"姓（漢字）"
+            %span.listingpage-text__right 必須
             %br/
             = f.text_field :family_name_kanji
           .field
             = f.label :last_name_kanji,"名（漢字）"
+            %span.listingpage-text__right 必須
             %br/
             = f.text_field :last_name_kanji
           .field
             = f.label :family_name_kana,"姓（カタカナ全角）"
+            %span.listingpage-text__right 必須
             %br/
             = f.text_field :family_name_kana
           .field
             = f.label :last_name_kana,"名（カタカナ全角）"
+            %span.listingpage-text__right 必須
             %br/
             = f.text_field :last_name_kana
           .field
             = f.label :birthday,"生年月日"
+            %span.listingpage-text__right 必須
             %br/
-            = f.text_field :birthday, :placeholder => "（例：1990年05月20日は19900520と記入）"
+            = f.text_field :birthday, :placeholder => "例:1991年1月1日は19900101と入力"
           .actions
             = f.submit "次へ"
+        既にアカウントをお持ちの方は
         = render "devise/shared/links"
 
 = render "users/footer"

@@ -6,12 +6,16 @@
     -@product.images.each do |image|
       %li
         = image_tag image.src.url
+  
 
 
   .test_test1
     .price= @product.price
     %p.tax  (税込) 送料込み
-  - if user_signed_in? && current_user.id==@product.user_id
+  - if @product.purchaser_id.present?
+    .item_sold
+      sold
+  - elsif user_signed_in? && current_user.id==@product.user_id
     .purchase_0
       = link_to '編集',"/listingpage/#{@product.id}/edit", method: :get
     .purchase_1
@@ -19,7 +23,6 @@
   - elsif user_signed_in? 
     .purchase
       = link_to '購入ページ',"/item/#{@product.id}", method: :get
-
     %p.setumei= @product.detail
   .name= @product.title
   %table

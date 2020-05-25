@@ -108,11 +108,15 @@
     .furima5__item
       新規投稿商品
     .furima5__picture
-      - @products.each do |item|
+      -@products.each do |item|
         = link_to listingpage_path(item.id),class:'furima5__picture__list' do
           .list1= image_tag item.images.first.src.url,width:'100%',height:'200px'
           .list2= item.title
           .list3= item.price
+          -if item.purchaser_id.present?
+            .item_sold_index
+              sold
+      
 
     .furima5-brand
       ピックアップブランド

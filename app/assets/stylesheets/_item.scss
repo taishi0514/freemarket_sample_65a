@@ -1,55 +1,72 @@
 .item__buypage{
-  height:auto;
+  height:900px;
   width:100%;
+  background-color:#F8F8F8
 }
 
-.main__item__page__4__box__button{
-  height:100px;
-  width:100px;
-  padding-top:27px;
-  a{
-    text-decoration:none;
-    font-size:14px;
-    color:skyblue;
+  .item__top{
+    height:150px;
+    width:100%;
+    &__logo{
+      height:60px;
+      width:300px;
+      margin:auto;
+      text-align:center;
+      padding-top:50px;
+      .picture{
+        height:55px;
+      }
+    }
   }
-}
-
 
   .main__item{
     height:950px;
     width:100%;
-    margin-top: 50px;
     &__page{
-      height:950px;
+      height:800px;
       width:700px;
       background-color:white;
-      margin:0 auto;
+      margin-left:380px;
       &__1{
         height:100px;
         border-bottom:solid 1px #C0C0C0;
-        font-size:22px;
-        font-weight:bold;
-        text-align: center;
-        padding-top:35px;
+        &__item{
+          height:50px;
+          width:700px;
+          font-size:22px;
+          font-weight:bold;
+          letter-spacing:0.05em;
+          padding:35px;
+          padding-left:270px;
+        }
       }
 
       &__2{
-        height:auto;
+        height:150px;
         border-bottom:solid 1px #C0C0C0;
-        width: 100%;
+        letter-spacing:0.05em;
+        display:flex;
         &__picture{
           height:150px;
-          width: 300px;
-          margin: 0 auto;
-          padding-top: 20px;
+          width:700px;
+          position:absolute;
           .watch{
-            height:100px;
-            width:100px;
+            height:90px;
+            width:60px;
+            position:relative;
+            left:190px;
+            top:30px;
           }
           &__item{
+            width:200px;
             font-size:12px;
+            left:270px;
+            bottom:55px;
             line-height:25px;
-            float: right;
+            position:relative;
+            span{
+              font-weight:bold;
+            }
           }
         }
       }
@@ -83,7 +100,7 @@
       }
 
       &__4{
-        height:150px;
+        height:200px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         &__box{
@@ -97,6 +114,16 @@
             height:50px;
             margin-left:190px;
             padding-top:30px;
+                    }
+          &__button{
+            height:100px;
+            width:100px;
+            padding-top:27px;
+            a{
+              text-decoration:none;
+              font-size:14px;
+              color:skyblue;
+            }
           }
         }
         &__card{
@@ -112,7 +139,7 @@
       }
 
       &__5{
-        height:150px;
+        height:200px;
         border-bottom:solid 1px #C0C0C0;
         letter-spacing:0.05em;
         display:flex;
@@ -130,11 +157,23 @@
             top:10px;
           }
         }
+        &__button{
+          height:50px;
+          width:100px;
+          display:inline-block;
+          a{
+            font-size:14px;
+            margin-top:30px;
+            display:block;
+            text-decoration: none;
+            color: skyblue;
+          }
+        }
       }
 
       &__6{
         height:145px;
-        &__button{
+        &__button__buy{
           height:50px;
           width:300px;
           background-color:red;
@@ -143,6 +182,9 @@
           margin-top:40px;
           position: absolute;
           display:inline-block;
+          font-weight: bold;
+          color:white;
+          font-size:18px;
           a{
             height:50px;
             text-decoration:none;

@@ -1,0 +1,31 @@
+= render "users/header"
+
+%main
+  %section.container
+    %h2.container__message クレジットカード情報登録
+    .container__main
+      .account-page__inner--right.user-form
+        = form_with url:card_index_path ,method: :post, local: true, id: "charge-form" do |f|
+          .field
+            = f.label :card_namber,"クレジット番号"
+            %br/
+            = f.text_field :card_number, :placeholder => "半角数字のみ"
+          .field
+            = f.label :cvc,"セキュリティーコード"
+            %br/
+            = f.password_field :cvc, autocomplete: "security_code", :placeholder => "カード背面3,4桁の番号"
+          .field
+            = f.label :expiration_data,"有効期限"
+            %br/
+            = f.select :exp_month, ['1','2','3','4','5','6','7','8','9','10','11','12'],{include_blank: ''}
+            %span 月/
+            = f.select :exp_year, ['2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030'],{include_blank: ''}
+            %span 年
+          .field
+            = f.label :account_holder,"口座名義"
+            %br/
+            = f.text_field :account_holder, :placeholder => "（例：YOHEI KAWASE）"
+          .actions
+            = f.submit "登録する", id: "charge-submit"
+
+= render "users/footer"

@@ -1,413 +1,405 @@
-.main{
-  height:3710px;
-  .auction{
-    height:130px;
-    width:130px;
-    color:white;
-    font-size:18px;
-    border:1px solid #FF3333	;
-    border-radius:10px;
-    background-color: #FF3333	;
-    position:fixed;
+.main {
+  height: 3710px;
+  .auction {
+    height: 130px;
+    width: 130px;
+    color: white;
+    font-size: 18px;
+    border: 1px solid #ff3333;
+    border-radius: 10px;
+    background-color: #ff3333;
+    position: fixed;
     text-align: center;
-    bottom:30px;
-    right:30px;
-    z-index:100;
-    .auction__button{
-      &__head{
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    .auction__button {
+      &__head {
         height: 22px;
         margin: 32px 0 3px 0;
         font-size: 22px;
         line-height: 1.1;
       }
-      .auction__button2{
-        margin:0;
-        padding:15px;
+      .auction__button2 {
+        margin: 0;
+        padding: 15px;
       }
-      a{
+      a {
         text-decoration: none;
         padding: 15px 0 0 0;
         color: white;
       }
     }
-    .camera__button{
-      font-size:60px;
-      background-color: #FF3333	;
+    .camera__button {
+      font-size: 60px;
+      background-color: #ff3333;
     }
     i {
       font-size: 60px;
     }
   }
 }
-  .auction{
-    height:120px;
-    width:120px;
-    color:white;
-    font-size:18px;
-    border:1px solid green;
-    border-radius:10px;
-    background-color: green;;
-    position:fixed;
-    text-align: center;
-    bottom:30px;
-    right:30px;
-    z-index:100;
-    .auction__button{
-      a{
-        text-decoration: none;
-      }
-      .auction2{
-        margin:10px auto;
-      }
-      .button2{
-        background-color: green;
-        color:white;
-        border:none;
-        margin-top:10px;
-      }
-    }
-    .camera__button{
-      font-size:50px;
-      background-color:green;
-      color: white;
-      margin-top:10px;
-    }
-  }
-
-.furima{
-    height:510px;
-    width:100%;
-    }
-    .picture1{
-      position: absolute;
-      height:540px;
-      width:100%;
-    }
-    .furima__copy{
-        width:800px;
-        color:white;
-        font-size: 60px;
-        text-shadow:1px 1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px -1px 0 #000,
-                    -1px -1px 0 #000;
-        position: relative;
-        top:200px;
-        left:50px;
-    }
-    .furima__copy2{
-      width:800px;
-        color:white;
-        font-size: 20px;
-        text-shadow:1px 1px 0 #000,
-                    -1px 1px 0 #000,
-                    1px -1px 0 #000,
-                    -1px -1px 0 #000;
-        position: relative;
-        top:210px;
-        left:50px;
-        letter-spacing:0.05em;
-        line-height:30px;
-    }
-      .furima__download{
-          margin-top:20px;
-      }
-      .apple__btn{
-          text-decoration:none;
-      }
-      .apple__btn:hover {
-        opacity:0.7;
-      }
-
-        .applelogo{
-            height:50px;
-            width:170px;
-            border-radius: 10px 10px 10px 10px;
-            justify-content: space-between;
-        }
-        .googlelogo{
-            height:50px;
-            width:170px;
-        }
-        .googlelogo:hover {
-          opacity:0.7;
-        }
-
-.furima2{
-    height:680px;
-    width:100%;
-    background-color:#fff;
-    }
-    .furima-use{
-    height:200px;
-    width:100%;
-    }
-    .furima-point{
-        width:100%;
-        font-size:24px;
-        font-weight: bolder;
-        position:relative;
-        top:100px;
-        text-align: center;
-        text-decoration:underline;
-        text-decoration-color:#33CCFF;
-        text-decoration-style: double;
-    }
-    .furima-reason{
-      height:330px;
-      width:100%;
-      display:flex;
-      justify-content:space-around;
-    }
-      .furima-reason__pic1{
-        height:250px;
-        width:250px;
-        margin-left:150px;
-        .furima-reason__namber1{
-          height:60px;
-          width:60px;
-          background-color:#33CCFF;
-          font-size:24px;
-          color:white;
-          font-weight:bolder;
-          position:relative;
-          text-align: center;
-          padding:10px;
-        }
-      }
-      .reason1{
-        height:300px;
-        width:300px;
-        position:absolute;
-      }
-      .furima-reason__pic2{
-        height:250px;
-        width:250px;
-        .furima-reason__namber2{
-          height:60px;
-          width:60px;
-          background-color:#33CCFF;
-          color:white;
-          font-size:24px;
-          font-weight:bolder;
-          position:relative;
-          text-align:center;
-          padding:10px;
-        }
-      }
-      .furima-reason__pic3{
-        height:250px;
-        width:250px;
-        margin-right:200px;
-        .furima-reason__namber3{
-          height:60px;
-          width:60px;
-          background-color:#33CCFF;
-          color:white;
-          font-size:24px;
-          font-weight:bolder;
-          position:relative;
-          text-align:center;
-          padding:10px;
-        }
-      }
-    .furima-catch{
-        height:60px;
-        width:100%;
-        display:flex;
-        justify-content: space-around;
-        span{
-          color:#33CCFF;
-        }
-    }
-      .furima-catch__copy{
-        font-size:22px;
-        font-weight: bolder;
-        margin-left:180px;
-      }
-      .furima-catch__copy2{
-        font-size: 22px;
-        font-weight: bolder;
-      }
-      .furima-catch__copy3{
-        font-size:22px;
-        font-weight: bolder;
-        margin-right:200px;
-      }
-    .furima-description{
-      height:150px;
-      width:100%;
-      display:flex;
-      justify-content:space-around;
-    }
-      .furima-description__1{
-        font-size: 16px;
-        margin-left:170px;
-        line-height:24px;
-      }
-      .furima-description__2{
-        font-size:16px;
-        line-height:24px;
-      }
-      .furima-description__3{
-        font-size:16px;
-        margin-right:180px;
-        line-height:24px;
-      }
-
-.furima3{
-  height:400px;
-  width:100%;
-  }
-  .picture2{
-    height:400px;
-    width:100%;
-    position:absolute;
-  }
-  .furima3__copy{
-    width:200px;
-    font-size:28px;
-    color:white;
-    font-weight: bolder;
-    position:relative;
-    text-shadow:1px 1px 0 #000,
-                -1px 1px 0 #000,
-                1px -1px 0 #000,
-                -1px -1px 0 #000;
-    top:80px;
-    left:210px;
-  }
-  .furima3__copy2{
-    width:370px;
-    font-size:16px;
-    color:white;
-    font-weight:bolder;
-    position:relative;
-    text-shadow:1px 1px 0 #000,
-                -1px 1px 0 #000,
-                1px -1px 0 #000,
-                -1px -1px 0 #000;
-    top:120px;
-    left:210px;
-    line-height:24px;
-    letter-spacing:0.05em;
-  }
-  .furima3__download{
-    height:130px;
-    width:800px;
-    margin-top:30px;
-  }
-    .applelogo2{
-        height:50px;
-        width:170px;
-        border-radius: 10px 10px 10px 10px;
-    }
-    .googlelogo2{
-        height:50px;
-        width:170px;
-    }
-    .googlelogo2:hover {
-      opacity:0.7;
-    }
-.furima4{
-    height:750px;
-    width:100%;
-}
-  .furima4-use{
-    height:520px;
-    width:100%;
-  }
-    .furima4-point{
-      width:100%;
-      font-size:24px;
-      font-weight: bolder;
-      position:relative;
-      top:100px;
-      text-align: center;
-    }
-  .furima-reason2{
-    height:330px;
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-    position:relative;
-    top:100px;
-  }
-  .furima4-reason__pic1{
-    height:250px;
-    width:250px;
-    margin-left:150px;
-  }
-  .reason2{
-    height:350px;
-    width:250px;
-  }
-  .furima4-reason__pic2{
-    height:250px;
-    width:250px;
-  }
-  .furima4-reason__pic3{
-    height:250px;
-    width:250px;
-    margin-right:200px;
-  }
-  .furima4-catch{
-    height:50px;
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-  }
-    .furima4-catch__copy1{
-      font-size:18px;
-      font-weight:bolder;
-      margin-left:150px;
-    }
-    .furima4-catch__copy2{
-      font-size:18px;
-      font-weight:bolder;
-    }
-    .furima4-catch__copy3{
-      font-size:18px;
-      font-weight:bolder;
-      margin-right:200px;
-    }
-  .furima4-description{
-    height:200px;
-    width:100%;
-    display:flex;
-    justify-content:space-around;
-  }
-    .furima4-description__1{
-      line-height:24px;
-      margin-left:150px;
-    }
-    .furima4-description__2{
-      line-height:24px;
-    }
-    .furima4-description__3{
-      line-height:24px;
-      margin-right:180px;
-    }
-
-.furima5{
-  height:1000px;
-  width:100%;
-  background-color:#fff;
+.auction {
+  height: 120px;
+  width: 120px;
+  color: white;
+  font-size: 18px;
+  border: 1px solid green;
+  border-radius: 10px;
+  background-color: green;
+  position: fixed;
   text-align: center;
-  padding: 20px 40px;
-  &__category{
-    font-size:28px;
-    font-weight:bolder;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+  .auction__button {
+    a {
+      text-decoration: none;
+    }
+    .auction2 {
+      margin: 10px auto;
+    }
+    .button2 {
+      background-color: green;
+      color: white;
+      border: none;
+      margin-top: 10px;
+    }
   }
-  &__item{
-    font-size:24px;
-    font-weight:bolder;
-    color:#33CCFF;
+  .camera__button {
+    font-size: 50px;
+    background-color: green;
+    color: white;
     margin-top: 10px;
   }
-  &__picture{
-    display:flex;
-    &__list{
+}
+
+.furima {
+  height: 510px;
+  width: 100%;
+}
+.picture1 {
+  position: absolute;
+  height: 540px;
+  width: 100%;
+}
+.furima__copy {
+  width: 800px;
+  color: white;
+  font-size: 60px;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  position: relative;
+  top: 200px;
+  left: 50px;
+}
+.furima__copy2 {
+  width: 800px;
+  color: white;
+  font-size: 20px;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  position: relative;
+  top: 210px;
+  left: 50px;
+  letter-spacing: 0.05em;
+  line-height: 30px;
+}
+.furima__download {
+  margin-top: 20px;
+}
+.apple__btn {
+  text-decoration: none;
+}
+.apple__btn:hover {
+  opacity: 0.7;
+}
+
+.applelogo {
+  height: 50px;
+  width: 170px;
+  border-radius: 10px 10px 10px 10px;
+  justify-content: space-between;
+}
+.googlelogo {
+  height: 50px;
+  width: 170px;
+}
+.googlelogo:hover {
+  opacity: 0.7;
+}
+
+.furima2 {
+  height: 680px;
+  width: 100%;
+  background-color: #fff;
+}
+.furima-use {
+  height: 200px;
+  width: 100%;
+}
+.furima-point {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  position: relative;
+  top: 100px;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #33ccff;
+  text-decoration-style: double;
+}
+.furima-reason {
+  height: 330px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.furima-reason__pic1 {
+  height: 250px;
+  width: 250px;
+  margin-left: 150px;
+  .furima-reason__namber1 {
+    height: 60px;
+    width: 60px;
+    background-color: #33ccff;
+    font-size: 24px;
+    color: white;
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+  }
+}
+.reason1 {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+}
+.furima-reason__pic2 {
+  height: 250px;
+  width: 250px;
+  .furima-reason__namber2 {
+    height: 60px;
+    width: 60px;
+    background-color: #33ccff;
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+  }
+}
+.furima-reason__pic3 {
+  height: 250px;
+  width: 250px;
+  margin-right: 200px;
+  .furima-reason__namber3 {
+    height: 60px;
+    width: 60px;
+    background-color: #33ccff;
+    color: white;
+    font-size: 24px;
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+  }
+}
+.furima-catch {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  span {
+    color: #33ccff;
+  }
+}
+.furima-catch__copy {
+  font-size: 22px;
+  font-weight: bolder;
+  margin-left: 180px;
+}
+.furima-catch__copy2 {
+  font-size: 22px;
+  font-weight: bolder;
+}
+.furima-catch__copy3 {
+  font-size: 22px;
+  font-weight: bolder;
+  margin-right: 200px;
+}
+.furima-description {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.furima-description__1 {
+  font-size: 16px;
+  margin-left: 170px;
+  line-height: 24px;
+}
+.furima-description__2 {
+  font-size: 16px;
+  line-height: 24px;
+}
+.furima-description__3 {
+  font-size: 16px;
+  margin-right: 180px;
+  line-height: 24px;
+}
+
+.furima3 {
+  height: 400px;
+  width: 100%;
+}
+.picture2 {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+}
+.furima3__copy {
+  width: 200px;
+  font-size: 28px;
+  color: white;
+  font-weight: bolder;
+  position: relative;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  top: 80px;
+  left: 210px;
+}
+.furima3__copy2 {
+  width: 370px;
+  font-size: 16px;
+  color: white;
+  font-weight: bolder;
+  position: relative;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  top: 120px;
+  left: 210px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+.furima3__download {
+  height: 130px;
+  width: 800px;
+  margin-top: 30px;
+}
+.applelogo2 {
+  height: 50px;
+  width: 170px;
+  border-radius: 10px 10px 10px 10px;
+}
+.googlelogo2 {
+  height: 50px;
+  width: 170px;
+}
+.googlelogo2:hover {
+  opacity: 0.7;
+}
+.furima4 {
+  height: 750px;
+  width: 100%;
+}
+.furima4-use {
+  height: 520px;
+  width: 100%;
+}
+.furima4-point {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bolder;
+  position: relative;
+  top: 100px;
+  text-align: center;
+}
+.furima-reason2 {
+  height: 330px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 100px;
+}
+.furima4-reason__pic1 {
+  height: 250px;
+  width: 250px;
+  margin-left: 150px;
+}
+.reason2 {
+  height: 350px;
+  width: 250px;
+}
+.furima4-reason__pic2 {
+  height: 250px;
+  width: 250px;
+}
+.furima4-reason__pic3 {
+  height: 250px;
+  width: 250px;
+  margin-right: 200px;
+}
+.furima4-catch {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.furima4-catch__copy1 {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-left: 150px;
+}
+.furima4-catch__copy2 {
+  font-size: 18px;
+  font-weight: bolder;
+}
+.furima4-catch__copy3 {
+  font-size: 18px;
+  font-weight: bolder;
+  margin-right: 200px;
+}
+.furima4-description {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.furima4-description__1 {
+  line-height: 24px;
+  margin-left: 150px;
+}
+.furima4-description__2 {
+  line-height: 24px;
+}
+.furima4-description__3 {
+  line-height: 24px;
+  margin-right: 180px;
+}
+
+.furima5 {
+  height: 1000px;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 40px;
+  &__category {
+    font-size: 28px;
+    font-weight: bolder;
+  }
+  &__item {
+    font-size: 24px;
+    font-weight: bolder;
+    color: #33ccff;
+    margin-top: 10px;
+  }
+  &__picture {
+    display: inline-flex;
+    &__list {
       margin-right: 50px;
       height: 200px;
       width: 220px;
@@ -416,73 +408,75 @@
     }
   }
 }
-
-
-
-  .furima5-brand{
-    font-size:28px;
-    font-weight:bolder;
-    position:relative;
-    text-align:center;
-    top:180px;
-  }
-  .furima5-item2{
-    font-size:24px;
-    font-weight:bolder;
-    color:#33CCFF;
-    position:relative;
-    text-align:center;
-    top:190px;
-  }
-
-
-
-.furima6{
-  height:300px;
-  width:100%;
+.item_sold_index {
+  width: 100px;
+  transform: rotate(-45deg);
+  font-size: 28px;
+  margin: -35px 0px 0px -55px;
+  color: red;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-left: 60px;
 }
-  .picture3{
-    height:370px;
-    width:100%;
-    position:absolute;
+
+.furima5-brand {
+  font-size: 28px;
+  font-weight: bolder;
+  position: relative;
+  text-align: center;
+  top: 180px;
+}
+.furima5-item2 {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #33ccff;
+  position: relative;
+  text-align: center;
+  top: 190px;
+}
+
+.furima6 {
+  height: 300px;
+  width: 100%;
+}
+.picture3 {
+  height: 370px;
+  width: 100%;
+  position: absolute;
+}
+.furima6-copy {
+  font-size: 24px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  position: relative;
+  text-align: center;
+  top: 100px;
+}
+.furima6-copy2 {
+  font-size: 34px;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  position: relative;
+  text-align: center;
+  top: 110px;
+}
+.furima6-download {
+  .applelogo3 {
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 10px 10px 10px 10px;
   }
-  .furima6-copy{
-    font-size:24px;
-    font-weight:bolder;
-    color:white;
-    text-shadow:1px 1px 0 #000,
-                -1px 1px 0 #000,
-                1px -1px 0 #000,
-                -1px -1px 0 #000;
-    position:relative;
-    text-align:center;
-    top:100px;
+  img {
+    height: 46px;
   }
-  .furima6-copy2{
-    font-size:34px;
-    font-weight:bolder;
-    color:white;
-    text-shadow:1px 1px 0 #000,
-                -1px 1px 0 #000,
-                1px -1px 0 #000,
-                -1px -1px 0 #000;
-    position:relative;
-    text-align:center;
-    top:110px;
+  .googlelogo3 {
+    margin-top: 20px;
   }
-  .furima6-download{
-    .applelogo3{
-      margin-top:20px;
-      margin-right:10px;
-      border-radius: 10px 10px 10px 10px;
-    }
-    img{
-      height: 46px;
-    }
-    .googlelogo3{
-      margin-top:20px;
-    }
-    .googlelogo3:hover {
-      opacity:0.7;
-    }
+  .googlelogo3:hover {
+    opacity: 0.7;
   }
+}

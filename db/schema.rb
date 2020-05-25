@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_02_153939) do
+ActiveRecord::Schema.define(version: 2020_05_14_061407) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "family_name_kanji", null: false
@@ -34,6 +34,14 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_areas_on_name"
+  end
+
+  create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "payjp_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -94,11 +102,13 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.bigint "area_id"
     t.string "ship_period"
     t.integer "price"
+    t.bigint "purchaser_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["area_id"], name: "index_products_on_area_id"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["product_size_id"], name: "index_products_on_product_size_id"
+    t.index ["purchaser_id"], name: "index_products_on_purchaser_id"
     t.index ["shippingway_id"], name: "index_products_on_shippingway_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end
@@ -130,6 +140,7 @@ ActiveRecord::Schema.define(version: 2020_05_02_153939) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "cards", "users"
   add_foreign_key "category_sizes", "categories"
   add_foreign_key "category_sizes", "product_sizes"
   add_foreign_key "images", "products"

@@ -1,0 +1,141 @@
+= render "users/top"
+
+
+.main
+  .auction
+    .auction__button
+      = link_to "http://www.google.co.jp", class:"auction" do
+        %p.auction2 出品する
+        =fa_icon 'camera', class: 'camera__button'
+  .furima
+    = image_tag 'logos/picture1.jpg', class: 'picture1'
+    .furima__copy
+      人生を変えるフリマアプリ
+    .furima__copy2
+      FURIMAはだれでもかんたんに出品・購入できる</p>フリマアプリです。
+      .furima__download
+        = link_to "http://www.google.co.jp", class:"apple__btn" do
+          = image_tag 'logos/applelogo.png', class: 'applelogo'
+        = link_to "http://www.google.co.jp", class:"google__btn" do
+          = image_tag 'logos/googlelogo.png', class: 'googlelogo'
+
+  .furima2
+    .furima-use
+      .furima-point
+        FURIMAが選ばれる３つの理由
+    .furima-reason
+      .furima-reason__pic1
+        =image_tag 'logos/pict-reason-01.jpg', class: 'reason1'
+        .furima-reason__namber1
+          1
+      .furima-reason__pic2
+        =image_tag 'logos/pict-reason-02.jpg', class: 'reason1'
+        .furima-reason__namber2
+          2
+      .furima-reason__pic3
+        =image_tag 'logos/pict-reason-03.jpg', class: 'reason1'
+        .furima-reason__namber3
+          3
+    .furima-catch
+      .furima-catch__copy
+        %span 3分 
+        ですぐに出品
+      .furima-catch__copy2
+        %span シンプル
+        で使いやすい
+      .furima-catch__copy3
+        手数料 
+        %span 業界最安
+    .furima-description
+      .furima-description__1
+        スマホで入力するだけで簡単に出品で
+        %p きる！
+      .furima-description__2
+        めんどくさい入力は必要なく、検索も
+        %p 購入もスムーズ！
+      .furima-description__3
+        最大３％でお得に出品＆＆購入！
+
+  .furima3
+    = image_tag 'logos/picture2.jpg', class: 'picture2'
+    .furima3__copy
+      会員数日本一位
+    .furima3__copy2
+      FURIMAは、フリマアプリで最も人気。</p>出品・購入回数も業界最多です！</p>ほしかったあの商品に出会えるかもしれません。
+      .furima3__download
+        = link_to "http://www.google.co.jp", class:"apple__btn" do
+          = image_tag 'logos/applelogo.png', class: 'applelogo2'
+        = link_to "http://www.google.co.jp", class:"google__btn" do
+          = image_tag 'logos/googlelogo.png', class: 'googlelogo2'
+
+  .furima4
+    .furima4-use
+      .furima4-point
+        FURIMAの特徴
+      .furima-reason2
+        .furima4-reason__pic1
+          =image_tag 'logos/icon-01.png', class: 'reason2'
+        .furima4-reason__pic2
+          =image_tag 'logos/icon-03.png', class: 'reason2'
+        .furima4-reason__pic3
+          =image_tag 'logos/icon-04.png', class: 'reason2'
+    .furima4-catch
+      .furima4-catch__copy1
+        簡単に売り買い出来る
+      .furima4-catch__copy2
+        売上金は即日振込振込みに対応
+      .furima4-catch__copy3
+        様々な支払いに対応
+    .furima4-description
+      .furima4-description__1
+        スマホひとつで、いつでもどこでも簡単
+        %p に出品・購入が可能！
+      .furima4-description__2
+        午前9時までに振込を依頼いただけれ
+        %p ば、翌日に指定の口座に入金いたします！
+      .furima4-description__3
+        お支払いは、クレジットカードだけでな
+        %p く、ポイントや売上金など多彩な方法が
+        %p あります。
+    
+  .furima5
+    .furima5-category
+      ピックアップカテゴリー
+    .furima5-item
+      新規投稿商品
+    .furima5-picture
+      .furima5-picture1
+        = link_to "product/1", class:"ra-men__btn" do
+          = image_tag 'logos/ra-men.jpg', class: 'ra-menlogo'
+      .furima5-picture2
+        = link_to "product/1", class:"curry__btn" do
+          = image_tag 'logos/curry.jpg', class: 'currylogo'
+      .furima5-picture3
+        = link_to "product/1", class:"yakiniku__btn" do
+          = image_tag 'logos/yakiniku.jpg', class: 'yakinikulogo'
+    .furima5-brand
+      ピックアップブランド
+    .furima5-item2
+      アーカイバ
+    .furima5-picture2__brand
+      .furima5-picture4
+        = link_to "product/1", class:"ra-men__btn" do
+          = image_tag 'logos/ra-men.jpg', class: 'ra-menlogo2'
+      .furima5-picture5
+        = link_to "product/1", class:"curry__btn" do
+          = image_tag 'logos/curry.jpg', class: 'currylogo2'
+      .furima5-picture6
+        = link_to "product/1", class:"yakiniku__btn" do
+          = image_tag 'logos/yakiniku.jpg', class: 'yakinikulogo2'
+  
+  .furima6
+    =image_tag 'logos/picture3.jpg', class: 'picture3'
+    .furima6-copy
+      だれでもかんたん、人生を変えるフリマアプリ
+    .furima6-copy2
+      今すぐ無料ダウンロード！
+      .furima6-download
+        = link_to "http://www.google.co.jp", class:"apple__btn" do
+          = image_tag 'logos/applelogo.png', class: 'applelogo3'
+        = link_to "http://www.google.co.jp", class:"google__btn" do
+          = image_tag 'logos/googlelogo.png', class: 'googlelogo3'

@@ -12,6 +12,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.references  :area  
       t.string :ship_period  
       t.integer :price
+      t.references  :purchaser
       t.timestamps
     end
   end
